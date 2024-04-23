@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <title>Asher Web - Connecting Resources</title>
+</head>
+<body>
+    <div>
+        <!-- <div class=""></div> -->
+        <header class="p-4">
+            <div class="logo">
+              <!-- <img src="logo.png" alt="Asher Web Logo"> -->
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICMzMzM7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiPgogICAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSIxMjAiIGN5PSIxMjAiIHI9IjEyMCIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTAxLjQsODguMUg4Mi43YTQuMSw0LjEsMCwwLDAtNC4xLDQuMXY1My43YTQuMSw0LjEsMCwwLDAsNC4xLDQuMWgxOC43YTQuMSw0LjEsMCwwLDAsNC4xLTQuMVY5Mi4yQTQuMSw0LjEsMCwwLDAsMTAxLjQsODguMVptNjYuOCwwSDEzMy43YTQuMSw0LjEsMCwwLDAtNC4xLDQuMXYxNi4zYTQuMSw0LjEsMCwwLDAsNC4xLDQuMWgzNC40YTQuMSw0LjEsMCwwLDAsNC4xLTQuMXYtMTYuM0E0LjEsNC4xLDAsMCwwLDE2OCw4OC4xWiIvPgogIDwvZz4KPC9zdmc+Cg==">
+              <h1>Asher Web</h1>
+            </div>
+            <nav>
+              <ul>
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="./Home.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </nav>
+            <div>
+                <button class="btn btn-primary">Login</button>
+                <button class="btn btn-primary">Sign up</button>
+            </div>
+          </header>
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+            <div class="col-md-6 p-5 mt-lg-5">
+                <h1 class="display-5 animated fadeIn mb-4">Find A <span class="text-primary">Perfect Home</span> To Live With Your Family</h1>
+                <p class="animated fadeIn mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet
+                    sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                <button class="btn btn-primary py-3 px-5 me-3 animated fadeIn"><a href="./property.html" class="a">Get Started</a></button>
+            </div>
+            <div class="col-md-6 p-5 mt-lg-5">
+                <div class="p-3">
+                    <img src="/img/1.jpeg" alt="House Image" class="img-size">
+                </div>
+            </div>
+        </div>
+
+        <div class="header py-4">
+            <div class="">
+                <h3 class="">Believe in Finding it</h3>
+                <p class="p">Search the World's Largest Properties for sale and to rent</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <form>
+              <input type="text" class="form-select me-1" placeholder="e.g 'york' 'hampshire' 'midian'" id="inputElement">
+            </form>
+            <!-- <button class="buttin" onclick="saveValueAndNavigate()">
+                For Sale
+                <-- <a href="./About.html" class="a">For Sale</a> ->
+            </button> -->
+            <button class="buttin px-4" onclick="saveValueAndNavigate()">Browse Properties</button>
+            </div>
+           <!-- <FilterSearch /> -->
+            <!-- <FooterComp /> -->
+        </div>
+
+        <div class="card-container my-5">
+            <div class="d-flex justify-content-center gap-5">    
+                <div class="col-3 col-md-3 col-lg-3">
+                    <div class="card card-color p-3">
+                        <div class="card-body">
+                            <div class="icon-container">
+                                <i class="bi bi-shop fs-3"></i>
+                            </div>
+                            <div class="card-body-text">
+                                <h4>Find Your Dream Home</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, 
+                                    adipisicing elit. Mollitia est placeat 
+                                    inventore dolore, temporibus architecto!
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3 col-lg-3">
+                    <div class="card card-color p-3">
+                        <div class="card-body">
+                            <div class="icon-container">
+                                <i class="bi bi-buildings fs-3"></i>
+                            </div>
+                            <div class="card-body-text">
+                                <h4>Find Your Dream Home</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, 
+                                    adipisicing elit. Mollitia est placeat 
+                                    inventore dolore, temporibus architecto!
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-3 col-lg-3">
+                    <div class="card card-color p-3">
+                        <div class="card-body">
+                            <div class="icon-container">
+                                <i class="bi bi-shop fs-3"></i>
+                            </div>
+                            <div class="card-body-text">
+                                <h4>Find Your Dream Home</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, 
+                                    adipisicing elit. Mollitia est placeat 
+                                    inventore dolore, temporibus architecto!
+                                    Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container-two mb-5">
+            <div class="d-flex p-5 justify-content-evenly">
+                <div class="card card-color" style="width: 100%;">
+                    <div class="card-body d-flex justify-content-between p-0">
+                        <div class="card-text col-4 d-flex justify-content-center px-5 align-items-center">
+                            <div class="">
+                                <h2>The new way to find your new home</h2>
+                            <p>Find your dream place to live in with more tha 10k Properties listed</p>
+                            <div class="card-text-footer mt-2 d-flex justify-content-center">
+                                <div class="">
+                                    <div class="icon-container-sm">
+                                        <img src="./img/Icon-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <h5>3500</h5>
+                                        <small>Active Users</small>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="">
+                                    <div class="icon-container-sm">
+                                        <img src="./img/Icon-2.png" alt="">
+                                    </div>
+                                    <div>
+                                        <h5>3856</h5>
+                                        <small>Total Properties</small>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="">
+                                    <div class="icon-container-sm">
+                                        <img src="./img/Icon-3.png" alt="">
+                                    </div>
+                                    <div>
+                                        <h5>2540</h5>
+                                        <small>Daily Transactions Completed</small>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="card-img d-flex justify-content-end">
+                            <img src="./img/Illustration.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-three d-flex justify-content-evenly gap-2 p-5">
+            <div class="card-left">
+                <img src="./img/FindTheBest.png" alt="">
+            </div>
+            <div class="card-right d-flex justify-content-center align-items-center">
+                <div class="card-right-content">
+                    <div class="d-flex">
+                        <div class="topleft">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                <h6 class="m-0">Trust</h6>
+                            </div>
+                            <div><p>Trust is the corner stone of every successful real estate transaction</p></div>    
+                        </div>
+                        <div class="topright">
+                            <div class="">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                    <h6 class="m-0">Trust</h6>
+                                </div>
+                                <div><p>Trust is the corner stone of every successful real estate transaction</p></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="d-flex">
+                        <div class="topleft">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                <h6 class="m-0">Trust</h6>
+                            </div>
+                            <div><p>Trust is the corner stone of every successful real estate transaction</p></div>    
+                        </div>
+                        <div class="topright">
+                            <div class="">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                    <h6 class="m-0">Trust</h6>
+                                </div>
+                                <div><p>Trust is the corner stone of every successful real estate transaction</p></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="moredetails p-5">
+            <div class="d-flex justify-content-between p-3">
+                <div class="moredetailsleft">
+                    <div class=""><h2>We make it easy for Landlord, tenants and Agents</h2></div>
+                    <div>
+                        <div class="card">
+                            <div class="card-body d-flex">
+                                <div class="houseContainer"><i class="bi bi-house-check fs-3"></i></div>
+                                <div class="">
+                                    <h4>Find the Best Deal</h4>
+                                    <p class="m-0">Browse Thousands of properties, save your favourite and set up search alerts so you don't miss the best home deals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="moredetailsright">
+                    <div>
+                        <div class="card">
+                            <div class="card-body d-flex">
+                                <div class="houseContainer"><i class="bi bi-house-check fs-3"></i></div>
+                                <div class="">
+                                    <h4>Find the Best Deal</h4>
+                                    <p class="m-0">Browse Thousands of properties, save your favourite and set up search alerts so you don't miss the best home deals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="container-fluid bg-dark text-white-50 footer py-5" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="">About Us</a>
+                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms &amp; Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="asset/property-1.jpg" alt="">
+                                
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            © <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">Dexter Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script>
+        // function redirectToNextPage() {
+        //     // Get the input value
+        //     var inputValue = document.getElementById("inputElement").value;
+        //     // Encode the value to pass it to the next page via URL
+        //     var encodedValue = encodeURIComponent(inputValue);
+        //     // Redirect to the next page with the encoded value as a query parameter
+        //     window.location.href = "About.html?searchTerm=" + encodedValue;
+        // }
+                // let inputSearch = document.getElementById('inputElement');
+                // let d = inputSearch.value;
+                // // Assuming 'valueToSave' is the value you want to save
+                // localStorage.setItem('myValue', d);
+        function saveValueAndNavigate() {
+            // Get the input element
+            var inputElement = document.getElementById('inputElement');
+
+            // Get the value from the input element
+            var valueToSave = inputElement.value;
+
+            // Save the value to local storage
+            localStorage.setItem('myValue', valueToSave);
+
+            // Navigate to the next page
+            window.location.href = 'About.html'; // Change 'next-page.html' to the URL of your next page
+        }
+    </script>
+</body>
+</html>

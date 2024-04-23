@@ -1,0 +1,1613 @@
+/* Color Code Black #363636 Red #B80238  White #ffffff*/
+
+.image-in-slider{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border-left: 1px solid rgb(220, 53, 69);
+}
+
+#myChart{
+    width: auto;
+    height: 350px !important;
+    align-self: center;
+}
+i{
+    font-style: normal !important;
+}
+.border-radius-card-shadow{
+    border-radius: 20px;
+    cursor: pointer;
+}
+body{
+    min-height: 100vh;
+}
+.card-overlay-top{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#blink, #tenant-outstanding-indicator {
+    transition: 0.5s;
+    border: 2px solid transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+}
+#tenant-outstanding-indicator{
+  width: 25px;
+  height: 25px;
+}
+#property-row > p{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  align-items: center;
+}
+/* Added the styling for the tooltip for the hover function on the repairs and HOAs */
+#tooltip {
+    background: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+  }
+  #arrow,
+  #arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+    }
+    
+    #arrow {
+visibility: hidden;
+}
+  
+ #arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+#tooltip[data-popper-placement^='top'] > #arrow {
+  bottom: -6px;
+}
+
+#tooltip[data-popper-placement^='bottom'] > #arrow {
+  top: -4px;
+}
+
+#tooltip[data-popper-placement^='left'] > #arrow {
+  right: -4px;
+}
+
+#tooltip[data-popper-placement^='right'] > #arrow {
+  left: -4px;
+}
+
+#tooltip {
+/* ... */
+display: none;
+}
+
+#tooltip[data-show] {
+display: block;
+}
+/* Adding the new style details for the second tooltip */
+#trap{
+    background: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+}
+#arrow,
+#arrow::before {
+position: absolute;
+width: 8px;
+height: 8px;
+background: inherit;
+}
+#arrow {
+visibility: hidden;
+}
+#arrow::before {
+visibility: visible;
+content: '';
+transform: rotate(45deg);
+}
+#trap[data-popper-placement^='top'] > #arrow {
+bottom: -4px;
+}
+
+#trap[data-popper-placement^='bottom'] > #arrow {
+top: -4px;
+}
+
+#trap[data-popper-placement^='left'] > #arrow {
+right: -4px;
+}
+
+#trap[data-popper-placement^='right'] > #arrow {
+left: -4px;
+}
+
+#trap {
+/* ... */
+display: none;
+}
+
+#trap[data-show] {
+display: block;
+}
+
+
+/* Css code to style the title attribute */
+/* Style the tooltip */
+div[title] {
+  position: relative;
+  cursor: pointer;
+}
+/* Style the tooltip text */
+div[title]::after {
+  content: attr(title);
+  display: none;
+  position: absolute;
+  background-color: #dc3545 !important;
+  color: white !important;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+/* Show the tooltip on hover */
+div[title]:hover::after {
+  display: inline-block;
+}
+
+#initialValue{
+  display: flex;
+  justify-content: space-evenly;
+}
+#TotalValue{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#TotalValue5{
+  display: flex;
+  justify-content: space-evenly;
+}
+#hoascard :hover{
+  background-color: #dc3545;
+  color : white;
+  border-radius: 70px;
+}
+.card-box-a{
+  /* border-left: 2px solid #dc3545; */
+  /* border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  border-radius: 30px;
+}
+
+.counter{
+  border-left: 5px solid #dc3545;
+  border-radius: 2px;
+}
+#housely{
+  font-size: 40px;
+}
+
+#housel{
+  font-size: 60px;
+  color: black
+}
+#housel:hover{
+  font-size: 60px;
+  color: #a22525ae
+}
+.accordion-body{
+  /* background-color: rgb(231, 231, 231); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* #headhead{
+  display: flex;
+  width: 100%;
+  flex-direction: row; 
+  } */
+  .inky{
+    font-size: 15px;
+  }
+  /* .corner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.corner a{
+    text-decoration: none;
+    outline: none;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+}
+.popup-it{
+    background-color: aliceblue;
+    width: 600px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    
+}
+.open-popup{
+    visibility: visible;
+    top:50%;
+    left: -500%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 1000;
+}
+
+.btnn{
+   
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.popup-it .popup-it-header{
+    border-bottom: 1px solid rgb(207, 207, 207);
+    text-align: start;
+    font-size: 25px;
+    color: red;
+    padding-bottom: 5px;
+    padding-top: 12px;
+    width: 100%;
+
+}
+.popup-it-body{
+    background-color: rgba(228, 228, 228,0.4);
+    padding: 5px;
+    margin-top: 25px;
+
+} */
+
+.btnn{
+  background-color: #cc3232;
+
+  color: white;
+}
+.btnn:hover{
+  color: #cc3232;
+  background-color: white;
+}
+#customers, #unassignedTable, #pendingtable, #completeTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th,  #unassignedTable td , #pendingtable td, #completeTable td,
+#unassignedTable th, #pendingtable th, #completeTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even), #unassignedTable tr:nth-child(even), #pendingtable tr:nth-child(even), #completeTable tr:nth-child(even)
+{background-color: #f2f2f2;}
+
+#customers tr:hover, #unassignedTable tr:hover,
+#pendingtable tr:hover , #completeTable tr:hover 
+{background-color: #ddd;}
+
+#customers th , #unassignedTable th, #pendingtable th, #completeTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #cc3232;
+  color: white;
+}
+
+/* Table on the finance for the modal accordion page */
+#example5 thead{
+padding-top: 5px;
+padding-bottom: 5px;
+text-align: left;
+background-color: #cc3232;
+color: white;
+}
+#example6 thead{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #e09812;
+  color: white;
+}
+#example7 thead{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #2dc937;
+  color: white;
+}
+
+
+/* End of table styling for finance page */
+
+
+
+/* .popup-it-body ul{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+  justify-content: space-evenly;
+
+}
+.topic{
+    font-weight: bold;
+}
+.popup-it-body ul li{
+list-style: none;
+padding: 2px 7px;
+
+}
+.popup-it-footer{
+    margin-top: 50px;
+    padding: 5px;
+    border-top: 1px solid rgb(207, 207, 207);
+    display: flex;
+    flex-direction: column;
+  
+    align-items: flex-end;
+}
+.popup-it-footer button{
+    background: rgba(255, 0, 0, 0.4);
+    width: 20%;
+    border:0;
+    box-shadow: 1px 1px brown;
+    border-radius: 20px;
+    text-align: center;
+    padding: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+
+}
+.popup-it-footer button:hover{
+background-color: rgb(104, 58, 3);
+color: white;
+box-shadow: 1px 1px rgba(104, 58, 3,0.3);
+} */
+
+
+.flint{
+  display: flex;
+  flex-direction: row;
+}
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 900px) {
+ .flint{
+  display: flex;
+  flex-direction: column;
+ }
+
+} */
+/* @media only screen and (min-width: 900px) {
+  .flint{
+   display: flex;
+   flex-direction: column;
+  }
+ #disk{
+   display:grid;
+   grid-template-columns: auto auto;
+ }
+ } */
+
+ #disk{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: ; */
+ }
+/* Centering the text inside the chart */
+.chart-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 10;
+  
+}  
+.center-text2{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 10;
+  
+}
+
+
+/* Changing the background of the task card menu -assigned -unassigned -pending -completed */
+/* Then making the color white */
+#taskcard-1{
+  background-color: #c92c2c80;
+  color: white;
+}
+#btnnn-1{
+  background-color: rgba(201, 44, 44, 0.05);
+  color: white;
+  padding: 0;
+}
+#taskcard-2{
+  background-color: #c2140acc;
+  color: white;
+}
+#btnnn-2{
+  background-color: rgba(194, 20, 10, 0.05);
+  color: white;
+  padding: 0;
+}
+#taskcard-3{
+  background-color: #e3190d;
+  color: white;
+}
+#btnnn-3{
+  background-color: rgba(227, 25, 13,1);
+  color: white;
+  padding: 0;
+}
+#taskcard-4{
+  background-color: #9c0c02cc;
+  color: white;
+}
+#btnnn-4{
+  background-color: rgba(156, 12, 2, 0.1);
+  color: white;
+  padding: 0;
+}
+#modalityfooter{
+  border: 1px solid grey;
+}
+#panelsStayOpen-headingOne{
+  color: #cc3232;
+}
+/* .finance-title-box-d .finance-title-d:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #a22525ae;
+  bottom: 20px;
+  left: 0;
+} */
+.finance-title-box-d{
+  margin-bottom: 10px;
+  border-bottom: 5px Solid #a22525ae;
+}
+@media only screen and (max-width: 798px) {
+#myInput {
+  background-image: url('../../images/icons8-search-48.png');
+  background-position: 2px 7px;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 15px;
+  
+}
+}
+@media only screen and (min-width: 800px) {
+#myInput {
+  background-image: url('../../images/icons8-search-48.png');
+  background-position: 2px 7px;
+  background-repeat: no-repeat;
+  background-size: 8%;
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 15px;
+}
+}
+/* .profile-tenant{
+}*/
+.profile-tenant img{
+  width: 13%;
+  height: auto;
+  border-radius: 50%;
+  background: grey;
+  margin-left: 10px;
+  
+} 
+.chart-area1{
+  width: 100%;
+  height: 333px;
+  /* height: 409px; */
+}
+.center-text1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10;
+  
+} 
+.flint1{
+  display: flex;
+  flex-direction: column;
+}
+#example5, #example6, #example7{
+  display: none
+}
+#row-report{
+  border-top: 1px solid black;
+}
+#col-report{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+#col-report ::after{
+  content: "";
+  border-width: 100%;
+  border-bottom: 1px solid black;
+}
+/* #col-report select{
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #cc3232;
+} */
+
+#GenerateReport{
+  color: #cc3232;
+  background-color: white;
+  margin-right: .6rem;
+  border-radius: 15px;
+  width: 172px;
+  text-align: center;
+}
+#GenerateReport:hover{
+  color: white;
+  background-color: #cc3232;
+
+}
+#col-report select{
+  width: 120px;
+  height: 40px;
+  color: #cc3232;
+  background-color: white;
+  margin-right: .6rem;
+}
+#col-report1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.focussortby{
+  content: visible;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.sortby{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+}
+.sortby .sortby-text{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 5px;
+}
+.sortby-select{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.sortby-select select{
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+
+/* @media only screen and (max-width: 798px) {
+  .sortby-text1{
+    display: none;
+  }
+} */
+
+/* Styling for the future tenant button */
+.futureTenant{
+  background-color: #cc3232;
+  color: white;
+  border-radius: 10px;
+}
+.futureTenant:hover{
+  color: #cc3232;
+  background-color: white;
+  border-radius: 12px;
+}
+/* Ending of the styling for the future tenant button */
+/* Comment for the form for the future tenant modal */
+
+.futureTenantForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.futureTenantForm > label{
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: -15px;
+}
+.futureTenantForm > input{
+  width: 70%;
+  height: auto;
+  border: 1px solid #2e2222;
+  border-radius: 5px;
+  margin-top: 2px;
+
+}
+#futureTenantFormSubmit{
+  width: 50%;
+  left: 15px;
+}
+#table-p-tag{
+  display: block;
+  text-align: center;
+}
+#table-p-tage{
+  display: block;
+}
+/* The transaction table should be displayed as none by default */
+#example4{
+  display: none;
+}
+.p-tag{
+  background-color: white;
+  color: #cc3232;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+.p-tag:hover{
+  background-color: #cc3232;
+  color: white;
+  border-radius: 15px;
+  
+}
+#modal-bodyShow{
+  color: black;
+}
+.restores{
+  display: none;
+}
+.reportrestores{
+  display: none;
+}
+.reportMonthly{
+  display: none;
+}
+.report-Month{
+  display: none;
+}
+/* Subscribe Button Styling */
+.reportSubscribeButton{
+  display: none;
+}
+.subscibeSelect2{
+  display: none;
+}
+.subscibeSelect2 form{
+  display: none;
+}
+.ChooseSubscribe1{
+  display: none;
+}
+#subscibeSelect1{
+  display: none;
+}
+.report{
+  display: none;
+}
+.Ort{
+  display: none;
+}
+/* Display the select options for the subscribe button as none */
+.subscribeselect{
+  display: none;
+}
+#generate{
+  display: none;
+  width: fit-content !important;
+}
+.modal-title{
+  color: black;
+}
+#occupant-li-button{
+  display: none;
+}
+#occupant-li-img{
+  display: none;
+}
+@media only screen and (max-width: 798px) {
+  #searchInput {
+    background-image: url('../../images/icons8-search-48.png');
+    background-position: 2px 7px;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    
+  }
+  }
+  @media only screen and (min-width: 800px) {
+  #searchInput {
+    background-image: url('../../images/icons8-search-48.png');
+    background-position: 2px 7px;
+    background-repeat: no-repeat;
+    background-size: 8%;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    border-radius: 15px;
+  }
+  }
+  #Finance-body{
+    background-color: rgba(0,0,0,0.015);
+  }
+  #finance-col-report1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #finance-header{
+    background-color: rgba(0,0,0,0.04);
+  }
+  #finance-card-header{
+    font-weight: bold;
+  }
+  .offcanvas.offcanvas-end{
+    width: fit-content !important;
+  }
+  #pay-select{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+  }
+  #payment-form, #card-payment-form{
+    display: none;
+  }
+
+  table{
+    position: relative;
+  }
+table::after{
+    content: "Asher";
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 40%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.01); /* Adjust transparency as needed */
+    text-align: center;
+    padding-top: 60px; /*Adjust positioning as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    color: rgba(165, 163, 163,0.3); /* Adjust font color as needed */
+    transform: rotate(-45deg); /* Rotate the text */
+    transform-origin: center bottom; /* Set the rotation origin */
+    pointer-events: none;
+    z-index: -5;
+  }
+.offcanvas-text-header{
+  width: 650px;
+  padding-left: 10px;
+  padding-bottom: 50px;
+}
+#allTaskTable tbody tr:nth-child(odd){
+  background-color:rgba(220, 53, 69,0.3);
+}
+#allTaskTable tr td:nth-child(odd){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+#allTaskTable tr td:nth-child(even){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+#allTaskTable th{
+  padding-left : 20px;
+  padding-right : 20px;
+}
+
+
+#unclearedTaskTable tbody tr:nth-child(odd){
+  background-color: rgba(220, 53, 69,0.3);
+}
+#unclearedTaskTable tr td:nth-child(odd){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+#unclearedTaskTable tr td:nth-child(even){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+
+#unclearedTaskTable th{
+  padding-left : 20px;
+  padding-right : 20px;
+}
+
+#ExpensesTaskTable tbody tr:nth-child(odd){
+  background-color: rgba(220, 53, 69,0.5);
+}
+#ExpensesTaskTable tr td:nth-child(odd){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+#ExpensesTaskTable tr td:nth-child(even){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+
+#ExpensesTaskTable th{
+  padding-left : 20px;
+  padding-right : 20px;
+}
+.btnnsubscribe{
+  background-color: #050505;
+  color: white;
+}
+.btnnsubscribe:hover{
+  background-color: #cc3232;
+  color: white;
+}
+.reportTableFlavour tbody tr:nth-child(odd){
+  background-color: rgba(220, 53, 69,0.3);
+}
+.reportTableFlavour tr td:nth-child(odd){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+.reportTableFlavour tr td:nth-child(even){
+  padding-left : 20px;
+  padding-right : 20px;
+}
+.reportTableFlavour th{
+  padding-left : 20px;
+  padding-right : 20px;
+}
+
+
+/*=========== Add Proprerty  =============*/
+
+/* color for the card-header */
+.card-header-property{
+  background-color: rgba(184, 182, 182, 0.3);
+}
+.card-body-property{
+  background-color: rgba(184, 182, 182, 0.1);
+}
+.singleLayerFormClass{
+  display: none;
+}
+.multiLayerFormClass{
+  display: none;
+}
+/* .restoreProperty{
+  display: none;
+} */
+#restorePropertyid{
+  display: none;
+}
+.singleLayerCardclass:hover{
+background: rgb(207, 207, 207);
+}
+.multiLayerCardclass:hover{
+  background: rgb(207, 207, 207);
+}
+.singleLayerNextButtonClass{
+  display: none;
+}
+.multiLayerNextButtonClass{
+  display: none;
+}
+
+.nextSinglelayerFormClass{
+  display: none;
+}
+.nextRestoreClass{
+  display: none;
+}
+#containerID{
+  /* min-height: 25rem; */
+  background:  rgba(80, 79, 79, 0.1);
+}
+.addpropertycardclass{
+  background:  rgba(80, 79, 79, 0.05);
+}
+.addpropertycardclass1{
+  display: none;
+}
+.secondNextSingleClass{
+  display: none;
+}
+.secondNextMultiClass{
+  display: none;
+}
+/* ==============End Add Property========== */
+
+
+/*================= Chat UI code ======================== */
+.contact-area{
+  border-right: 1px solid rgba(128, 128, 128, 0.5);
+}
+.chat-navi:hover{
+  border-left: 2px solid white;
+}
+.chat-navi.active{
+  border-left: 2px solid white !important;
+  background-color: #B80238 !important;
+  border-radius: 0px !important;
+}
+
+/* .input-search{ 
+  height: 50px;
+  font-size: 14px;
+  background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-shadow: none;
+  -webkit-appearance: none; 
+ } */
+
+.message{
+  font-size: 12px;
+}
+#clipBorder, #broadcastclipBorder{
+  border-right: none;
+}
+.list-group-item:hover{
+  background: rgb(253, 206, 211) !important;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+.use.active{
+  background: rgb(253, 206, 211) !important;
+}
+.inboxClass.active {
+  /* border: none; */
+  border-radius: 0px !important;
+  border-bottom: 2px solid red !important;
+  background: white !important;
+  color: black !important;
+}
+.cardCommunity{
+  background-image: url(../../images/fashion-little-boy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border:none;
+  border-radius: 25px;
+}
+.card-over{
+  background-image: linear-gradient(6deg, black 40%, transparent);
+  position: relative;
+  border-radius: 0 0 25px 25px;
+  height: 50px;
+  color: white;
+  top: 69%;
+}
+.pinnedCommunity{
+  list-style: none;
+}
+.broadcastNextMenuClass{
+  display: none;
+}
+
+.sender-chatbox{
+  word-break: break-word;
+  border: 1px solid grey;
+  border-radius: 25px 35px 35px 0px;
+  margin-left: 56%;
+  margin-right: 0.5rem;
+  display: flex;
+}
+
+.receiver-chatbox{
+  word-break: break-word;
+  border: 1px solid #dc3545;
+  border-radius: 35px 25px 0px 35px;
+  display: flex;
+}
+
+.sender-chatbox-mini{
+  word-break: break-word;
+  border: 1px solid grey;
+  border-radius: 25px 35px 35px 0px;
+  margin-left: 81.5%;
+  margin-right: 0.5rem;
+  display: flex;
+}
+.senderReceiverNoMSg{
+  width: 1px;
+}
+
+.sender-chatbox-midi{
+  word-break: break-word;
+  border: 1px solid grey;
+  border-radius: 25px 35px 35px 0px;
+  margin-left: 73%;
+  margin-right: 0.5rem;
+  display: flex;
+}
+/* ===================End Chat UI Code========================== */
+
+.star-checked{
+  color: #B80238;
+}
+.radio-selected {
+  background-color: lightblue;
+  color: white;
+  font-weight: bold;
+}
+.addUnitClass{
+  display: none;
+}
+#stopRecording, #broadcaststopRecording{
+  display: none;
+}
+.img-first{
+  height: 64px;
+  position: absolute;
+  top: 25px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+  right: calc(100% - 64px + 19px);
+  left: calc(100% - 64px + 19px);
+  transform: rotate(25deg);
+}
+.ji{
+  height: 92px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(175, 40, 150);
+}
+.hi{
+  height: 92px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(6, 73, 70);
+}
+.li{
+  height: 92px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(231, 159, 3);
+}
+.ki{
+  height: 92px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  background-color: #050505;
+}
+.cardElementclass{
+  display: none;
+}
+.cardElementWebclass{
+  display: none;
+}
+.cardElementMobileclass{
+  display: none;
+}
+
+
+
+
+
+
+/* ================================================NEW SET'S OF DESIGN FOLLOWING THE NEW LOOK================================= */
+.side-panel.active{
+  background-color: white !important;
+  color: #B80238 !important;
+}
+.side-panel.active:hover{
+  background-color: white !important;
+  color: #B80238 !important;
+}
+.container-card{
+  position: relative;
+  width: 100%;
+  font-family: 'Exo 2', sans-serif;
+}
+.horiPanel{
+  color: #B80238;
+  background-color: white !important;
+}
+.horiPanel.active{
+  background-color: #E5787E !important;
+  color: black;
+}
+.overlay-card{
+  /* position: relative;
+  font-family: 'Exo 2', sans-serif;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in;
+  overflow: hidden; */
+  /* opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto; */
+  /* transition: .5s ease;
+  backface-visibility: hidden; */
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: 'Exo 2', sans-serif;
+}
+.card-property-overlay{
+  /* position: absolute;
+  font-family: 'Exo 2', sans-serif;
+  bottom: 0;
+  left: 0.5%;
+  overflow: hidden;
+  height: 75%;
+  transition: all 0.5s ease-in;*/
+  /* width: 100%; 
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 25%; 
+  left: 47%;
+  transform: translate(-50%, -50%); 
+   -ms-transform: translate(-50%, -50%);
+   text-align: center; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(80, 17, 17, 0.5),#3d0d0d);
+  opacity: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .7s ease;
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.container-card:hover .overlay-card{
+  opacity: 0.3;
+}
+
+.container-card:hover .card-property-overlay{
+  height: 100%;
+}
+.card-property-overlay-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  /* align-items: center; */
+  width: 100%;
+}
+.overlay-footer{
+  display: flex;
+  justify-content: center;
+}
+.propertyAddClass{
+  gap: 1rem;
+}
+
+#infobtn{
+  background: #B80238;
+  color: white;
+}
+/* Street View Class style */
+.streetViewbtn{
+  background: #B80238;
+  color: white;
+}
+.streetViewbtn:hover{
+  color: #B80238;
+  background: white;
+}
+#streetViewbtn{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+/* CheckBox as a switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #B80238;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+/* #familyBackground{
+background: url(../../images/propertyImg/4background.png), rgba(184, 2, 56, 0.25);
+border-bottom: 1px solid rgba(54, 54, 54, 0.2);
+border-radius: 15px 15px 0px 0px;
+
+} */
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+#back-to-topcard{
+  /* background: url(../../images/propertyImg/4background.png), rgba(184, 2, 56, 0.25); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-img{
+  position: relative;
+  border-radius: 25px;
+}
+.btn-photos{
+  background: #B80238;
+  color: white; 
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+}
+.btn-photos:hover{
+  background: white;
+  color: #B80238
+}
+.listed.active{
+  background-color: white!important;
+  color: #B80238!important;
+}
+.transactionTable{
+  width: 100%;
+  position: relative;
+  left : 10px;
+}
+.propertyDetails{
+  padding: 15rem 0 3rem;
+}
+.toothpick{
+  position: relative;
+  display: inline-block;
+}
+.toothpick .tooltiptext{
+  position: absolute; 
+  top: 15px; 
+  left: 105%;
+  visibility: hidden;
+  width: 100px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 0;
+  z-index: 1;
+  background-color: #E5787E;
+}
+
+.toothpick .tooltiptext::after{
+  /* content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px; */
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #E5787E transparent transparent;
+}
+.toothpick:hover .tooltiptext{
+  visibility: visible;
+}
+
+/* Code for UI For Downdown */
+  /* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+	.dropdown-menu li{
+		position: relative;
+	}
+	.dropdown-menu .submenu{ 
+		display: none;
+		position: absolute;
+		right:100%; top:-7px;
+	}
+	.dropdown-menu .submenu-left{ 
+		right:100%; left:auto;
+	}
+
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{
+		display: block;
+	}
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+
+.dropdown-menu .dropdown-menu{
+		margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+}
+
+}	
+/* ============ small devices .end// ============ */
+
+/* End for UI For Downdown */
+
+/* Dashbord */
+
+#calendar .fc-day-header,
+#calendar .fc-day,
+#calendar a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+#calendar .fc-direction-ltr {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#calendar .fc-scroller{
+  overflow: hidden !important;
+}
+
+
+/*======================================================= Report Page ==============================================*/
+/* The border for the View Button */
+.viewButton{
+  border: 1px solid black;
+  padding: 4px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* Lease Styling */
+
+/* The new button */
+.leasenew{
+  width: 60px;
+  background-color: rgba(184, 2, 56, 0.1);
+  color: rgb(184, 2, 56);
+  border-radius: 10px;
+  text-align: center;
+}
+@media (max-width: 991px) {
+.leasenew{
+  font-size: 10px;
+  width: 40px;
+}
+}
+.leaseFootborder{
+  border-top: 1px solid #B80238;
+}
+.leaseAppTableData{
+  cursor: pointer;
+}
+.LAshortname{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #B80238;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leaseFootborder{
+text-align: center;
+}
+.leaseFootborder a {
+  color : #B80238;
+}
+
+/* Lease Existing Application */
+.LAExistingImg img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+}
+
+/* Shortlet Code */
+.bi-plus-square{
+  font-size: 40px;
+}
+/* ========= Occupant or Tenant Page UI */
+.tenantBack{
+  background-color: #B80238;
+  color: white;
+}
+.tenantProfileShareclass{
+  border-radius: 20px;
+}
+td, .trhover:hover{
+  background: rgba(184, 2, 56,0.3);
+}
+.boxShadowStyle{
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #030303 inset, -2px -2px 5px #030303 inset;
+  background: rgba(184, 2, 56, 0.5);
+}
+.ulCol5{
+  border-bottom: 1px solid #B80238;
+}
+.listStyleNone{
+  list-style: none;
+}
+.FileSVG SVG{ 
+  color: white;
+}
+
+
+/* ===============================================File UI=============================================================== */
+.btn-red-inverse{
+  color: #B80238;
+  background-color: white;
+  border: 1px solid #B80238;
+}
+.checked{
+  cursor: pointer;
+}
+#trFile:hover{
+  background-color: rgba(184, 2, 56,0.2);
+}
+/* ==========================================Rental UI===================================================== */
+.rentalVacant{
+  background-color: rgba(255, 165, 0, 0.1);
+  color: rgba(255, 165, 0, 0.7);
+  text-align: center;
+  border-radius: 5px;
+}
+.btn-danger-inverse{
+  background-color: white;
+  color: #B80238;
+  border: 1px solid #B80238;
+  border-radius: 10px;
+}
+.btn-danger-two{
+  border-radius: 10px;
+}
+
+
+/* ===================================Finance UI code================================================================= */
+.finance-border-left-green{
+  border-left: 4px solid green;
+}
+.finance-border-left-orange{
+  border-left: 4px solid orange;
+}
+.finance-border-left-red{
+  border-left: 4px solid #B80238;
+}
+.backgroundFinanceColor{
+  background-color:  rgba(184, 2, 56, 0.2);
+}
+.financeBorderRad{
+  border-radius: 50%;
+}
+.text-success-1{
+  color: green;
+}
+.bg-success-1{
+  background-color: rgba(0, 128, 0, 0.3);
+  border-radius: 10px;
+}
+.btn-red{
+  background-color: #B80238;
+  color: white;
+}

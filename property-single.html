@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink -to-fit=no">
+    <meta name="description" content="ASHER">
+    <title>Asher</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/custom-scroll.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <script src="./js/connection.js"></script>
+
+    <!-- bootstrap 5 CDN link -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+    <!-- Map Quest JS Library -->
+    <!-- <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/> -->
+
+    <!-- Script Tag -->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+
+  </head>
+
+<body onload="PropertInfo()">
+
+  <!-- Custom titlebar -->
+  <!-- <header id="titlebar">
+    <div id="drag-region">
+      <div id="window-controls">
+        <div class="button" id="min-button">
+        <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+        </div>
+
+        <div class="button" id="max-button">
+        <img class="icon" srcset="icons/max-w-10.png 1x, icons/max-w-12.png 1.25x, icons/max-w-15.png 1.5x, icons/max-w-15.png 1.75x, icons/max-w-20.png 2x, icons/max-w-20.png 2.25x, icons/max-w-24.png 2.5x, icons/max-w-30.png 3x, icons/max-w-30.png 3.5x" draggable="false" />
+        </div>
+
+        <div class="button" id="restore-button">
+        <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+        </div>
+
+        <div class="button" id="close-button">
+        <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+        </div>
+      </div>
+    </div>
+  </header> -->
+  <!-- Custom titlebar End -->
+
+  <main id="main" style="margin-top: -150px; padding-top: -100px; background: #fff;">
+
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single" style="display: none">
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-md-1 col-lg-1 col-1 justify-content-center align-items-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="dashboard.html"><i class="bi bi-house-fill fa-3x" id="housel"></i></a><!--Home-->
+                </li>
+            </ol>
+          </div>
+          <div class="col-md-7 col-lg-7 col-8">
+            <div class="title-single-box">
+              <h1 class="title-single" id="property-name"></h1>
+              <span class="color-text-a" id="property-location"></span>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 col-2">
+            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+              <ol class="breadcrumb">
+                <!-- <li class="breadcrumb-item" id="breaddcrumb-location">
+                  <a href="location/location.html" >Location</a>
+                </li> -->
+                <li class="breadcrumb-item">
+                  <a href="properties.html"><i class="bi bi-arrow-left" id="housely"></i></a>
+                </li>
+                <!-- <li class="breadcrumb-item active" aria-current="page" id="property-name-breadcumb">
+                </li> -->
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Intro Single-->
+
+    <!-- ======= Property Single ======= -->
+    <section class="property-single nav-arrow-b" style="display: none;">
+      <div class="container">
+
+          <div class="card mb-12" style="width: 100%" >
+            <div class="card-body">
+            <div class="row justify-content-between" style="margin-bottom: 20px">
+              <div class="col-lg-6 col-md-12 col-sm-12 mx-3 my-1">
+                <div id="property-single-carousel" class="swiper">
+                  <div class="swiper-wrapper" id="swiper-wrapper-container">
+                  </div>
+                </div>
+                <div class="property-single-carousel-pagination carousel-pagination"></div>
+              </div>
+              <div class="col-lg-5 col-md-12 col-sm-12 mx-3 mb-5 pb-2 align-self-center">
+                <!-- <div class="accordion" id="accordionExample">
+                  <div class="accordion-items">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="True" aria-controls="collapseOne">
+                        Property Summary
+                      </button>
+                    </h2> -->
+                    <!-- <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body"> -->
+                      <div class="property-summary">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="title-box-d">
+                              <h3 class="title-d">Property History</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="summary-list">
+                          <ul class="list">
+                            <li class="d-flex justify-content-between">
+                              <strong>Year Built:</strong>
+                              <span id="property-year-built"></span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <strong>Total Expenses:</strong>
+                              <span id="property-total-expenses"></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="property-summary">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="title-box-d">
+                              <h3 class="title-d">Market Value</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="summary-list">
+                          <ul class="list">
+                            <li class="d-flex justify-content-between">
+                              <strong>Current Amount Generating:</strong>
+                              <span id="property-current-amount"></span>
+                            </li>
+                            <!-- <li class="d-flex justify-content-between">
+                              <strong>Current Month Income Generation:</strong>
+                              <span id="property-current-month-income">&#8358; 200,000</span>
+                            </li> -->
+                            <li class="d-flex justify-content-between">
+                              <strong>Total Amount Generated (All Time):</strong>
+                              <span id="property-total-amount-generated"></span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- </div>
+                  </div> -->
+                <!-- </div>
+              </div> -->
+            </div>
+          </div>
+          </div>
+
+        <!--Occupant--> 
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-lg-7 col-sm-12 mb-3">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-items">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Occupant History
+              </button>
+                    </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">    
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="property-summary">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="title-box-d">
+                                <h3 class="title-d">Occupant History</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="summary-list">
+                            <ul class="list" onload="OccupantListing()" id="occupant-info-list">
+                              <li class="d-flex justify-content-between">
+                                <strong>Date Current Occupant Moved In:</strong>
+                                <span id="date-current-occupant-movedin">24th of January, 2023</span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Date the current occupant applied for the property:</strong>
+                                <span id="date-current-occupant-applied">24th of November, 2022</span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Date the Current occupant got accepted:</strong>
+                                <span id="date-current-occupant-accepted">19th of December, 2022</span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Date the last occupant moved out:</strong>
+                                <span id="date-last-occupant-left">24th of October, 2022</span>
+                              </li>
+        
+                         
+                              <!-- <li class="d-flex justify-content-between mt-3" style="list-style: none;" id="occupant-li-img"> -->
+                                <!-- <div class="profile-tenant"> -->
+                                  <!-- set the width of container and add image as the background -->
+                                  <!-- <img src="./images/fashion-little-boy.jpg" alt="Profile-image-for-tenant" >
+                                  <img src="./images/fashion-little-boy.jpg" alt="Profile-image-for-tenant" >
+                                </div> -->
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <div class="row justify-content-start">
+                                  <button class="futureTenant mt-3 ms-2" data-bs-toggle="modal" data-bs-target="#tenantModal">Future Tenants <i class="bi bi-clipboard2-plus-fill ps-2"></i></button>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="row" id="occupant-list">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+            </div>
+                </div>
+            </div>
+                  </div>
+          <div class="col-lg-5 col-sm-12">
+            <!-- <div class="accordion" id="accordionExample">
+              <div class="accordion-items">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Property Performance
+                      </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">     -->
+
+                  <div class="title-box-d">
+                    <h3 class="title-d">Property Performance</h3>
+                  </div>
+                      <!-- Card Body -->
+                      <div class="card">
+                            <canvas id="myChart"></canvas>
+                    </div>
+                    <!-- </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+      
+        </div>
+        <!--INVENTORY-->
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-lg-12 col-sm-12">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    Inventory
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="property-summary">
+                      <div class="row">
+                        <div class="col-sm-12" style="display: flex; justify-content: center;">
+                          <div class="title-box-d">
+                            <h3 class="title-d">Inventory</h3>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="title-box-d">
+                            <h5 class="title">Task Ongoing</h5>
+                          </div>
+                          <div class="summary-list">
+                            <ul class="list" id="task-list">
+                              <li class="d-flex justify-content-between">
+                              </li>
+                        
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="title-box-d">
+                            <h5 class="title">Total Tasks</h5>
+                          </div>
+                        <div class="summary-list">
+                          <ul class="list">
+                            <li class="d-flex justify-content-between">
+                              <strong>Total repairs done:</strong>
+                              <span id="total-repairs-done">12</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <strong>Total maintenance:</strong>
+                              <span id="total-maintenance-done">10</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <strong>Total complains and issues resolved:</strong>
+                              <span id="total-complain-resolved">5</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      </div>
+                
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              
+            </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-lg-5 col-xl-5 col-md-12 col-sm-12" style="margin-top: 20px;">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Acquisition
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body" style="height: 371px;">
+                        <div class="col-sm-12" style="display: flex; justify-content: center;">
+                          <div class="title-box-d ">
+                            <h3 class="title-d">Acquisition</h3>
+                          </div>
+                        </div>
+                        <div class="summary-list">
+                          <ul class="list">
+                            <li class="d-flex justify-content-between">
+                              <strong>Total Acquisition requests:</strong>
+                              <span id="Aquisition">24</span>
+                            </li>
+                        
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-xl-7 col-md-12 col-sm-12" style="margin-top: 20px;">
+            <div class="card shadow mb-4">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-asher-accent">Task</h6>
+                  <!-- <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                          aria-labelledby="dropdownMenuLink">
+                          <div class="dropdown-header">Dropdown Header:</div>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                  </div> -->
+              </div>
+              <!-- Card Body -->
+              <div class="card-body flint">
+                  <div class="chart-pie pt-4 pb-2 chart-container">
+                      <canvas id="TaskDoughtChart"></canvas>
+                      <div class="center-text"> Total Task<br> <span id="totaltask"></span></div>
+                    </div>
+                  <div class="ms-2 text-center small" id="disk" style="width: 100%;">
+                    <div class="mr-2 card mb-2" id="taskcard-1">
+                      <div class="row py-2 align-items-center">
+                          <div class="col-md-8 col-8 col-lg-8 col-xl-8">
+                              Assigned  
+                          </div>
+                          <div class="col-md-4 col-4 col-lg-4 col-xl-4">
+                              
+                              <!-- start of modal for assigned task -->
+                              <button type="button" class="btn btn-sm" id="btnnn-1"  data-toggle="modal" data-target="#myModal">
+                                  55
+                                </button>
+                            
+                                <!-- Modal -->
+                              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="myModalLabel">Task</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body text-dark">
+                                          <table id="customers">
+                                              <thead>
+                                              <tr>
+                                                <th>Task Type</th>
+                                                <th>Description of the task</th>
+                                                <th>Assignee Name</th>                                                                          <th>person assigned to the task</th>
+                                                <th>Duration of task</th>
+                                                <th>Cost</th>
+                                              </tr>
+                                              </thead>
+                                              <!-- <tr>
+                                                <td>Clearing</td>
+                                                <td>Clearing the Bushy Area</td>
+                                                <td>Started</td>
+                                                <td>Ayo</td>
+                                                <td>2 days</td>
+                                                <td></td>
+                                              </tr>                                                                                                                                            -->
+                                            </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                              <!--end of modal for assigned task   -->
+                              <!-- <i class="fas fa-circle" style="color: #c92c2c;"></i> -->
+                          </div> 
+                      </div>
+                  </div>
+                  <div class="mr-2 card mb-2" id="taskcard-2">
+                      <div class="row py-2 align-items-center">
+                          <div class="col-md-8 col-8 col-lg-8 col-xl-8">
+                              unassigned
+                          </div>
+                          <div class="col-md-4 col-4 col-lg-4 col-xl-4">
+                              
+                              <!-- start of modal for the unassigned task -->
+                              <button type="button" class="btn btn-sm" id="btnnn-2"  data-toggle="modal" data-target="#unassignedModal">
+                                  30
+                                </button>
+                            
+                                <!-- Modal -->
+                              <div class="modal fade" id="unassignedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="myModalLabel">Task</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body text-dark">
+                                          <table id="unassignedTable">
+                                              <thead>
+                                              <tr>
+                                              <th>Task Type</th>
+                                                <th>Description of the task</th>
+                                                <th>Duration of task</th>
+                                                <th>Cost</th>
+                                              </tr>
+                                              </thead>
+                                            </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                              <!-- end of modal for the unassigned task -->
+                              <!-- <i class="fas fa-circle" style="color: #f07b7b;"></i>  -->
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mr-2 card mb-2" id="taskcard-3">
+                      <div class="row py-2 align-items-center">
+                          <div class="col-md-8 col-8 col-lg-8 col-xl-8">
+                              Pending 
+                          </div>
+                          <div class="col-md-4 col-4 col-lg-4 col-xl-4">
+                              
+                              <!-- start of the modal for the pending task-->
+                              <button type="button" class="btn btn-sm" id="btnnn-3"  data-toggle="modal" data-target="#myPendingModal">
+                                  15
+                                </button>
+                            
+                                <!-- Modal -->
+                              <div class="modal fade" id="myPendingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="myModalLabel">Task</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body text-dark">
+                                          <table id="pendingtable">
+                                              <thead>
+                                              <tr>
+                                                  <th>Task Type</th>
+                                                  <th>Description of the task</th>
+                                                  <th>Assignee Name</th>                                                                         
+                                                  <th>Days left for task</th>
+                                                  <th>Cost</th>
+                                              </tr>
+                                              </thead>
+                                                                                                                                                                                 
+                                            </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                              <!-- end of modal for the pending task -->
+                              <!-- <i class="fas fa-circle" style="color: #db7b2b;"></i> -->
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mr-2 card mb-1" id="taskcard-4">
+                      <div class="row py-2 align-items-center">
+                          <div class="col-md-8 col-8 col-lg-8 col-xl-8">
+                              Completed 
+                          </div>
+                          <div class="col-md-4 col-4 col-lg-4 col-xl-4">
+                              
+                              <!-- start -->                                                          
+                                    <!-- Button to trigger the modal -->
+                                    <button type="button" class="btn btn-sm" id="btnnn-4"  data-toggle="modal" data-target="#myCompleteModal">
+                                      25
+                                    </button>
+                                
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myCompleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title text-dark" id="myModalLabel">Task</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body text-dark">
+                                              <table id="completeTable">
+                                                  <thead>
+                                                      <tr>
+                                                          <th>Task Type</th>
+                                                          <th>Description of the task</th>                                                                      
+                                                          <th>Assignee Name</th>
+                                                          <th>Day Task Completed</th>
+                                                          <th>Cost</th>
+                                                      </tr>
+                                                  </thead>
+                                                
+                                                                                                                                                                                           
+                                                </table>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+                                  
+                              <!-- end -->
+                              
+
+                              <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                  25
+                              </button> -->
+                              
+                              <!-- Modal -->
+                              <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Task</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                      ...
+                                      </div>
+                                      <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                      </div>
+                                  </div>
+                                  </div>
+                              </div> -->
+                                
+                              
+                              <!-- <i class="fas fa-circle" style="color: #2dc937;"></i> -->
+                          </div>
+                      </div> 
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      
+          </div>
+         <div class="row">
+          <div class="col-sm-12 my-2">
+            <div class="row justify-content-between">
+
+              <!-- Quick Summary -->
+              <div class="col-md-5 col-lg-5">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-items">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Occupant History
+                      </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">    
+                        <div class="property-price d-flex justify-content-center foo">
+                          <div class="card-header-c d-flex">
+                            <!-- <div class="card-box-ico">
+                              <span class="bi bi-cash"></span>
+                            </div> -->
+                            <div class="card-title-c align-self-center">
+                              <h5 class="title-c" id="property-fee"></h5>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="property-summary">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="title-box-d section-t4">
+                                <h3 class="title-d">Quick Summary</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="summary-list">
+                            <ul class="list">
+                              <li class="d-flex justify-content-between">
+                                <strong>Location:</strong>
+                                <span id="property-location-2"></span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Property Type:</strong>
+                                <span id="property-type"></span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Status:</strong>
+                                <span id="property-status"></span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Area:</strong>
+                                <span><span id="property-propertysize"></span>
+                                  m<sup>2</sup>
+                                </span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Beds:</strong>
+                                <span id="property-beds"></span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Baths:</strong>
+                                <span id="property-baths"></span>
+                              </li>
+                              <li class="d-flex justify-content-between">
+                                <strong>Garage:</strong>
+                                <span id="property-garage"></span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+              <!-- Properties Summary -->
+              <div class="col-md-7 col-lg-7 section-md-t3">
+                
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Property Description
+                      </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+
+
+
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div class="title-box-d">
+                                <h3 class="title-d">Property Description</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="property-description">
+                            <p class="description color-text-a no-margin" id="property-desc">
+                            </p>
+                          </div>
+                          <div class="row section-t3">
+                            <div class="col-sm-12">
+                              <div class="title-box-d">
+                                <h3 class="title-d">Amenities</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="amenities-list color-text-a">
+                            <ul class="list-a no-margin" id="property-amenities">
+                              
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+              </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Video Section -->
+          <!-- offset-md-1 -->
+          <div class="col-md-12 my-2">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-items">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      Showcase
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul class="nav nav-pills-a nav-pills mb-3 section-t3" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-video-tab" data-bs-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="true">Video</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-plans-tab" data-bs-toggle="pill" href="#pills-plans" role="tab" aria-controls="pills-plans" aria-selected="false">Floor Plans</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-map-tab" data-bs-toggle="pill" href="#pills-map" role="tab" aria-controls="pills-map" aria-selected="false">Ubication</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab">
+                        <iframe src="https://player.vimeo.com/video/73221098" width="100%" height="460" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                      </div>
+                      <div class="tab-pane fade" id="pills-plans" role="tabpanel" aria-labelledby="pills-plans-tab">
+                        <img src="assets/img/plan2.jpg" alt="" class="img-fluids">
+                      </div>
+                      <div class="tab-pane fade" id="pills-map" role="tabpanel" aria-labelledby="pills-map-tab">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834" width="100%" height="460" frameborder="0" style="border:0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Agent Profile -->
+          <div class="col-md-12 my-2">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-items">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    Agent Profile
+                  </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body"> 
+                  <div class="row section-t3">
+                      <div class="col-sm-12">
+                        <div class="title-box-d">
+                          <h3 class="title-d">Contact Agent</h3>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6 col-lg-4">
+                        <img src="assets/img/agent-4.jpg" alt="" class="img-fluids">
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <div class="property-agent">
+                          <h4 class="title-agent" id="agent-name"></h4>
+                          <p class="color-text-a" id="agent-desc"></p>
+                          <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between">
+                              <strong>Phone:</strong>
+                              <span class="color-text-a" id="agent-phone"></span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <strong>Mobile:</strong>
+                              <span class="color-text-a" id="agent-mobile"></span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <strong>Email:</strong>
+                              <span class="color-text-a" id="agent-email"></span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <strong>Skype:</strong>
+                              <span class="color-text-a" id="agent-skype"></span>
+                            </li>
+                          </ul>
+                          <div class="socials-a">
+                            <ul class="list-inline">
+                              <li class="list-inline-item">
+                                <a href="#">
+                                  <i class="bi bi-facebook" aria-hidden="true"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a href="#">
+                                  <i class="bi bi-twitter" aria-hidden="true"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a href="#">
+                                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                                </a>
+                              </li>
+                              <li class="list-inline-item">
+                                <a href="#">
+                                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-lg-4">
+                      </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- </div> -->
+          </div>
+      </div>
+        <!-- </div>
+      </div> -->
+    </section><!-- End Property Single-->
+    
+    <!-- NEW UI Code -->
+    <section class="propertyDetails">
+    
+    <!-- style="width: 92.5vw" -->
+      <div class="nav border">
+        <div class="d-flex align-items-start">
+          <div class="nav flex-column nav-pills me-3 gap-3 shadow" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="height: 200vh">
+            <!-- class="nav-link side-panel" id="v-pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dashboard" type="button" role="tab" aria-controls="v-pills-dashboard" aria-selected="false" title="dashboard"> -->
+            <a href="dashboard.html" class="nav-link side-panel toothpick">
+              <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.3607 21.9698H6.17631C5.0256 21.9698 4.08411 21.0283 4.08411 19.8776V5.23221C4.08411 4.0815 5.0256 3.14001 6.17631 3.14001H10.3607C11.5114 3.14001 12.4529 4.0815 12.4529 5.23221V19.8776C12.4529 21.0283 11.5114 21.9698 10.3607 21.9698ZM16.6373 21.9698H20.8217C21.9724 21.9698 22.9139 21.0283 22.9139 19.8776V14.6471C22.9139 13.4964 21.9724 12.5549 20.8217 12.5549H16.6373C15.4866 12.5549 14.5451 13.4964 14.5451 14.6471V19.8776C14.5451 21.0283 15.4866 21.9698 16.6373 21.9698ZM22.9139 8.37051V5.23221C22.9139 4.0815 21.9724 3.14001 20.8217 3.14001H16.6373C15.4866 3.14001 14.5451 4.0815 14.5451 5.23221V8.37051C14.5451 9.52122 15.4866 10.4627 16.6373 10.4627H20.8217C21.9724 10.4627 22.9139 9.52122 22.9139 8.37051Z" fill="#363636"/>
+                </svg>  
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" fill="currentColor" class="bi bi-grid-1x2" viewBox="0 0 16 16">
+                  <path d="M6 1H1v14h5V1zm9 0h-5v5h5V1zm0 9v5h-5v-5h5zM0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm1 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1h-5z"/>
+                </svg> -->
+                <span class="tooltiptext">dashboard</span>
+            </a>
+            <button class="nav-link side-panel active toothpick" id="v-pills-property-tab" data-bs-toggle="pill" data-bs-target="#v-pills-property" type="button" role="tab" aria-controls="v-pills-property" aria-selected="true">
+              <!-- <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="ph:house-fill">
+                <path id="Vector" d="M22.9139 11.7248V20.7965C22.9132 21.0797 22.8364 21.3575 22.6914 21.6007C22.5465 21.844 22.3388 22.0439 22.0901 22.1793C21.862 22.305 21.6052 22.3693 21.3448 22.3656H16.6373C16.4292 22.3656 16.2297 22.283 16.0825 22.1358C15.9354 21.9887 15.8527 21.7891 15.8527 21.5811V16.8736C15.8527 16.6655 15.7701 16.466 15.6229 16.3188C15.4758 16.1717 15.2763 16.089 15.0682 16.089H11.9299C11.7218 16.089 11.5222 16.1717 11.3751 16.3188C11.228 16.466 11.1453 16.6655 11.1453 16.8736V21.5811C11.1453 21.7891 11.0626 21.9887 10.9155 22.1358C10.7684 22.283 10.5688 22.3656 10.3607 22.3656H5.65327C5.43068 22.3665 5.21048 22.3196 5.00749 22.2283C4.80449 22.1369 4.62341 22.0032 4.47641 21.836C4.22132 21.5347 4.08221 21.1521 4.08413 20.7573V11.7248C4.0842 11.5071 4.12957 11.2918 4.21737 11.0926C4.30517 10.8933 4.43346 10.7146 4.5941 10.5676L12.4398 3.43777C12.7291 3.17313 13.107 3.02637 13.499 3.02637C13.8911 3.02637 14.2689 3.17313 14.5582 3.43777L22.4039 10.5676C22.5646 10.7146 22.6929 10.8933 22.7807 11.0926C22.8685 11.2918 22.9138 11.5071 22.9139 11.7248Z" fill="#B80238"/>
+                </g>
+                </svg>-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                </svg>
+                <span class="tooltiptext">Property</span>
+            </button>
+            <a href="Ren.html" class="nav-link side-panel toothpick">
+              <!-- <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="uil:archive">
+                <path id="Vector" d="M11.4066 15.447H15.591C15.8685 15.447 16.1346 15.3368 16.3307 15.1406C16.5269 14.9445 16.6371 14.6784 16.6371 14.4009C16.6371 14.1235 16.5269 13.8574 16.3307 13.6612C16.1346 13.465 15.8685 13.3548 15.591 13.3548H11.4066C11.1292 13.3548 10.8631 13.465 10.6669 13.6612C10.4708 13.8574 10.3605 14.1235 10.3605 14.4009C10.3605 14.6784 10.4708 14.9445 10.6669 15.1406C10.8631 15.3368 11.1292 15.447 11.4066 15.447ZM20.8215 3.93994H6.17614C5.34381 3.93994 4.54557 4.27058 3.95703 4.85913C3.36848 5.44767 3.03784 6.24591 3.03784 7.07824V10.2165C3.03784 10.494 3.14806 10.7601 3.34424 10.9562C3.54042 11.1524 3.8065 11.2626 4.08394 11.2626H5.13004V19.6314C5.13004 20.4638 5.46068 21.262 6.04923 21.8505C6.63777 22.4391 7.43601 22.7697 8.26834 22.7697H18.7293C19.5617 22.7697 20.3599 22.4391 20.9484 21.8505C21.537 21.262 21.8676 20.4638 21.8676 19.6314V11.2626H22.9137C23.1912 11.2626 23.4573 11.1524 23.6534 10.9562C23.8496 10.7601 23.9598 10.494 23.9598 10.2165V7.07824C23.9598 6.24591 23.6292 5.44767 23.0406 4.85913C22.4521 4.27058 21.6539 3.93994 20.8215 3.93994ZM19.7754 19.6314C19.7754 19.9089 19.6652 20.175 19.469 20.3711C19.2729 20.5673 19.0068 20.6775 18.7293 20.6775H8.26834C7.9909 20.6775 7.72482 20.5673 7.52863 20.3711C7.33245 20.175 7.22224 19.9089 7.22224 19.6314V11.2626H19.7754V19.6314ZM21.8676 9.17044H5.13004V7.07824C5.13004 6.8008 5.24025 6.53472 5.43644 6.33854C5.63262 6.14235 5.8987 6.03214 6.17614 6.03214H20.8215C21.099 6.03214 21.3651 6.14235 21.5612 6.33854C21.7574 6.53472 21.8676 6.8008 21.8676 7.07824V9.17044Z" fill="#363636"/>
+                </g>
+                </svg> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+                  <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <span class="tooltiptext">Rentals</span>
+              </a>
+            <a href="lease.html" class="nav-link side-panel toothpick">
+              <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.87 20.5987V21.1218C21.87 21.6768 21.6495 22.209 21.2571 22.6014C20.8647 22.9938 20.3325 23.2143 19.7775 23.2143H7.2225C6.66754 23.2143 6.1353 22.9938 5.74288 22.6014C5.35046 22.209 5.13 21.6768 5.13 21.1218V4.38181C5.13 3.82684 5.35046 3.29461 5.74288 2.90219C6.1353 2.50977 6.66754 2.28931 7.2225 2.28931H16.1156L19.7775 5.95118M9.315 19.0293H10.3613" stroke="#363636" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.2169 10.2512C20.421 10.0472 20.6632 9.88534 20.9298 9.77492C21.1964 9.6645 21.4821 9.60767 21.7706 9.60767C22.0592 9.60767 22.3449 9.6645 22.6115 9.77492C22.878 9.88534 23.1203 10.0472 23.3243 10.2512C23.5283 10.4553 23.6902 10.6975 23.8006 10.9641C23.911 11.2306 23.9679 11.5164 23.9679 11.8049C23.9679 12.0934 23.911 12.3792 23.8006 12.6457C23.6902 12.9123 23.5283 13.1546 23.3243 13.3586L18.679 17.983L14.5463 19.0293L15.5821 14.8966L20.2169 10.2512Z" stroke="#363636" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+                <span class="tooltiptext">Lease</span>
+            </a>
+            <a href="finance.html" class="nav-link side-panel toothpick" title="Finance">
+              <!-- <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.2224 17.8579L4.08411 20.9335V12.1044H7.2224M12.4529 15.9331L10.8105 14.5313L9.3146 15.9122V7.91999H12.4529M17.6834 14.1966L14.5451 17.3349V3.7356H17.6834M20.6229 13.9978L18.7295 12.1044H23.96V17.3349L22.0875 15.4624L14.5451 22.942L10.9151 19.7828L6.96088 23.6115H4.08411L10.8524 16.9792L14.5451 20.0966" fill="#363636"/>
+                </svg>  -->
+                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.2224 17.8579L4.08411 20.9335V12.1044H7.2224M12.4529 15.9331L10.8105 14.5313L9.3146 15.9122V7.91999H12.4529M17.6834 14.1966L14.5451 17.3349V3.7356H17.6834M20.6229 13.9978L18.7295 12.1044H23.96V17.3349L22.0875 15.4624L14.5451 22.942L10.9151 19.7828L6.96088 23.6115H4.08411L10.8524 16.9792L14.5451 20.0966" fill="#363636"/>
+                  </svg>
+                <span class="tooltiptext">Finance</span>
+            </a>
+            <!-- id="v-pills-communication-tab" data-bs-toggle="pill" data-bs-target="#v-pills-communication" type="button" role="tab" aria-controls="v-pills-communication" aria-selected="false" -->
+            <a href="chat.html" class="nav-link side-panel toothpick" >
+              <!-- <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1212_7152)">
+                  <path d="M22.5239 1.31695L2.12204 13.0824C0.434964 14.0583 0.596806 16.5546 2.40159 17.2952L8.0072 19.6149V23.7541C8.0072 26.0297 10.9105 26.9664 12.2543 25.1567L14.4024 22.2583L19.8903 24.5241C20.1797 24.6418 20.4837 24.7006 20.7878 24.7006C21.1899 24.7006 21.5872 24.5977 21.9452 24.3966C22.573 24.0435 23.0045 23.4157 23.1173 22.7046L26.0305 3.71516C26.3297 1.74853 24.2208 0.341 22.5239 1.31695ZM10.3613 23.7541V20.5859L12.1562 21.3265L10.3613 23.7541ZM20.7878 22.3466L13.245 19.2324L20.1208 9.31096C20.6456 8.55079 19.6549 7.66802 18.9585 8.27125L8.58591 17.3099L3.29907 15.1226L23.7009 3.35224L20.7878 22.3466Z" fill="#363636"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1212_7152">
+                    <rect width="25.11" height="25.11" fill="white" transform="translate(0.945007 0.998169)"/>
+                  </clipPath>
+                </defs>
+              </svg> -->
+              
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" fill="currentColor" class="bi bi-send fw-bold" viewBox="0 0 16 16">
+                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+              </svg>
+              <span class="tooltiptext">Chat</span>
+            </a>
+            
+            <a href="report.html" class="nav-link side-panel toothpick">
+              <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1212_7184)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5602 10.2167V23.5544H6.43783V3.15548H13.499V7.47064C13.499 8.98644 14.7292 10.2167 16.245 10.2167H20.5602ZM20.3703 7.86293L15.8527 3.34535V7.47064C15.8527 7.68718 16.0285 7.86293 16.245 7.86293H20.3703ZM4.08411 2.37091C4.08411 1.95474 4.24943 1.55562 4.5437 1.26135C4.83797 0.967078 5.23709 0.801758 5.65326 0.801758L15.9877 0.801758C16.4038 0.801847 16.8029 0.967226 17.0971 1.26152L22.4541 6.61859C22.7484 6.9128 22.9138 7.31185 22.9139 7.72798V24.339C22.9139 24.7552 22.7486 25.1543 22.4543 25.4485C22.16 25.7428 21.7609 25.9081 21.3447 25.9081H5.65326C5.23709 25.9081 4.83797 25.7428 4.5437 25.4485C4.24943 25.1543 4.08411 24.7552 4.08411 24.339V2.37091ZM9.96842 13.3549C9.65629 13.3549 9.35695 13.4789 9.13625 13.6996C8.91554 13.9203 8.79155 14.2197 8.79155 14.5318C8.79155 14.8439 8.91554 15.1433 9.13625 15.364C9.35695 15.5847 9.65629 15.7087 9.96842 15.7087H17.0296C17.3417 15.7087 17.641 15.5847 17.8618 15.364C18.0825 15.1433 18.2064 14.8439 18.2064 14.5318C18.2064 14.2197 18.0825 13.9203 17.8618 13.6996C17.641 13.4789 17.3417 13.3549 17.0296 13.3549H9.96842ZM8.79155 18.4547C8.79155 18.1426 8.91554 17.8432 9.13625 17.6225C9.35695 17.4018 9.65629 17.2778 9.96842 17.2778H13.8913C14.2034 17.2778 14.5027 17.4018 14.7235 17.6225C14.9442 17.8432 15.0681 18.1426 15.0681 18.4547C15.0681 18.7668 14.9442 19.0661 14.7235 19.2868C14.5027 19.5076 14.2034 19.6315 13.8913 19.6315H9.96842C9.65629 19.6315 9.35695 19.5076 9.13625 19.2868C8.91554 19.0661 8.79155 18.7668 8.79155 18.4547Z" fill="#363636"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1212_7184">
+                    <rect width="25.1064" height="25.1064" fill="white" transform="translate(0.946777 0.803223)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="tooltiptext">Report</span>
+            </a>
+            
+            <a href="settings.html" class="nav-link side-panel toothpick">
+              <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.5001 8.56993C14.6099 8.56993 15.6742 9.01079 16.4589 9.79551C17.2436 10.5802 17.6845 11.6446 17.6845 12.7543C17.6845 13.8641 17.2436 14.9284 16.4589 15.7131C15.6742 16.4979 14.6099 16.9387 13.5001 16.9387C12.3903 16.9387 11.326 16.4979 10.5413 15.7131C9.75655 14.9284 9.3157 13.8641 9.3157 12.7543C9.3157 11.6446 9.75655 10.5802 10.5413 9.79551C11.326 9.01079 12.3903 8.56993 13.5001 8.56993ZM13.5001 10.6621C12.9452 10.6621 12.4131 10.8826 12.0207 11.2749C11.6283 11.6673 11.4079 12.1994 11.4079 12.7543C11.4079 13.3092 11.6283 13.8414 12.0207 14.2337C12.4131 14.6261 12.9452 14.8465 13.5001 14.8465C14.055 14.8465 14.5871 14.6261 14.9795 14.2337C15.3719 13.8414 15.5923 13.3092 15.5923 12.7543C15.5923 12.1994 15.3719 11.6673 14.9795 11.2749C14.5871 10.8826 14.055 10.6621 13.5001 10.6621ZM11.4079 23.2153C11.1464 23.2153 10.9267 23.027 10.8848 22.776L10.4978 20.0038C9.83875 19.7423 9.27386 19.3866 8.72988 18.9682L6.1251 20.0247C5.89495 20.1084 5.61251 20.0247 5.48698 19.7946L3.39478 16.1751C3.33075 16.0673 3.30818 15.9399 3.33128 15.8166C3.35439 15.6934 3.42158 15.5828 3.52031 15.5056L5.72758 13.769L5.65435 12.7543L5.72758 11.7082L3.52031 10.0031C3.42158 9.92582 3.35439 9.81523 3.33128 9.69201C3.30818 9.56879 3.33075 9.44137 3.39478 9.33358L5.48698 5.71408C5.61251 5.48394 5.89495 5.38979 6.1251 5.48394L8.72988 6.53004C9.27386 6.12206 9.83875 5.76638 10.4978 5.50486L10.8848 2.7327C10.9267 2.48163 11.1464 2.29333 11.4079 2.29333H15.5923C15.8538 2.29333 16.0735 2.48163 16.1153 2.7327L16.5024 5.50486C17.1614 5.76638 17.7263 6.12206 18.2703 6.53004L20.8751 5.48394C21.1052 5.38979 21.3877 5.48394 21.5132 5.71408L23.6054 9.33358C23.7414 9.56372 23.6786 9.84617 23.4799 10.0031L21.2726 11.7082L21.3458 12.7543L21.2726 13.8004L23.4799 15.5056C23.6786 15.6625 23.7414 15.9449 23.6054 16.1751L21.5132 19.7946C21.3877 20.0247 21.1052 20.1189 20.8751 20.0247L18.2703 18.9786C17.7263 19.3866 17.1614 19.7423 16.5024 20.0038L16.1153 22.776C16.0735 23.027 15.8538 23.2153 15.5923 23.2153H11.4079ZM12.7155 4.38553L12.3285 7.11585C11.0731 7.37738 9.96428 8.04688 9.15878 8.97791L6.63769 7.88997L5.85311 9.2499L8.06038 10.8713C7.64194 12.0918 7.64194 13.4169 8.06038 14.6373L5.84265 16.2692L6.62722 17.6292L9.16925 16.5412C9.97474 17.4618 11.0731 18.1313 12.318 18.3823L12.7051 21.1231H14.2951L14.6822 18.3928C15.927 18.1313 17.0255 17.4618 17.8309 16.5412L20.373 17.6292L21.1575 16.2692L18.9398 14.6478C19.3583 13.4238 19.3583 12.0953 18.9398 10.8713L21.1471 9.2499L20.3625 7.88997L17.8414 8.97791C17.0194 8.0263 15.9044 7.37494 14.6717 7.12631L14.2847 4.38553H12.7155Z" fill="#363636"/>
+              </svg>
+              <span class="tooltiptext">Settings</span>
+            </a>
+            <a href="support.html" class="nav-link side-panel toothpick">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.5 11.6011C20.5 9.47934 19.6571 7.44451 18.1569 5.94422C16.6566 4.44393 14.6217 3.60107 12.5 3.60107C10.3783 3.60107 8.34344 4.44393 6.84315 5.94422C5.34285 7.44451 4.5 9.47934 4.5 11.6011" stroke="#363636" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.5 18.6011V19.1011C20.5 19.6315 20.2893 20.1402 19.9142 20.5153C19.5391 20.8904 19.0304 21.1011 18.5 21.1011H15M2.5 16.0391V14.1631C2.50007 13.7171 2.6492 13.2839 2.9237 12.9324C3.19821 12.5809 3.58232 12.3312 4.015 12.2231L5.755 11.7871C5.84342 11.7651 5.93569 11.7635 6.02481 11.7824C6.11393 11.8014 6.19757 11.8404 6.26937 11.8965C6.34118 11.9526 6.39926 12.0243 6.43922 12.1062C6.47918 12.188 6.49997 12.278 6.5 12.3691V17.8321C6.50016 17.9234 6.47947 18.0135 6.43952 18.0956C6.39957 18.1777 6.34141 18.2496 6.26946 18.3059C6.19752 18.3621 6.11369 18.4012 6.02436 18.4201C5.93503 18.439 5.84257 18.4373 5.754 18.4151L4.014 17.9801C3.58151 17.8717 3.19762 17.622 2.92331 17.2705C2.649 16.919 2.50001 16.4859 2.5 16.0401V16.0391ZM22.5 16.0391V14.1631C22.4999 13.7171 22.3508 13.2839 22.0763 12.9324C21.8018 12.5809 21.4177 12.3312 20.985 12.2231L19.245 11.7871C19.1566 11.7651 19.0643 11.7635 18.9752 11.7824C18.8861 11.8014 18.8024 11.8404 18.7306 11.8965C18.6588 11.9526 18.6007 12.0243 18.5608 12.1062C18.5208 12.188 18.5 12.278 18.5 12.3691V17.8321C18.4999 17.9233 18.5206 18.0133 18.5604 18.0953C18.6003 18.1773 18.6584 18.2492 18.7302 18.3054C18.8021 18.3616 18.8857 18.4007 18.9749 18.4197C19.0641 18.4387 19.1565 18.4371 19.245 18.4151L20.985 17.9801C21.4177 17.8719 21.8018 17.6222 22.0763 17.2707C22.3508 16.9192 22.4999 16.4861 22.5 16.0401V16.0391Z" stroke="#363636" stroke-width="1.5"/>
+                <path d="M14 22.6011H11C10.6022 22.6011 10.2206 22.443 9.93934 22.1617C9.65804 21.8804 9.5 21.4989 9.5 21.1011C9.5 20.7032 9.65804 20.3217 9.93934 20.0404C10.2206 19.7591 10.6022 19.6011 11 19.6011H14C14.3978 19.6011 14.7794 19.7591 15.0607 20.0404C15.342 20.3217 15.5 20.7032 15.5 21.1011C15.5 21.4989 15.342 21.8804 15.0607 22.1617C14.7794 22.443 14.3978 22.6011 14 22.6011Z" stroke="#363636" stroke-width="2"/>
+              </svg>
+              <span class="tooltiptext">Support</span>
+            </a>
+            
+
+          </div>
+
+          <div class="tab-content" id="v-pills-tabContent" style="max-width: 93.6%; width: 93.5%;">
+            <div class="tab-pane fade" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab" tabindex="0">dashboard</div>
+            <!-- the property details page -->
+            <div class="tab-pane fade show active" id="v-pills-property" role="tabpanel" aria-labelledby="v-pills-property-tab" tabindex="0">
+            
+              <div id="momement-next" style="width: 92.5vw">
+                
+                <div class="row">
+                  <div class="row justify-content-start" style="margin-top: -60px">
+                    <col-3 class="col-md-3 col-lg-3">
+                      <a href="properties.html" class="btn link-danger"><i class="bi bi-arrow-left fs-2"></i></a>
+                    </col-3>
+                  </div>
+
+                  <div class="row"><!--gap-md-2-->
+                    <div class="col-12 col-md-12 col-lg-8">
+                      <div class="img-container-lg" style="position: relative">
+                        <img src="./images/propertyImg/bg-property.jpg" alt="Main-img" class="main-img img-fluid">
+                        <button class="btn btn-lg streetViewbtn" id="streetViewbtn" data-bs-toggle="modal" data-bs-target="#streetViewModal"> <i class="bi bi-geo fs-4"></i>Street View</button>
+                        <!-- Modal to Show the content of  -->
+                                                  
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="streetViewModal" tabindex="-1" aria-labelledby="streetViewModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="streetViewModalLabel">Street View</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  Street View
+                                  <div id="map" style="width: 100%; height: 600px;">
+                                    <!-- <button class="btn btn-lg btn-success" onclick="">Create MAP</button> -->
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        <!-- End of the modal Content for the streetView -->
+                      </div>
+                    </div>
+                    <!-- class="col-12 col-md-12 col-lg-4 gap-2 d-flex flex-column-lg justify-content-between" -->
+                    <div class="col-4 col-md-12 col-lg-4 d-flex flex-column justify-content-between" style="position : relative;">
+                      <img src="./images/propertyImg/1background.png" alt="" class="second-img img-fluid">
+                      <img src="./images/propertyImg/4background.png" alt="" class="first-img img-fluid">
+                      <button class="btn btn-sm btn-photos" id="photoButton" data-bs-toggle="modal" data-bs-target="#photosModal"><i class="bi bi-image"></i> 15 Photos</button>
+                      
+                      <div class="modal fade unk" id="photosModal" tabindex="-1" aria-labelledby="photosModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="photosModalLabel">Image Gallery </h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Image Gallery
+                              <div class="img-gallery">
+                              
+                               
+                                
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-8 col-md-8 col-lg-8">
+                      <div class=""><strong style="font-size: 26px;"id="propertyLocation">123 Synacore Avenue Cleveland OH</strong></div>
+                      <div class="">
+                        <div class="card-bottom d-flex justify-content-around">
+                          <div class="bed d-flex flex-column align-items-center">
+                            <strong class="rent" id="rent" style="color: #B80238;">$5,236</strong>
+                            <p class="">/mon</p>
+                          </div>
+                          <div class="bed d-flex flex-column align-items-center">
+                            <strong class="bed" id="bed" style="color: #B80238;">5</strong>
+                            <p class="">Bed</p>
+                          </div>
+                          <div class="bathroom d-flex flex-column align-items-center">
+                            <strong id="bath" style="color: #B80238;">4</strong>
+                            <p>Bath</p>
+                          </div>
+                          <div class="property-size d-flex flex-column align-items-center">
+                            <strong id="size" style="color: #B80238;">215</strong>
+                            <p class="">Sq ft.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 d-flex flex-column justify-content-end align-items-end">
+                      <div class="slider-box">
+                        <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                      <div class="slider-name">
+                        <small>Smart Home</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-around">
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="card">
+                        <div class="card-header" style="border-radius: 0 0 15px 15px; border-bottom: 2px solid #B80238">
+                          <h4>Market Value</h4>
+                        </div>
+                        <div class="card-body">
+                          <div class="">
+                            <canvas id="finaChart"></canvas>
+                          </div>
+                          <div class="d-flex justify-content-end flex-column">
+                            <div> <span><i class="bi bi-circle-fill" style="color:#B80238"></i></span> <span>Current Value</span></div>
+                            <div><span><i class="bi bi-circle-fill" style="color: rgba(184, 2, 56, 0.10)"></i></span> <span>Purchase Value</span></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-end"><a href="#" class="icon-link icon-link-hover">View More <i class="bi bi-arrow-right"></i></a></div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                      <div class="card">
+                        <div class="card-header" style="border-radius: 0 0 15px 15px; border-bottom: 2px solid #B80238">
+                          <h4>Income Tracking</h4>
+                        </div>
+                        <div class="card-body">
+                          <div class="">
+                            <canvas id="GantChart"></canvas>
+                          </div>
+                          <div class="d-flex justify-content-end flex-column">
+                            <div> <span><i class="bi bi-circle-fill" style="color:#B80238"></i></span> <span>Total Income</span></div>
+                            <div><span><i class="bi bi-circle-fill" style="color: rgba(184, 2, 56, 0.10)"></i></span> <span>Total Expenses</span></div>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-end"> <a href="#" class="icon-link icon-link-hover">View More <i class="bi bi-arrow-right"></i></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Bottom Navigation -->
+                  <div class="row">
+                    <div class="card">
+                      <div class="card-header" style="background-color: white;">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist" style="display: flex;
+                        justify-content: space-around;background-color: rgba(184, 2, 56, 0.10);
+                        border-bottom: 2px solid #B80328;border-radius: 0 0 10px 10px;">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link listed active" id="pills-overview-tab" data-bs-toggle="pill" data-bs-target="#pills-overview" type="button" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link listed" id="pills-performance-tab" data-bs-toggle="pill" data-bs-target="#pills-performance" type="button" role="tab" aria-controls="pills-performance" aria-selected="false">Performance</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link listed" id="pills-occupancy-tab" data-bs-toggle="pill" data-bs-target="#pills-occupancy" type="button" role="tab" aria-controls="pills-occupancy" aria-selected="false">Occupancy</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link listed" id="pills-task-tab" data-bs-toggle="pill" data-bs-target="#pills-task" type="button" role="tab" aria-controls="pills-task" aria-selected="false">Task</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link listed" id="pills-transaction-tab" data-bs-toggle="pill" data-bs-target="#pills-transaction" type="button" role="tab" aria-controls="pills-transaction" aria-selected="false">Transaction</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link listed" id="pills-vendor-tab" data-bs-toggle="pill" data-bs-target="#pills-vendor" type="button" role="tab" aria-controls="pills-vendor" aria-selected="false">Vendor</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link listed" id="pills-showcase-tab" data-bs-toggle="pill" data-bs-target="#pills-showcase" type="button" role="tab" aria-controls="pills-showcase" aria-selected="false">Showcase</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-body p-4">
+                          <div class="tab-content" id="pills-tabContent">
+                          <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab" tabindex="0">
+                            <div class="overview-content">
+                              <div class="row">
+                                <h6 style="color: #363636;font-family: Exo 2;font-size: 26px;
+                              font-style: normal;font-weight: 500;line-height: normal;">Description</h6>
+
+                                <p style="color: #363636;font-family: Exo 2;
+                                font-style: normal;font-weight: 300;line-height: normal; font-size: 17px;" id="ps-description">
+                                <!-- Introducing a stunning 5 bedroom bungalow located in the prestigious Cleveland area of Ohio. This beautiful property boasts a modern design with spacious rooms and top-notch finishing.
+                                As soon as you enter the property you’ll be greeted by the tastefully decorated living room that exudes warmth and comfort. The kitchen is fully fitted with modern appliances and ample storage space, perfect for whipping up delicious meals   
+                                Going deeper into this amazing property, you’ll find 5 cozy bedrooms, the 3 master bedrooms each with its own en-suite bathrooms and the last 2 sharing on humongous bathroom. Offering a sense of privacy and comfort for you and your family. The master bedroom is especially luxurious, featuring a large wardrobe perfect for housing all your amazing outfits and many more.
+                                
+                                On the outside you’ll find a well manicured garden, perfect for hosting gatherings or enjoying a quiet evening with loved ones. The property also comes with ample parking space and 24/7 security, ensuring your safety and peace of mind.
+                                
+                                Located in the heart of Cleveland, this property offers easy access to all the basic amenities the area has to offer, including top-rated restaurants and fine dining, shopping malls, recreational and monumental parks, hiking trails and entertainment venues.
+                                
+                                Don't miss out on th opportunity to own this stunning 5 bedroom single foamily house in the heart of Cleveland, OH. Contact us today to schedule a showing.
+                                 -->
+                                </p>
+                              </div>
+                              <div class="">
+                                <div class="row mb-3">
+                                  <div class="col-4 col-md-4 col-lg-4">
+                                    <span style="color: white;                                    
+                                    background: #B80328;
+                                    padding : 5px;
+                                    border-radius: 10px;          
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    text-transform: uppercase;">smart home technologies</span>
+                                  </div>
+                                  <div class="col-3 col-md-3 col-lg-3">
+                                    <span style="font-family: Exo 2;                                            
+                                    font-style: normal;font-weight: 500;
+                                    line-height: normal;text-transform: uppercase;
+                                    color: white;background: #B80328;
+                                    padding : 5px;border-radius: 10px;">Gourmet kitchen</span>
+                                  </div>
+                                  <div class="col-3 col-lg-3 col-md-3">
+                                    <span style="font-family: Exo 2;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    text-transform: uppercase;
+                                    color: white;                                    
+                                    background: #B80328;
+                                    padding : 5px;
+                                    border-radius: 10px;">wood-style floors</span>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <div class="col-3 col-md-3 col-lg-3">
+                                    <span style="font-style: normal;
+                                    font-weight: 500;line-height: normal;text-transform: uppercase;
+                                    color: white;                                    
+                                    background: #B80328;
+                                    padding : 5px;
+                                    border-radius: 10px;">contemporary finish</span>
+                                  </div>
+                                  <div class="col-3 col-md-3 col-lg-3">
+                                    <span style="font-family: Exo 2;                                          
+                                    font-style: normal;font-weight: 500;
+                                    line-height: normal;text-transform: uppercase;
+                                    color: white;background: #B80328;
+                                    padding : 5px;
+                                    border-radius: 10px;">granite countertops
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <h6 style="color: #363636;font-family: Exo 2;font-size: 26px;
+                                font-style: normal; font-weight: 500;line-height: normal;">Amenities</h6>
+                                
+                                <!--<div class="PropertyOverviewSummary" style="width: 403px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: inline-flex">
+                                  <div class="HouseType" style="justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
+                                    <div class="BxBuildingHouse" style="width: 30px; height: 30px; position: relative">
+                                      <div class="Vector" style="width: 23.75px; height: 25px; left: 2.50px; top: 2.50px; position: absolute; background: #B80238"></div>
+                                      <div class="Vector" style="width: 12.50px; height: 13.75px; left: 8.75px; top: 7.50px; position: absolute; background: #B80238"></div>
+                                    </div> 
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M23.7497 2.49707H11.2497C9.87097 2.49707 8.74972 3.61831 8.74972 4.99705V11.9795L2.86598 17.8632C2.69122 18.038 2.57221 18.2607 2.524 18.5031C2.47579 18.7456 2.50055 18.9969 2.59514 19.2252C2.68972 19.4536 2.8499 19.6488 3.05541 19.7862C3.26092 19.9235 3.50254 19.9969 3.74973 19.9969V26.2469C3.74973 26.5784 3.88143 26.8963 4.11585 27.1307C4.35027 27.3652 4.66821 27.4969 4.99973 27.4969H24.9997C25.3312 27.4969 25.6491 27.3652 25.8836 27.1307C26.118 26.8963 26.2497 26.5784 26.2497 26.2469V4.99705C26.2497 3.61831 25.1284 2.49707 23.7497 2.49707ZM13.7497 24.9969H6.24973V18.0144L9.99972 14.2645L13.7497 18.0144V24.9969ZM23.7497 24.9969H16.2497V19.9969C16.4972 19.9975 16.7392 19.9245 16.9451 19.7872C17.151 19.65 17.3115 19.4546 17.4062 19.226C17.5009 18.9974 17.5255 18.7458 17.4769 18.5032C17.4284 18.2605 17.3088 18.0378 17.1335 17.8632L11.2497 11.9795V4.99705H23.7497V24.9969Z" fill="#B80238"/>
+                                      <path d="M13.7519 7.49707H16.2519V9.99705H13.7519V7.49707ZM18.7519 7.49707H21.2519V9.99705H18.7519V7.49707ZM18.7519 12.5358H21.2519V14.997H18.7519V12.5358ZM18.7519 17.497H21.2519V19.997H18.7519V17.497ZM8.75195 18.747H11.2519V21.247H8.75195V18.747Z" fill="#B80238"/>
+                                    </svg>
+                                    <div class="SingleFamilyResidence" style="color: #363636; font-family: Exo 2; font-weight: 300; word-wrap: break-word">Single family residence</div>
+                                  </div>
+                                  <div class="YearBuilt" style="justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
+                                     <div class="MaterialSymbolsCalendarMonthOutlineRounded" style="width: 30px; height: 30px; position: relative">
+                                      <div class="Vector" style="width: 22.50px; height: 25px; left: 3.75px; top: 2.50px; position: absolute; background: #B80238"></div>
+                                    </div>
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M14.9999 17.4986C14.6457 17.4986 14.3491 17.3786 14.1099 17.1386C13.8699 16.8995 13.7499 16.6028 13.7499 16.2487C13.7499 15.8945 13.8699 15.5974 14.1099 15.3574C14.3491 15.1182 14.6457 14.9987 14.9999 14.9987C15.3541 14.9987 15.6512 15.1182 15.8912 15.3574C16.1303 15.5974 16.2499 15.8945 16.2499 16.2487C16.2499 16.6028 16.1303 16.8995 15.8912 17.1386C15.6512 17.3786 15.3541 17.4986 14.9999 17.4986ZM9.99995 17.4986C9.64579 17.4986 9.34871 17.3786 9.10871 17.1386C8.86954 16.8995 8.74996 16.6028 8.74996 16.2487C8.74996 15.8945 8.86954 15.5974 9.10871 15.3574C9.34871 15.1182 9.64579 14.9987 9.99995 14.9987C10.3541 14.9987 10.6512 15.1182 10.8912 15.3574C11.1304 15.5974 11.2499 15.8945 11.2499 16.2487C11.2499 16.6028 11.1304 16.8995 10.8912 17.1386C10.6512 17.3786 10.3541 17.4986 9.99995 17.4986ZM19.9999 17.4986C19.6457 17.4986 19.349 17.3786 19.1099 17.1386C18.8699 16.8995 18.7499 16.6028 18.7499 16.2487C18.7499 15.8945 18.8699 15.5974 19.1099 15.3574C19.349 15.1182 19.6457 14.9987 19.9999 14.9987C20.354 14.9987 20.6507 15.1182 20.8899 15.3574C21.1299 15.5974 21.2499 15.8945 21.2499 16.2487C21.2499 16.6028 21.1299 16.8995 20.8899 17.1386C20.6507 17.3786 20.354 17.4986 19.9999 17.4986ZM14.9999 22.4986C14.6457 22.4986 14.3491 22.3786 14.1099 22.1386C13.8699 21.8994 13.7499 21.6028 13.7499 21.2486C13.7499 20.8945 13.8699 20.5978 14.1099 20.3586C14.3491 20.1186 14.6457 19.9986 14.9999 19.9986C15.3541 19.9986 15.6512 20.1186 15.8912 20.3586C16.1303 20.5978 16.2499 20.8945 16.2499 21.2486C16.2499 21.6028 16.1303 21.8994 15.8912 22.1386C15.6512 22.3786 15.3541 22.4986 14.9999 22.4986ZM9.99995 22.4986C9.64579 22.4986 9.34871 22.3786 9.10871 22.1386C8.86954 21.8994 8.74996 21.6028 8.74996 21.2486C8.74996 20.8945 8.86954 20.5978 9.10871 20.3586C9.34871 20.1186 9.64579 19.9986 9.99995 19.9986C10.3541 19.9986 10.6512 20.1186 10.8912 20.3586C11.1304 20.5978 11.2499 20.8945 11.2499 21.2486C11.2499 21.6028 11.1304 21.8994 10.8912 22.1386C10.6512 22.3786 10.3541 22.4986 9.99995 22.4986ZM19.9999 22.4986C19.6457 22.4986 19.349 22.3786 19.1099 22.1386C18.8699 21.8994 18.7499 21.6028 18.7499 21.2486C18.7499 20.8945 18.8699 20.5978 19.1099 20.3586C19.349 20.1186 19.6457 19.9986 19.9999 19.9986C20.354 19.9986 20.6507 20.1186 20.8899 20.3586C21.1299 20.5978 21.2499 20.8945 21.2499 21.2486C21.2499 21.6028 21.1299 21.8994 20.8899 22.1386C20.6507 22.3786 20.354 22.4986 19.9999 22.4986ZM6.24998 27.4986C5.56249 27.4986 4.97374 27.254 4.48374 26.7648C3.99458 26.2748 3.75 25.6861 3.75 24.9986V7.49872C3.75 6.81123 3.99458 6.2229 4.48374 5.73374C4.97374 5.24374 5.56249 4.99874 6.24998 4.99874H7.49997V3.74875C7.49997 3.39459 7.61955 3.09751 7.85872 2.85751C8.09872 2.61835 8.3958 2.49876 8.74996 2.49876C9.10412 2.49876 9.40121 2.61835 9.6412 2.85751C9.88037 3.09751 9.99995 3.39459 9.99995 3.74875V4.99874H19.9999V3.74875C19.9999 3.39459 20.1199 3.09751 20.3599 2.85751C20.599 2.61835 20.8957 2.49876 21.2499 2.49876C21.604 2.49876 21.9007 2.61835 22.1399 2.85751C22.3799 3.09751 22.4999 3.39459 22.4999 3.74875V4.99874H23.7498C24.4373 4.99874 25.0261 5.24374 25.5161 5.73374C26.0052 6.2229 26.2498 6.81123 26.2498 7.49872V24.9986C26.2498 25.6861 26.0052 26.2748 25.5161 26.7648C25.0261 27.254 24.4373 27.4986 23.7498 27.4986H6.24998ZM6.24998 24.9986H23.7498V12.4987H6.24998V24.9986ZM6.24998 9.9987H23.7498V7.49872H6.24998V9.9987ZM6.24998 9.9987V7.49872V9.9987Z" fill="#B80238"/>
+                                    </svg>
+                                    <div class="BuiltIn1954" style="width: 199.73px; color: #363636; font-family: Exo 2; font-weight: 300; word-wrap: break-word">Built in <span id="theYear"> 1954</span> </div>
+                                  </div>
+                                  <div class="Heater" style="justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
+                                     <div class="FluentTemperature20Regular" style="width: 30px; height: 30px; position: relative">
+                                      <div class="Vector" style="width: 12px; height: 24px; left: 9px; top: 3px; position: absolute; background: #B80238"></div>
+                                    </div> 
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M15 9.74946C15.1989 9.74946 15.3896 9.82847 15.5303 9.96913C15.6709 10.1098 15.75 10.3005 15.75 10.4995V18.0939C16.4569 18.2764 17.0731 18.7106 17.4829 19.3149C17.8927 19.9192 18.068 20.6523 17.976 21.3766C17.884 22.101 17.531 22.7669 16.9831 23.2496C16.4352 23.7323 15.7301 23.9986 15 23.9986C14.2698 23.9986 13.5647 23.7323 13.0168 23.2496C12.4689 22.7669 12.1159 22.101 12.0239 21.3766C11.9319 20.6523 12.1072 19.9192 12.517 19.3149C12.9268 18.7106 13.543 18.2764 14.25 18.0939V10.4995C14.25 10.3005 14.329 10.1098 14.4696 9.96913C14.6103 9.82847 14.801 9.74946 15 9.74946ZM15 2.99951C13.8065 2.99951 12.6619 3.47361 11.818 4.31752C10.9741 5.16143 10.5 6.30601 10.5 7.49948V17.0304C9.73625 17.8964 9.23861 18.9644 9.0668 20.1062C8.89498 21.248 9.05629 22.4152 9.53137 23.4676C10.0064 24.52 10.7751 25.413 11.7451 26.0394C12.7151 26.6658 13.8453 26.9989 15 26.9989C16.1546 26.9989 17.2848 26.6658 18.2548 26.0394C19.2248 25.413 19.9935 24.52 20.4685 23.4676C20.9436 22.4152 21.1049 21.248 20.9331 20.1062C20.7613 18.9644 20.2637 17.8964 19.4999 17.0304V7.49948C19.4999 6.30601 19.0258 5.16143 18.1819 4.31752C17.338 3.47361 16.1934 2.99951 15 2.99951ZM15 4.4995C15.7956 4.4995 16.5587 4.81557 17.1213 5.37817C17.6839 5.94078 17.9999 6.70383 17.9999 7.49948V17.6319L18.2144 17.8494C18.8345 18.4823 19.2539 19.2843 19.4201 20.1546C19.5863 21.025 19.4918 21.925 19.1485 22.7419C18.8052 23.5588 18.2284 24.2561 17.4904 24.7465C16.7524 25.2369 15.886 25.4985 15 25.4985C14.1139 25.4985 13.2475 25.2369 12.5095 24.7465C11.7715 24.2561 11.1947 23.5588 10.8514 22.7419C10.5081 21.925 10.4137 21.025 10.5798 20.1546C10.746 19.2843 11.1654 18.4823 11.7855 17.8494L12 17.6319V7.49948C12 6.70383 12.316 5.94078 12.8787 5.37817C13.4413 4.81557 14.2043 4.4995 15 4.4995Z" fill="#B80238"/>
+                                    </svg>
+                                    <div class="NaturalGasWallFurnace" style="color: #363636; font-family: Exo 2; font-weight: 300; word-wrap: break-word">Natural gas, wall furnace</div>
+                                  </div>
+                                  <div class="Ac" style="justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
+                                     <div class="FaRegularSnowflake" style="width: 30px; height: 30px; position: relative">
+                                      <div class="Vector" style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute; background: #B80238"></div>
+                                    </div> 
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <g clip-path="url(#clip0_1212_6833)">
+                                        <path d="M29.4705 20.8116L26.8455 19.464L29.129 18.919C29.6915 18.7843 30.0263 18.2687 29.8723 17.7706L29.5977 16.8624C29.4504 16.3644 28.8678 16.0655 28.3053 16.2003L22.9683 17.4718L18.1603 14.9991L22.975 12.5265L28.312 13.798C28.8745 13.9328 29.4504 13.6339 29.6044 13.1359L29.879 12.2277C30.0263 11.7296 29.6982 11.214 29.1357 11.0793L26.8522 10.5343L29.4772 9.1867C29.9794 8.92888 30.1535 8.35467 29.8656 7.9035L29.3366 7.08906C29.0486 6.63789 28.3991 6.48554 27.8969 6.74335L25.2719 8.091L25.8813 6.05781C26.0286 5.55977 25.7005 5.04415 25.138 4.90939L24.1201 4.66915C23.5576 4.53439 22.9817 4.83321 22.8277 5.33126L21.4014 10.0773L16.5867 12.5499V7.59882L20.4907 4.12423C20.8992 3.76096 20.8992 3.1633 20.4907 2.80003L19.7474 2.13792C19.3389 1.77464 18.6693 1.77464 18.2608 2.13792L16.5934 3.62619V0.93676C16.5934 0.421139 16.1246 -0.000732422 15.5421 -0.000732422H14.4907C13.9081 -0.000732422 13.4394 0.421139 13.4394 0.93676V3.63791L11.772 2.14964C11.3635 1.78636 10.6939 1.78636 10.2854 2.14964L9.51532 2.81175C9.10684 3.17502 9.10684 3.77268 9.51532 4.13595L13.4193 7.61053V12.5617L8.60461 10.089L7.17828 5.34298C7.03096 4.84493 6.44838 4.54611 5.88588 4.68087L4.86803 4.9211C4.30554 5.05587 3.97072 5.57149 4.12473 6.06953L4.73411 8.10272L2.10913 6.75507C1.6069 6.49726 0.964046 6.64961 0.669405 7.10077L0.140392 7.91522C-0.147552 8.36639 0.019857 8.93474 0.528782 9.19841L3.15376 10.5461L0.870297 11.0793C0.307801 11.214 -0.0270176 11.7296 0.126999 12.2277L0.40155 13.1359C0.548871 13.6339 1.13146 13.9328 1.69395 13.798L7.03096 12.5265L11.8457 14.9991L7.03096 17.4718L1.69395 16.2003C1.13146 16.0655 0.555567 16.3644 0.40155 16.8624L0.126999 17.7706C-0.0203212 18.2687 0.307801 18.7843 0.870297 18.919L3.15376 19.464L0.528782 20.8116C0.0265534 21.0694 -0.147552 21.6436 0.140392 22.0948L0.669405 22.9092C0.95735 23.3604 1.6069 23.5128 2.10913 23.2549L4.73411 21.9073L4.12473 23.9405C3.97741 24.4385 4.30554 24.9541 4.86803 25.0889L5.88588 25.3291C6.44838 25.4639 7.02427 25.1651 7.17828 24.667L8.60461 19.921L13.4193 17.4483V22.3995L9.51532 25.8741C9.10684 26.2373 9.10684 26.835 9.51532 27.1983L10.2586 27.8604C10.6671 28.2237 11.3367 28.2237 11.7452 27.8604L13.4126 26.3721V29.0615C13.4126 29.5772 13.8814 29.999 14.4639 29.999H15.5153C16.0979 29.999 16.5666 29.5772 16.5666 29.0615V26.3604L18.234 27.8487C18.6425 28.2119 19.3121 28.2119 19.7206 27.8487L20.4639 27.1866C20.8724 26.8233 20.8724 26.2256 20.4639 25.8623L16.5599 22.3878V17.4366L21.3746 19.9093L22.8009 24.6553C22.9482 25.1534 23.5308 25.4522 24.0933 25.3174L25.1112 25.0772C25.6737 24.9424 26.0085 24.4268 25.8545 23.9288L25.2451 21.8956L27.8701 23.2432C28.3723 23.501 29.0152 23.3487 29.3098 22.8975L29.8388 22.0831C30.1469 21.6436 29.9794 21.0694 29.4705 20.8116Z" fill="#B80238"/>
+                                      </g>
+                                      <defs>
+                                        <clipPath id="clip0_1212_6833">
+                                          <rect width="29.9998" height="29.9998" fill="white" transform="translate(0 -0.000732422)"/>
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                    <div class="CentralAirWallUnitS" style="color: #363636; font-family: Exo 2; font-weight: 300; word-wrap: break-word">Central air, wall unit(s)</div>
+                                  </div>
+                                  <div class="Parking" style="justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
+                                     <div class="RiParkingBoxLine" style="width: 30px; height: 30px; position: relative">
+                                      <div class="Vector" style="width: 22.50px; height: 22.50px; left: 3.75px; top: 3.75px; position: absolute; background: #B80238"></div>
+                                    </div> 
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M4.99999 3.75H24.9998C25.3314 3.75 25.6493 3.88169 25.8837 4.11611C26.1181 4.35053 26.2498 4.66847 26.2498 4.99999V24.9998C26.2498 25.3314 26.1181 25.6493 25.8837 25.8837C25.6493 26.1181 25.3314 26.2498 24.9998 26.2498H4.99999C4.66847 26.2498 4.35053 26.1181 4.11611 25.8837C3.88169 25.6493 3.75 25.3314 3.75 24.9998V4.99999C3.75 4.66847 3.88169 4.35053 4.11611 4.11611C4.35053 3.88169 4.66847 3.75 4.99999 3.75ZM6.24998 6.24998V23.7498H23.7498V6.24998H6.24998ZM11.2499 8.74996H15.6249C16.7852 8.74996 17.898 9.21089 18.7185 10.0314C19.5389 10.8518 19.9999 11.9646 19.9999 13.1249C19.9999 14.2852 19.5389 15.398 18.7185 16.2185C17.898 17.039 16.7852 17.4999 15.6249 17.4999H13.7499V21.2499H11.2499V8.74996ZM13.7499 11.2499V14.9999H15.6249C16.1222 14.9999 16.5991 14.8024 16.9507 14.4507C17.3023 14.0991 17.4999 13.6222 17.4999 13.1249C17.4999 12.6276 17.3023 12.1507 16.9507 11.7991C16.5991 11.4475 16.1222 11.2499 15.6249 11.2499H13.7499Z" fill="#B80238"/>
+                                    </svg>
+                                    <div class="AttachedGarageSpaces" style="color: #363636; font-family: Exo 2; font-weight: 300; word-wrap: break-word">2 Attached garage spaces</div>
+                                  </div>
+                                  <div class="PriceSqft" style="justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
+                                     <div class="LaRulerCombined" style="width: 30px; height: 30px; position: relative">
+                                      <div class="Vector" style="width: 22.50px; height: 22.50px; left: 3.75px; top: 3.75px; position: absolute; background: #B80238"></div>
+                                      <div class="FluentEmojiHighContrastHeavyDollarSign" style="width: 11.25px; height: 11.25px; left: 12.75px; top: 5.25px; position: absolute">
+                                        <div class="Vector" style="width: 4.85px; height: 9.88px; left: 3.16px; top: 0.71px; position: absolute; background: #B80238"></div>
+                                      </div>
+                                    </div>
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M3.75 3.75171V26.2515H26.2498V17.8141H12.1874V3.75171H3.75ZM5.62499 5.62669H10.3124V7.50168H7.49997V9.37666H10.3124V11.2516H7.49997V13.1266H10.3124V15.0016H7.49997V16.8766H10.3124V18.3635L5.62499 23.0509V5.62669ZM11.6381 19.6891H13.1249V22.5016H14.9999V19.6891H16.8749V22.5016H18.7499V19.6891H20.6249V22.5016H22.4999V19.6891H24.3748V24.3765H6.9506L11.6381 19.6891Z" fill="#B80238"/>
+                                      <g clip-path="url(#clip0_1212_6865)">
+                                      <path d="M20.7612 12.4808C20.7471 11.5667 20.0897 10.2097 18.3389 10.2097C17.337 10.2097 17.1999 9.59797 17.1893 9.36946C17.1999 9.08469 17.33 8.42376 18.3249 8.42376C19.3585 8.42376 19.478 9.15149 19.4885 9.37649C19.4991 9.72453 19.7979 10.0234 20.1389 9.99172C20.4905 9.98468 20.7682 9.69289 20.7577 9.34133C20.7401 8.57845 20.2339 7.49916 18.9647 7.22143L18.9753 6.59916C18.9788 6.24761 18.6975 5.95933 18.346 5.95581H18.3389C17.9909 5.95581 17.7061 6.23706 17.7026 6.5851L17.6956 7.21791C16.4159 7.48861 15.9237 8.58196 15.9167 9.36594C15.9308 10.2167 16.5882 11.4823 18.3389 11.4823C19.3268 11.4823 19.4675 12.1995 19.4885 12.4667C19.4604 12.639 19.2987 13.2683 18.3389 13.2683C17.3651 13.2683 17.2104 12.6144 17.1858 12.421C17.1542 12.0694 16.8518 11.8163 16.4933 11.8444C16.1417 11.8761 15.8851 12.1854 15.9167 12.5335C15.9694 13.1347 16.4229 14.2034 17.6991 14.4741V15.2018C17.6991 15.5534 17.9839 15.8382 18.3354 15.8382C18.687 15.8382 18.9753 15.5534 18.9753 15.2018V14.4741C19.4393 14.3857 19.8628 14.1509 20.1836 13.8042C20.5044 13.4575 20.7056 13.017 20.7577 12.5476L20.7612 12.5124V12.4808Z" fill="#B80238"/>
+                                      </g>
+                                      <defs>
+                                      <clipPath id="clip0_1212_6865">
+                                      <rect width="11.2499" height="11.2499" fill="white" transform="translate(12.75 5.25073)"/>
+                                      </clipPath>
+                                      </defs>
+                                      </svg>
+                                      
+                                    <div class="94PriceSqft" style="width: 199.73px; color: #363636; font-family: Exo 2; font-weight: 300; word-wrap: break-word">$94 price/sqft</div>
+                                  </div>
+                                </div>
+                                  -->
+                                
+                                  <ul id="ps-amenities">
+                                  
+                                  </ul>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="pills-performance" role="tabpanel" aria-labelledby="pills-performance-tab" tabindex="0">
+                            <div class="card">
+                              <div class="card-header" id="" style="border-radius: 0 0 10px 10px; border-bottom: 2px solid #B80238">
+                                Price History
+                              </div>
+                              <div class="card-body" id="">
+                                <table style="width: 100%">
+                                  <thead style="border-bottom: 2px solid #B80238">
+                                    <tr>
+                                      <th>Date</th>
+                                      <th>Event</th>
+                                      <th>Price</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>22 Dec, 2023</td>
+                                      <td>Listed for Rent</td>
+                                      <td><p class="m-0">$22,000</p>
+                                        <small>2500 sq ft</small>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>22 Dec, 2023</td>
+                                      <td>Listed for Rent</td>
+                                      <td><p class="m-0">$22,000</p>
+                                        <small>2500 sq ft</small>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>22 Dec, 2023</td>
+                                      <td>Listed for Rent</td>
+                                      <td><p class="m-0">$22,000</p>
+                                        <small>2500 sq ft</small>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                            </div>
+                            <div class="row">
+                              <div class="col-4 col-lg-4 col-md-4">
+                                <div class="heading">Market Value</div>
+                                <div class="thebody">
+                                  <ul>
+                                    <li class="d-flex justify-content-between" style="list-style: none">
+                                      <span>Current Income Generated</span> <span class="currentIncomeValue">$2,000,000</span>
+                                    </li>
+                                    <li class="d-flex justify-content-between" style="list-style: none">
+                                      <span>Total Income Generated</span> <span class="totalIncomeValue">$4,000,000</span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="pills-occupancy" role="tabpanel" aria-labelledby="pills-occupancy-tab" tabindex="0">
+                            <div class="card">
+                              <div class="card-header" style="border-bottom: 2px solid #B80238; border-radius: 0 0 10px 10px;">
+                                Future Tenant
+                              </div>
+                              <div class="card-body">
+
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="card-header d-flex justify-content-between" style="border-bottom: 2px solid #B80238; border-radius: 0 0 10px 10px;">
+                                <div class="d-flex align-items-center"> Current Tenant</div>
+                                <div class="d-flex align-items-center">
+                                  <a href="#" class="btn" role="button">
+                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M16.1276 0.122871C15.3965 -0.0422358 15.0068 -0.0396734 14.3453 0.122871L0 14.364C0 15.2288 0.680546 15.7045 1.27466 15.5856C1.86878 15.4667 15.177 2.02598 15.177 2.02598L28.8418 15.5856C29.6569 15.4376 30.0055 15.242 30.03 14.3962L25.2771 9.51945V1.78809C23.5998 1.42391 22.7042 1.38582 21.237 1.78809V5.23746L16.1276 0.122871Z" fill="#B80238"/>
+                                      <path d="M3.17584 16.2993L15.177 4.40486L27.0594 16.2993V25.339C26.834 26.7043 26.3549 27.139 25.0394 27.48H5.19585C4.0406 27.2111 3.61043 26.721 3.17584 25.339V16.2993Z" fill="#B80238"/>
+                                    </svg>
+                                  </a>
+                                  <a href="#">
+                                    <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M15.1663 2.60423C15.7196 2.4019 16.3226 2.34095 16.9108 2.42789C17.4991 2.51483 18.0504 2.7464 18.5061 3.09786L18.7132 3.27093L26.4814 10.3804C26.9032 10.7661 27.2026 11.2494 27.3474 11.7788C27.4923 12.3082 27.4771 12.8637 27.3036 13.3858L27.2098 13.6266L23.3208 22.5254C23.1028 23.0237 22.7431 23.4595 22.279 23.7876C21.8149 24.1157 21.2634 24.3243 20.6816 24.3916L12.3297 25.3472C12.1159 25.3698 11.889 25.3984 11.6555 25.4315L10.9254 25.5399L10.5439 25.6031L9.355 25.8138L8.54102 25.9733L7.31595 26.2246L5.74555 26.5678L3.19345 27.1637L2.13117 27.4256C1.86309 27.4931 1.5808 27.4979 1.31017 27.4395C1.03955 27.3812 0.789249 27.2616 0.582228 27.0918C0.375206 26.922 0.218086 26.7073 0.125274 26.4674C0.0324609 26.2275 0.00692595 25.9702 0.0510094 25.719L0.106919 25.4992L0.592015 23.8257L1.02614 22.2485L1.40106 20.8113L1.67567 19.6901L1.84833 18.9436L2.08019 17.857L2.21174 17.1693L2.31699 16.5251L3.40229 8.57894C3.47051 8.0885 3.66974 7.62101 3.98237 7.21782C4.295 6.81463 4.71138 6.48817 5.19468 6.26731L5.44298 6.16347L15.1663 2.60423ZM16.3864 5.39895L6.66477 8.95819L5.70444 15.9894L5.62551 16.5853C5.46432 17.6925 5.25311 18.7931 4.99242 19.8842L4.71123 21.0671L10.118 16.1188C9.93055 15.4788 9.9791 14.8 10.2561 14.1879C10.5331 13.5757 11.0231 13.0642 11.6501 12.7329C12.2771 12.4016 13.006 12.2689 13.7239 12.3553C14.4417 12.4418 15.1082 12.7426 15.6202 13.2112C16.1321 13.6797 16.4608 14.2898 16.5553 14.9467C16.6498 15.6037 16.5048 16.2708 16.1428 16.8446C15.7807 17.4184 15.2219 17.8669 14.553 18.1204C13.8841 18.3739 13.1425 18.4184 12.4432 18.2468L7.0364 23.1951L7.681 23.0642L8.97021 22.8159C9.77357 22.6654 10.5813 22.5349 11.3924 22.4246L20.2672 21.4072L24.1562 12.5099L16.3864 5.39895ZM20.2721 0.441594C20.5551 0.182252 20.9317 0.0263148 21.3313 0.00303983C21.731 -0.0202352 22.1262 0.0907519 22.4427 0.315177L22.5973 0.441594L29.5728 6.82565C29.8709 7.09586 30.0448 7.4601 30.0591 7.84383C30.0733 8.22756 29.9267 8.60176 29.6494 8.88983C29.372 9.1779 28.9848 9.35806 28.5671 9.39343C28.1493 9.4288 27.7326 9.3167 27.4022 9.08009L27.2477 8.95367L20.2721 2.56961C19.9639 2.28739 19.7907 1.90467 19.7907 1.5056C19.7907 1.10654 19.9639 0.723816 20.2721 0.441594Z" fill="#B80238"/>
+                                    </svg>
+                                  </a>
+                                  <button class="btn ms-1" style ="background: #B80238; color: white;"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9657 2.96027H11.6757C11.0047 2.96027 10.4607 3.50949 10.4607 4.18699V6.64043C10.4607 7.31793 11.0047 7.86716 11.6757 7.86716H18.9657C19.6367 7.86716 20.1807 7.31793 20.1807 6.64043V4.18699C20.1807 3.50949 19.6367 2.96027 18.9657 2.96027Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.4569 5.41394H8.02686C7.38239 5.41394 6.76431 5.67243 6.30859 6.13254C5.85288 6.59265 5.59686 7.21669 5.59686 7.86738V25.0415C5.59686 25.6922 5.85288 26.3162 6.30859 26.7763C6.76431 27.2364 7.38239 27.4949 8.02686 27.4949H22.6069C23.2513 27.4949 23.8694 27.2364 24.3251 26.7763C24.7808 26.3162 25.0369 25.6922 25.0369 25.0415V24.4281M20.1769 5.41394H22.6069C23.033 5.41438 23.4515 5.52796 23.8204 5.74327C24.1894 5.95858 24.4957 6.26806 24.7088 6.64066" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.4607 22.588H11.6757M23.121 12.2958C23.3579 12.0566 23.6392 11.8668 23.9488 11.7374C24.2584 11.6079 24.5902 11.5413 24.9253 11.5413C25.2603 11.5413 25.5921 11.6079 25.9017 11.7374C26.2113 11.8668 26.4926 12.0566 26.7295 12.2958C26.9665 12.5351 27.1544 12.8191 27.2826 13.1316C27.4109 13.4442 27.4769 13.7792 27.4769 14.1175C27.4769 14.4558 27.4109 14.7908 27.2826 15.1034C27.1544 15.416 26.9665 15.7 26.7295 15.9392L21.3349 21.3613L16.5357 22.588L17.7385 17.7425L23.121 12.2958Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>   New Tenants</button>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="occupant-container row" id="occupant-container"></div>
+                                </div>
+                                <div class="Group39" style="width: 394px; height: 334px; position: relative">
+                                  <div class="Frame263" style="width: 221px; height: 46px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; gap: 58px; display: inline-flex">
+                                    <div class="Group35" style="width: 20px; height: 20px; position: relative">
+                                      <div class="Ellipse6" style="width: 20px; height: 20px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #B80238 solid"></div>
+                                      <div class="Ellipse7" style="width: 17px; height: 17px; left: 1.50px; top: 1.50px; position: absolute; background: #B80238; border-radius: 9999px"></div>
+                                    </div>
+                                    <div class="Frame262" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                                      <div class="TenantMovedIn" style="color: #363636; font-family: Exo 2; word-wrap: break-word">Tenant moved in</div>
+                                      <div class="Sept12023" style="color: rgba(54, 54, 54, 0.50); font-size: 16px; font-family: Exo 2; font-weight: 400; word-wrap: break-word">sept 1, 2023</div>
+                                    </div>
+                                  </div>
+                                  <div class="Frame264" style="width: 394px; height: 46px; left: 0px; top: 72px; position: absolute; justify-content: flex-start; align-items: center; gap: 58px; display: inline-flex">
+                                    <div class="Group35" style="width: 20px; height: 20px; position: relative">
+                                      <div class="Ellipse6" style="width: 20px; height: 20px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #B80238 solid"></div>
+                                      <div class="Ellipse7" style="width: 17px; height: 17px; left: 1.50px; top: 1.50px; position: absolute; background: #B80238; border-radius: 9999px"></div>
+                                    </div>
+                                    <div class="Frame262" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                                      <div class="TenantSignedTheLeaseAgreement" style="color: #363636; font-family: Exo 2; word-wrap: break-word">Tenant signed the lease agreement</div>
+                                      <div class="Aug292023" style="color: rgba(54, 54, 54, 0.50); font-size: 16px; font-family: Exo 2; font-weight: 400; word-wrap: break-word">Aug 29, 2023</div>
+                                    </div>
+                                  </div>
+                                  <div class="Frame265" style="width: 394px; height: 46px; left: 0px; top: 144px; position: absolute; justify-content: flex-start; align-items: center; gap: 58px; display: inline-flex">
+                                    <div class="Group35" style="width: 20px; height: 20px; position: relative">
+                                      <div class="Ellipse6" style="width: 20px; height: 20px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #B80238 solid"></div>
+                                      <div class="Ellipse7" style="width: 17px; height: 17px; left: 1.50px; top: 1.50px; position: absolute; background: #B80238; border-radius: 9999px"></div>
+                                    </div>
+                                    <div class="Frame262" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                                      <div class="LeaseAgreementWasSent" style="color: #363636; font-family: Exo 2; word-wrap: break-word">Lease agreement was sent</div>
+                                      <div class="Aug292023" style="color: rgba(54, 54, 54, 0.50); font-size: 16px; font-family: Exo 2; font-weight: 400; word-wrap: break-word">Aug 29, 2023</div>
+                                    </div>
+                                  </div>
+                                  <div class="Frame266" style="width: 394px; height: 46px; left: 0px; top: 216px; position: absolute; justify-content: flex-start; align-items: center; gap: 58px; display: inline-flex">
+                                    <div class="Group35" style="width: 20px; height: 20px; position: relative">
+                                      <div class="Ellipse6" style="width: 20px; height: 20px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #B80238 solid"></div>
+                                      <div class="Ellipse7" style="width: 17px; height: 17px; left: 1.50px; top: 1.50px; position: absolute; background: #B80238; border-radius: 9999px"></div>
+                                    </div>
+                                    <div class="Frame262" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                                      <div class="TenantApplicationWasAccepted" style="color: #363636; font-family: Exo 2; word-wrap: break-word">Tenant application was accepted</div>
+                                      <div class="Aug252023" style="color: rgba(54, 54, 54, 0.50); font-size: 16px; font-family: Exo 2; font-weight: 400; word-wrap: break-word">Aug 25, 2023</div>
+                                    </div>
+                                  </div>
+                                  <div class="Frame267" style="width: 394px; height: 46px; left: 0px; top: 288px; position: absolute; justify-content: flex-start; align-items: center; gap: 58px; display: inline-flex">
+                                    <div class="Group35" style="width: 20px; height: 20px; position: relative">
+                                      <div class="Ellipse6" style="width: 20px; height: 20px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #B80238 solid"></div>
+                                      <div class="Ellipse7" style="width: 17px; height: 17px; left: 1.50px; top: 1.50px; position: absolute; background: #B80238; border-radius: 9999px"></div>
+                                    </div>
+                                    <div class="Frame262" style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 5px; display: inline-flex">
+                                      <div class="TenantApplied" style="color: #363636; font-family: Exo 2;  word-wrap: break-word">Tenant applied</div>
+                                      <div class="Aug242023" style="color: rgba(54, 54, 54, 0.50); font-size: 16px; font-family: Exo 2; font-weight: 400; word-wrap: break-word">Aug 24, 2023</div>
+                                    </div>
+                                  </div>
+                                  <div class="Rectangle106" style="width: 2px; height: 26px; left: 9px; top: 46px; position: absolute; background: #B80238; border-radius: 20px"></div>
+                                  <div class="Rectangle109" style="width: 2px; height: 26px; left: 9px; top: 118px; position: absolute; background: #B80238; border-radius: 20px"></div>
+                                  <div class="Rectangle107" style="width: 2px; height: 26px; left: 9px; top: 262px; position: absolute; background: #B80238; border-radius: 20px"></div>
+                                  <div class="Rectangle108" style="width: 2px; height: 26px; left: 9px; top: 190px; position: absolute; background: #B80238; border-radius: 20px"></div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="tab-pane fade" id="pills-task" role="tabpanel" aria-labelledby="pills-task-tab" tabindex="0">
+                            <!-- Task Section for the Property Single -->
+                            <div class="card shadow">
+                              <div class="card-header" style="border-radius: 0 0 10px 10px; border-bottom: 2px solid #B80238;">
+                                <div class="card-request d-flex justify-content-between p-1">
+                                  <strong class="ps-2 d-flex align-items-center" style="color: #B80238;">Task</strong>
+                                  <button class="btn" style="background: #B80238;color: white"><i class="bi bi-plus-lg"></i>Add maintenance request</button>
+                                </div>                
+                              </div>
+                              <div class="card-body" style="width: 100%; height: 50vh; overflow: scroll;">
+                                <div class="task-container" style="width : 100%;">
+                                  <div class="rom" style="width :110em;  display: flex; gap: 2em; height: 45vh">
+                                    <div class="unassigned-task" style="width: 25em;padding: 2em .5em;border-radius: 4.3px;
+                                    background: rgba(184, 2, 56, 0.10);box-shadow: 5.16px 3.44px 12.9px 2px rgba(0, 0, 0, 0.25);
+                                    display: flex;flex-direction: column;align-items: center;height: 40vh; overflow: scroll;" id="unassignedTask">
+                                        <span class="pb-1" style="width: 100%; font-family: Exo 2;font-size: 19px;
+                                        font-weight: 400;line-height: 23px;letter-spacing: 0em;
+                                        text-align: left;" id="nounassigned">Unassigned</span>
+                                      
+                                    </div>
+                                    <div class="assigned-task" style="width: 25em;padding: 2em .5em;border-radius: 4.3px;
+                                    background: rgba(184, 2, 56, 0.10);
+                                    box-shadow: 5.16px 3.44px 12.9px 2px rgba(0, 0, 0, 0.25);
+                                    display: flex; flex-direction: column;
+                                    align-items: center; height: 40vh; overflow: scroll;" id="assignedTask">
+                                    <span class="pb-1" style="width: 100%;font-family: Exo 2;
+                                    font-size: 19px; font-weight: 400; line-height: 23px;
+                                    letter-spacing: 0em; text-align: left;" id="noassigned">Assigned</span>
+                                      <!-- <div class="assigned-card py-2" style="width:20em">
+                                        <div class="card shadow" style="border-left: 2px solid #B80238; border-radius: 10px 10px 10px 10px;">
+                                          <div class="card-body">
+                                            <div class="card-title d-flex justify-content-between" id="unassigned-task">
+                                              <div class="card-title-title">
+                                                Clogged Toilet
+                                              </div>
+                                              <div class="card-title-id" >
+                                                #51336
+                                              </div>
+                                            </div>
+                                            <div class="card-description">
+                                              The toilet was stuck
+                                            </div>
+                                            <div class="card-view d-flex justify-content-between">
+                                              <div class="taskProfile d-flex justify-content-between">
+                                                <div class="taskProfile-img-rounded">
+                                                  <img src="images/fashion-little-boy.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                                                </div>
+                                                <div class="taskProfile-Details">
+                                                  <div class="tag"><small>assigned</small></div>
+                                                  <div class="tagname">Mohammed</div>
+                                                </div>
+                                              </div>
+                                              <div class="viewMore d-flex align-items-center">
+                                                <button class="btn btn-sm p-0" style="background: #B80238;color: white">view more <i class="bi bi-chevron-right"></i></button>
+                
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> -->
+                                    </div>
+                                    <div class="pending-task" style="width: 25em;padding: 2em .5em;border-radius: 4.3px;
+                                    background: rgba(184, 2, 56, 0.10); box-shadow: 5.16px 3.44px 12.9px 2px rgba(0, 0, 0, 0.25);
+                                    display: flex; flex-direction: column; align-items: center; height: 40vh; overflow: scroll;" id="pendingTask">
+                                    <span class="pb-1" style="width: 100%;font-family: Exo 2;
+                                    font-size: 19px; font-weight: 400;line-height: 23px; letter-spacing: 0em; text-align: left;
+                                    " id="nopending">In progress</span>
+                                      <!-- <div class="pending-card py-2" style="width:20em">
+                                        <div class="card shadow" style="border-left: 2px solid #B80238; border-radius: 10px 10px 10px 10px;">
+                                          <div class="card-body">
+                                            <div class="card-title d-flex justify-content-between" id="unassigned-task">
+                                              <div class="card-title-title">
+                                                Clogged Toilet
+                                              </div>
+                                              <div class="card-title-id" >
+                                                #51336
+                                              </div>
+                                            </div>
+                                            <div class="card-description">
+                                              The toilet was stuck
+                                            </div>
+                                            <div class="card-view d-flex justify-content-between">
+                                              <div class="taskProfile d-flex justify-content-between">
+                                                <div class="taskProfile-img-rounded">
+                                                  <img src="images/fashion-little-boy.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                                                </div>
+                                                <div class="taskProfile-Details">
+                                                  <div class="tag"><small>assigned</small></div>
+                                                  <div class="tagname">Mohammed</div>
+                                                </div>
+                                              </div>
+                                              <div class="viewMore d-flex align-items-center">
+                                                <button class="btn btn-sm p-0" style="background: #B80238;color: white">view more <i class="bi bi-chevron-right"></i></button>
+                
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> -->
+                                    </div>
+                                    <div class="completed-task" id="completedTask" style="width: 25em;padding: 2em .5em;border-radius: 4.3px;
+                                    background: rgba(184, 2, 56, 0.10);box-shadow: 5.16px 3.44px 12.9px 2px rgba(0, 0, 0, 0.25);
+                                    display: flex;flex-direction: column;
+                                    align-items: center;height: 40vh; overflow: scroll;">
+                                    <span class="pb-1" style="width: 100%;font-family: Exo 2;
+                                    font-size: 19px;font-weight: 400;line-height: 23px;
+                                    letter-spacing: 0em;text-align: left;" id="nocompleted"> Completed </span>
+                                      <!-- <div class="completed-card py-2" style="width:20em" id="card">
+                                        <div class="card shadow" style="border-left: 2px solid #B80238; border-radius: 10px 10px 10px 10px;">
+                                          <div class="card-body" id="completedLink">
+                                            <div class="card-title d-flex justify-content-between" id="unassigned-task">
+                                              <div class="card-title-title">
+                                                Clogged Toilet
+                                              </div>
+                                              <div class="card-title-id" >
+                                                #51336
+                                              </div>
+                                            </div>
+                                            <div class="card-description">
+                                              The toilet was stuck
+                                            </div>
+                                            <div class="card-view d-flex justify-content-between" id="">
+                                              <div class="taskProfile d-flex justify-content-between">
+                                                <div class="taskProfile-img-rounded">
+                                                  <img src="images/fashion-little-boy.jpg" alt="" width="50px" height="50px" style="border-radius: 50%;">
+                                                </div>
+                                                <div class="taskProfile-Details">
+                                                  <div class="tag"><small>assigned </small></div>
+                                                  <div class="tagname">Mohammed</div>
+                                                </div>
+                                              </div> 
+                                               <div class="viewMore d-flex align-items-center" id="">
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                          
+                          </div>
+                          <div class="tab-pane fade" id="pills-transaction" role="tabpanel" aria-labelledby="pills-transaction-tab" tabindex="0">
+                            <!-- Transaction -->
+                            <div class="card">
+                              <div class="card-header" style="border-radius: 0 0 10px 10px; border-bottom: 2px solid #B80238;">
+                                <div class="card-request d-flex justify-content-between p-1">
+                                  <strong class="ps-2 d-flex align-items-center" style="color: #B80238;">Recent Transaction</strong>
+                                  <button class="btn" style="background: #B80238;color: white" data-bs-toggle="modal" data-bs-target="#walletModal"><i class="bi bi-plus-lg"></i>Add Transaction</button>
+                                </div>                
+                              </div><div class="card-body">
+                                <div class="row" style="padding-right: 20px">
+                                  <table class="transactionTable">
+                                    <thead style="border-bottom: 1px solid #B80238">
+                                      <tr>  
+                                        <th> Status</th>
+                                        <th> Due Date</th>
+                                        <th> Category/Property</th>
+                                        <th> Contact</th>
+                                        <th> Total Paid</th>
+                                        <th> Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="transactionTbody" id="transactTbody">
+                                      
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="tab-pane fade" id="pills-vendor" role="tabpanel" aria-labelledby="pills-vendor-tab" tabindex="0">
+                            <div class="card">
+                              <div class="card-header" style="border-bottom: 2px solid #B80238; border-radius: 0 0 10px 10px;">
+                                <div>Current Vendor</div>
+                                
+                              </div>
+                              <div class="card-body">
+                                
+                              </div>
+                            </div>
+
+                            <div class="card">
+                              <div class="card-header" style="border-bottom: 2px solid #B80238; border-radius: 0 0 10px 10px;">Previous Vendor</div>
+                              <div class="card-body">
+                                <div class="vendorProfile d-flex gap-2"> 
+                                  <img src="./images/fashion-little-boy.jpg" alt="vendor Profile Picture" width="50px" height="50px" style="border-radius: 50%">
+                                  <div class="vendorProfileDetails d-flex flex-column">
+                                    <strong>Ahmed Nasiru</strong>
+                                    <small>Plumber</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="pills-showcase" role="tabpanel" aria-labelledby="pills-showcase-tab" tabindex="0">
+                            <div class="card">
+                              <div class="card-header" style="border-bottom: #B80238; border-radius: 0 0 10px 10px;">
+                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-video-tab" data-bs-toggle="pill" data-bs-target="#pills-video" type="button" role="tab" aria-controls="pills-video" aria-selected="true">Video</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-floor-tab" data-bs-toggle="pill" data-bs-target="#pills-floor" type="button" role="tab" aria-controls="pills-floor" aria-selected="false">Floor</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-ubification-tab" data-bs-toggle="pill" data-bs-target="#pills-ubification" type="button" role="tab" aria-controls="pills-ubification" aria-selected="false">Ubification</button>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="card-body">
+                                <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade show active" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab" tabindex="0">
+                                    Video Content
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-floor" role="tabpanel" aria-labelledby="pills-floor-tab" tabindex="0">
+                                    Floor
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-ubification" role="tabpanel" aria-labelledby="pills-ubification-tab" tabindex="0">
+                                    Ubification
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- How's the size -->
+                </div>
+              </div>
+              <!-- Property Details -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-rentals" role="tabpanel" aria-labelledby="v-pills-rentals-tab" tabindex="0">Rentals</div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">File Signature</div>
+            <div class="tab-pane fade" id="v-pills-finance" role="tabpanel" aria-labelledby="v-pills-finance-tab" tabindex="0">Finance</div>
+            <div class="tab-pane fade" id="v-pills-communication" role="tabpanel" aria-labelledby="v-pills-communication-tab" tabindex="0">Communication</div>
+            <div class="tab-pane fade" id="v-pills-report" role="tabpanel" aria-labelledby="v-pills-report-tab" tabindex="0">report</div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"y aria-labelledby="v-pills-settings-tab" tabindex="0">setting</div>
+            <div class="tab-pane fade" id="v-pills-support" role="tabpanel" aria-labelledby="v-pills-support-tab" tabindex="0">support</div>
+
+          </div>
+        </div>
+      </div> 
+
+    </section>
+
+    <!-- End of New UI code -->
+
+  </main>
+
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright-footer">
+            <p class="copyright color-text-a">
+              Copyright &copy; <span class="color-a">Asher Cooperation</span>
+            </p>
+          </div>
+          <!-- <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Modal for Future Tenants -->
+  <div class="modal fade" id="tenantModal" tabindex="-1" aria-labelledby="tenantModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Future Tenants Form</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <!-- Code for input Field -->
+          <div class="row align-items-center">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 align-items-center">
+              <form action="" class="futureTenantForm">
+                <label for="name">First Name</label><br/>
+                <input type="text" required><br/>
+                <label for="name">Last Name</label><br/>
+                <input type="text" required><br/>
+                <label for="name">Arrival time</label><br/>
+                <input type="text" placeholder="27th, June 2023" required><br/>
+                <input type="submit" id="futureTenantFormSubmit"><br/>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center text-center border border-top border-secondary" id="modalityfooter">
+          <div class="container border border-top border-secondary">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="copyright-footer">
+                  <p class="copyright color-text-a">
+                    Copyright &copy; <span class="color-a">Asher Cooperation</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of Modal for Future tenants -->
+
+<!-- Modal for wallet-->
+<div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-secondary">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Deposit into Wallet</h1>
+        <button type="button" class="btn-close" onclick="walletClose()" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body justify-content-center">
+        <input class="form-control" type="number" id="amount" min="5000" placeholder="Enter an ammount" required/>
+        <div class="justify-content-around" id="pay-select">
+          <button class="btn btn-primary" onclick="CardPay()">Pay with card</button>
+          <button class="btn btn-secondary" onclick="TransferPay()">Pay with bank transfer</button>
+        </div>
+        <p id="pay-select-message"></p>
+        <form id="card-payment-form">
+          <div id="link-authentication-element mb-4">
+            <!--Stripe.js injects the Link Authentication Element-->
+          </div>
+          <div id="card-element">
+            <!--Stripe.js injects the Payment Element-->
+          </div>
+          <button id="submit" class="p-1 mt-3 btn btn-secondary">
+            <div class="spinner hidden" id="spinner"></div>
+            <span id="button-text">Pay now</span>
+          </button>
+          <div id="card-payment-message" class="hidden"></div>
+        </form>
+        <form id="payment-form">
+          <div id="link-authentication-element mb-4">
+            <!--Stripe.js injects the Link Authentication Element-->
+          </div>
+          <div id="payment-element">
+            <!--Stripe.js injects the Payment Element-->
+          </div>
+          <button id="submit" class="p-1 mt-3 btn btn-secondary">
+            <div class="spinner hidden" id="spinner"></div>
+            <span id="button-text">Pay now</span>
+          </button>
+          <div id="card-payment-message" class="hidden"></div>
+          <div id="error-message"></div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright-footer">
+                <p class="copyright color-text-a">
+                  Copyright &copy; <span class="color-a">Asher Cooperation</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal for wallet-->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- App JS-->
+  <script src="./renderer.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- chart js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/pie-area.js"></script>
+
+
+  <script type="text/javascript">
+   // window.onload = function() {
+    const mapFunc = () =>{
+      L.mapquest.key = 'Gqh3hSgH52xbW7G7J2J6vdcHBTASC06P';
+      let map = document.getElementById('map');
+      var maps = L.mapquest.map('map', {
+        center: [37.7749, -122.4194],
+        layers: L.mapquest.tileLayer('map'),
+        zoom: 12
+      });
+
+      maps.addControl(L.mapquest.control());
+
+      // let map = document.getElementById('map')
+    }
+    mapFunc();
+    //}
+  </script>
+  
+  <script>
+    var completed = 30;
+    var unassigned = 40;
+    var assigned = 50;
+    var pending = 10;
+    document.getElementById('btnnn-1').innerHTML = completed;
+    
+    var ctx = document.getElementById("TaskDoughtChart");
+    const data = {
+      labels: [
+       "Assigned", "Unassigned", "pending","Completed"
+      ],
+      datasets: [{
+        label: 'Data',
+        data: [30, 30, 15,25],
+        backgroundColor: [
+        '#c92c2c80', '#c2140acc', '#e3190d','#9c0c02cc'
+        ],
+        hoverOffset: 4
+      }]
+    };
+    new Chart(ctx,{
+      type: 'doughnut',
+      data: data,
+      options: {
+        cutout: '80%',
+        maintainAspectRatio: false,
+        tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          caretPadding: 10,
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+        },
+       
+      }, 
+    })
+  </script>
+  <script>
+   
+  </script>
+</body>
+
+</html>
