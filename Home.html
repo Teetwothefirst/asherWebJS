@@ -22,6 +22,20 @@
         .link-white{
             color: white;
         }
+        @media screen and (max-width: 750px) {
+            .nav{
+            display: none;
+        }  
+        header{
+            width: 100%;
+        }
+        .card-content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        }
+        
     </style>
 </head>
 <body>
@@ -33,7 +47,7 @@
               <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICMzMzM7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiPgogICAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSIxMjAiIGN5PSIxMjAiIHI9IjEyMCIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTAxLjQsODguMUg4Mi43YTQuMSw0LjEsMCwwLDAtNC4xLDQuMXY1My43YTQuMSw0LjEsMCwwLDAsNC4xLDQuMWgxOC43YTQuMSw0LjEsMCwwLDAsNC4xLTQuMVY5Mi4yQTQuMSw0LjEsMCwwLDAsMTAxLjQsODguMVptNjYuOCwwSDEzMy43YTQuMSw0LjEsMCwwLDAtNC4xLDQuMXYxNi4zYTQuMSw0LjEsMCwwLDAsNC4xLDQuMWgzNC40YTQuMSw0LjEsMCwwLDAsNC4xLTQuMXYtMTYuM0E0LjEsNC4xLDAsMCwwLDE2OCw4OC4xWiIvPgogIDwvZz4KPC9zdmc+Cg==">
               <h1>Asher Web</h1>
             </div>
-            <nav>
+            <nav class="nav">
               <ul>
                 <!-- <li><a href="#">Home</a></li> -->
                 <li><a href="./Home.html">About</a></li>
@@ -80,7 +94,7 @@
         </div>
 
         <div class="card-container my-5">
-            <div class="d-flex justify-content-center gap-5">    
+            <div class="card-content d-flex justify-content-center gap-5">    
                 <div class="col-3 col-md-3 col-lg-3">
                     <div class="card card-color p-3">
                         <div class="card-body">
@@ -351,6 +365,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script>
+        
         // function redirectToNextPage() {
         //     // Get the input value
         //     var inputValue = document.getElementById("inputElement").value;
@@ -376,6 +391,7 @@
             // Navigate to the next page
             window.location.href = 'About.html'; // Change 'next-page.html' to the URL of your next page
         }
+    
     </script>
 </body>
 </html>

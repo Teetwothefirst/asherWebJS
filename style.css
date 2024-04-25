@@ -1,6 +1,8 @@
 *{
-  font-family: "Plus Jakarta Sans", sans-serif;}
-
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+}
+  
 /* From Header Comp */
 h3{
     color: #08DEB6;
