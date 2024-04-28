@@ -16,9 +16,52 @@
         margin: 0;
         padding: 0;
     }
+    .position-relative{
+        position: relative;
+
+    }
+    .position-absolute{
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        right: 10px;
+    }
     .btn-red{
             background-color: #B80238;
             color: white;
+        }
+    .bg-red{
+        background-color: #B80238;
+            color: white;
+            border-radius: 10px;
+        }
+        .btn-red:hover{
+            background-color: white;
+            color: #B80238;
+            border-radius: 15px;
+        }
+        .main-content{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .pad-5{
+            padding: 0;
+        }
+        .icon-yellow{
+            color: rgb(241, 241, 4);
+           
+        }
+        @media screen and (max-width: 750px) {
+            .main-content{
+            display: flex;
+            flex-direction: column ;
+        }
+        .form-container{
+            margin-bottom: 20px;
+        }
+        .pad-5{
+            padding: 3rem;
+        }
         }
 </style>
 </head>
@@ -36,17 +79,34 @@
                     </header>
                </div>
 
-               <main>
-                <div>
-                    <h4 style="text-align: center;">Welcome Back to Asher</h4>
+               <main class="main-content">
+                <div class="form-container">
+                    <h4 style="text-align: center;">Welcome Back to Asher <i class="bi bi-person-raised-hand icon-yellow"></i></h4>
+                    <form action="/Signup.html" class="pad-5">
+                        <label for="email" class="mb-2">Email Address</label>
+                        <input type="email" name="email" id="email" class="mb-3 form-control">
+                        <label for="password" class="mb-2">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <a href="#" class="mb-4">Forgot Password</a>
+
+
+                        <input type="submit" value="Submit" class="form-control btn-red" id="onSubmit">
+                        
+                        <p class="my-2" style="text-align: center;">Or</p> 
+                        
+                        <button class="form-control" id="g_id_onload" ><i class="bi bi-google"></i> Continue with Google</button>
+                    </form> 
                 </div>
-                <div><img src="./img/LoginBG.png" alt="">
-                    <div class="">
-                        <h2>FInd your Dream House</h2>
-                        <p></p></div>
+                <div class="position-relative"><img src="./img/LoginBG.png" alt="" width="100%">
+                    <div class="card bg-red position-absolute">
+                        <div class="card-body">
+                            <h2>Find your Dream House</h2>
+                            <p>Finding your dream house? Little to no effort required to start your move into your dream home!</p>    
+                        </div>
+                    </div>
                 </div>
                </main>
-                <div class="row justify-content-center mb-5">
+                <!-- <div class="row justify-content-center mb-5">
                     <div class="body col-12 col-md-6 col-lg-5">
                         <div style="width: 100%;">
                             <h4 style="text-align: center;">Welcome to Asher</h4>
@@ -63,10 +123,10 @@
                             </form> 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
 
-                <div>
+                <!-- <div>
                     <div class="container-fluid bg-dark text-white-50 footer p-0 py-5" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
                 <div class="container p-0 py-5">
                     <div class="row g-5">
@@ -130,7 +190,7 @@
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                                 © <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
                                 
-                                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                                This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. 
                                 Designed By <a class="border-bottom" href="https://htmlcodex.com">Dexter Codex</a>
                             </div>
                             <div class="col-md-6 text-center text-md-end">
@@ -145,7 +205,7 @@
                     </div>
                 </div>
                     </div>  
-                </div> 
+                </div>  -->
             </div>
             
         </div>
