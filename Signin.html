@@ -51,6 +51,14 @@
             color: rgb(241, 241, 4);
            
         }
+        .anchor{
+            /* display: block; */
+            color: black;
+            text-decoration: none;
+        }
+        .anchor:hover{
+            color:#B80238;
+        }
         @media screen and (max-width: 750px) {
             .main-content{
             display: flex;
@@ -87,8 +95,9 @@
                         <input type="email" name="email" id="email" class="mb-3 form-control">
                         <label for="password" class="mb-2">Password</label>
                         <input type="password" name="password" id="password" class="form-control">
-                        <a href="#" class="mb-4">Forgot Password</a>
-
+                        <div class="mb-4 mt-2">
+                            <a href="./forgotPassword.html" class="anchor">Forgot Password?</a>
+                        </div>
 
                         <input type="submit" value="Submit" class="form-control btn-red" id="onSubmit">
                         
