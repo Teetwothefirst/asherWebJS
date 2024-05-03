@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Profile</title>
+    <style>
+        /* *{
+            font-family: 'Courier New', Courier, monospace;
+        } */
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .img-edge{
+            border-radius: 50%;
+        }
+        .nav-link{
+            color: black;
+            display: flex;
+            justify-content: start;
+        }
+        .nav-link.active{
+            background-color: brown !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header class="ps-5 pe-3">
+            <div><img src="./img/Logo.png" alt=""></div>
+            <div>
+                <i class="bi bi-bell"></i>
+                <img src="./img/profile.png" alt="" width="50px" height="50px" class="img-edge">
+            </div>
+        </header>
+        <main>
+            <div class="navigation">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="d-flex align-items-start">
+                            
+                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="bi bi-person-circle me-3"></i> Profile</button>
+                              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="bi bi-book-half me-3"></i>Application</button>
+                              <button class="nav-link" id="v-pills-marketplace-tab" data-bs-toggle="pill" data-bs-target="#v-pills-marketplace" type="button" role="tab" aria-controls="v-pills-marketplace" aria-selected="false"><i class="bi bi-shop me-3"></i>Chat </button>
+                              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="bi bi-house me-3"></i>Settings</button>
+                              <button class="nav-link" id="v-pills-bulb-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bulb" type="button" role="tab" aria-controls="v-pills-bulb" aria-selected="false"><i class="bi bi-lightbulb"></i></button>
+                              <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="bi bi-gear-wide-connected"></i></button>
+                              <a href="signup.html" class="btn btn-success btn-sm mt-5 text-decoration-none">Logout</a>
+                            </div>
+                            <div class="tab-content" id="v-pills-tabContent">
+                              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                                <div class="container">
+                                    <div class="row">
+
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+                                <div class="carret" id="carretID">
+                                  <div class="carret-child" id="carret-child">
+                                    <header>
+                                        <div class="card text-bg-dark">
+                                            <img src="./main.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay">
+                                              <h5 class="card-title">AgroSec Readers </h5>
+                                              <p class="card-text">The more that you read, the more things you will know. The more that you learn, the more places you'll go</p>
+                                              <p class="card-text"><small>- Dr. Seuss</small></p>
+                                            </div>
+                                          </div>
+                                    </header>
+                                    <main class="my-3">
+                                        <h3 class="text-muted mt-5">Books</h3>
+                                        <div class="row">
+                                            <div class="col-4 col-md-4 col-lg-4 col-xl-4">
+                                                <div class="card">
+                                                    <img src="./booksBackground.jpg" class="card-img-top" alt="..." height="200px">
+                                                    <div class="card-body">
+                                                      <p class="card-text">Environmental Studies</p>
+                                                      <button class="button" id="downloadButton">Click Here</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 col-xl-4">
+                                                <div class="card">
+                                                    <img src="./booksBackground.jpg" class="card-img-top" alt="..." height="200px">
+                                                    <div class="card-body">
+                                                      <p class="card-text">Principle of Environment</p>
+                                                      <button class="button" id="downloadButton">Click Here</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-4 col-lg-4 col-xl-4">
+                                                <div class="card">
+                                                    <img src="./booksBackground.jpg" class="card-img-top" alt="..." height="200px">
+                                                    <div class="card-body">
+                                                      <p class="card-text">IAS Environment</p>
+                                                      <button class="button" id="downloadButton">Click Here</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="text-muted mt-5">Short Reads</h3>
+                                        <hr>
+                                        <div class="row">
+                                          <!-- <div><i class="bi bi-arrow-left"></i> </div> -->
+                                          <div class="col-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="head"><img src="./Ellipse 68.png" alt="image" width="20px" height="20px"><small class="title p-2">Agriculture on the Rising</small></div>
+                                            <div class="main"> <a href="#" id="reads"><strong>Agriculture is the way forward in our time and era</strong></a></div>
+                                            <div class="footer">March 10th, 2024 . 5 min read</div>
+                                          </div>
+                                          <div class="col-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="head"><img src="./Ellipse 68.png" alt="image" width="20px" height="20px"><small class="title p-2">Agriculture on the Rising</small></div>
+                                            <div class="main"> <a href="#" id="reads"><strong>The Future of Urban Agriculture: Vertical Farming and Rooftop Gardens</strong></a></div>
+                                            <div class="footer">March 10th, 2024 . 5 min read</div>
+                                          </div>
+                                        </div>
+                                    </main>
+                                    <footer class="d-flex justify-content-center text-secondary books">Copyright @AgroSec 2024</footer> 
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="v-pills-marketplace" role="tabpanel" aria-labelledby="v-pills-marketplace-tab" tabindex="0">
+                                <div class="row">
+                                  <h1>This Page is Under Construction</h1>
+                                  <img src="./construction workers/5123741.jpg" alt="">
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+                                <div class="container">
+                                  <h3 class="mt-2">Bring the Love to Residence and Agriculture</h3>
+                                  <div class="row">
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Ikoyi Resettlement</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Kuje, Abuja</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house3.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Akure, Ondo</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Akure, Ondo</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Ikoyi Resettlement</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Kuje, Abuja</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house3.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Akure, Ondo</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 mb-2">
+                                      <div class="card h-100">
+                                        <img src="./house4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Akure, Ondo</h5>
+                                          <p class="card-text"><small class="housetag">House</small><small class="housetag">Agriculture</small></p>
+                                          <a href="#" class="btn btn-green btn-sm">Check it</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="v-pills-bulb" role="tabpanel" aria-labelledby="v-pills-bulb-tab" tabindex="0">
+                                Light Bulb Area - Prototype as you like
+                              </div>
+                              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+                                <div class="container">
+                                  <h3>Settings</h3>
+                                  <div class="row">
+                                    <div><a href="#">Account</a></div>
+                                    <div><a href="#">App Language</a></div>
+                                    <div><a href="#">Notification</a></div>
+                                    <div><a href="#">Help</a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>   
+        </main>
+        <footer></footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>
