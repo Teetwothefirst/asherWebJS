@@ -16,348 +16,450 @@
 
     <title>Asher Web - Connecting Resources</title>
     <style>
-        a{
-            text-decoration: none;
-        }
-        .link-white{
+        .bg-asher{
+            background-color: #B80238;
             color: white;
         }
-        @media screen and (max-width: 750px) {
-            .nav{
-            display: none;
-        }  
-        header{
-            width: 100%;
-        }
-        .card-content{
-            width: 100%;
+        .container-three{
             display: flex;
-            flex-direction: column;
+            justify-content: space-evenly;
+
         }
+        .asher-flex-between{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .headerstyle{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .asher-nav-sm{
+            display: none;
+        }
+        .btn-white{
+            border: 1px solid grey;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color:#B80238;
+        }
+        .asher-nav-lg{
+            display: flex;
+            align-items: center;
+        }
+        .asher-button-lg{
+            display: block;
+        }
+        .text-asher{
+            color: #B80238;
+        }
+        .btn-red-lg{
+                background-color: #B80238;
+                color: white;
+                cursor: pointer;
+                border-color: #B80238;
+                padding: 5px;
+                border-radius: 10px;
+                text-wrap: nowrap;
+            }
+
+            .relative-Section-one{
+                position: relative;
+                /* height: 350px; */
+            }
+
+            .absolute{
+                position: absolute;
+                bottom: 5.5%;
+                left: 30%;
+            }
+            .bg-asher-grey{
+                background-color: #f8f8f8;
+            }
+            .asher-p10{
+                padding: 10px
+            }
+            .Explore{
+                display: flex;
+                justify-content: space-between;
+            }
+            @media screen and (max-width: 900px){
+                
+            }
+            @media screen and (max-width: 767px) {
+            .Explore{
+                display: flex;
+                flex-direction: column;
+            }
+            .asher-row-sm{
+                gap: 1rem;
+            }
+            .container-three{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+            .asher-nav-lg{
+                display: none;
+            }
+            .asher-flex-between{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .headerstyle{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            }
+            .asher-button-lg{
+                display: none;
+            }
+            .btn-red{
+                background-color: #B80238;
+                color: white;
+                cursor: pointer;
+                border-color: #B80238;
+                border-radius: 5px;
+            }
+            .asher-ds-lg-no{
+                display: none;
+            }
+            .btn-red:hover{
+                background-color: #B80238;
+                color: white;
+            }
+            .asher-nav-sm{
+                display: flex;
+                align-items: center;
+            }
+            .dropdown-item:hover{
+                background-color: #B80238;
+                color: white;
+            }
+            .absolute{
+                position: initial;
+            }
+            .asher-gap-sm{
+                gap: 3rem;
+            }
+            .asher-pad-sm{
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
         }
         
     </style>
 </head>
 <body>
-    <div>
-        <!-- <div class=""></div> -->
-        <header class="p-4">
-            <div class="logo">
-              <!-- <img src="logo.png" alt="Asher Web Logo"> -->
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTIgewogICAgICAgIGZpbGw6ICMzMzM7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiPgogICAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSIxMjAiIGN5PSIxMjAiIHI9IjEyMCIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTAxLjQsODguMUg4Mi43YTQuMSw0LjEsMCwwLDAtNC4xLDQuMXY1My43YTQuMSw0LjEsMCwwLDAsNC4xLDQuMWgxOC43YTQuMSw0LjEsMCwwLDAsNC4xLTQuMVY5Mi4yQTQuMSw0LjEsMCwwLDAsMTAxLjQsODguMVptNjYuOCwwSDEzMy43YTQuMSw0LjEsMCwwLDAtNC4xLDQuMXYxNi4zYTQuMSw0LjEsMCwwLDAsNC4xLDQuMWgzNC40YTQuMSw0LjEsMCwwLDAsNC4xLTQuMXYtMTYuM0E0LjEsNC4xLDAsMCwwLDE2OCw4OC4xWiIvPgogIDwvZz4KPC9zdmc+Cg==">
-              <h1>Asher Web</h1>
+    
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <header class="headerstyle pt-3">
+                    <div class="headerComponent d-flex justify-content-between">
+                        <img src="./img/Logo.png" alt="">
+                        <div class="asher-nav-lg gap-3 ps-5">
+                            <a href="">For Rent</a>
+                            <a href="#">Find Property</a>
+                        </div>
+                   </div>
+                   
+                   <div class="button">
+                    <nav class="asher-nav-sm">
+                        <div class="dropdown">
+                            <button class="btn btn-red dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-archive"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" id="sign-in">Sign in</a></li>
+                              <li><a class="dropdown-item" id="sign-up">Sign up</a></li>
+                              <li><a class="dropdown-item" href="#">For Rent</a></li>
+                              <li><a class="dropdown-item" href="#">Manage Property</a></li>
+                            </ul>
+                          </div>
+                    </nav>
+                    <nav class="asher-button-lg">
+                        <button class="btn btn-white" id="signin">Login</button>
+                        <button class="btn btn-danger" id="signup">Sign up</button>
+                    </nav>
+                   </div>
+                </header>
             </div>
-            <nav class="nav">
-              <ul>
-                <!-- <li><a href="#">Home</a></li> -->
-                <li><a href="./Home.html">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-            </nav>
-            <div>
-                <button class="btn btn-danger"><a href="./Signin.html" class="link-white">Login</a></button>
-                <button class="btn btn-danger"><a href="./Signup.html" class="link-white">Sign up</a></button>
-            </div>
-          </header>
-        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-            <div class="col-md-6 p-5 mt-lg-5">
-                <h1 class="display-5 animated fadeIn mb-4">Find A <span class="text-primary">Perfect Home</span> To Live With Your Family</h1>
-                <p class="animated fadeIn mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet
-                    sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                <button class="btn btn-primary py-3 px-5 me-3 animated fadeIn"><a href="./property.html" class="a">Get Started</a></button>
-            </div>
-            <div class="col-md-6 p-5 mt-lg-5">
-                <div class="p-3">
-                    <img src="/img/1.jpeg" alt="House Image" class="img-size">
-                </div>
-            </div>
-        </div>
-
-        <div class="header py-4">
-            <div class="">
-                <h3 class="">Believe in Finding it</h3>
-                <p class="p">Search the World's Largest Properties for sale and to rent</p>
-            </div>
-            <div class="d-flex justify-content-center align-items-center">
-              <form>
-              <input type="text" class="form-select me-1" placeholder="e.g 'york' 'hampshire' 'midian'" id="inputElement">
-            </form>
-            <!-- <button class="buttin" onclick="saveValueAndNavigate()">
-                For Sale
-                <-- <a href="./About.html" class="a">For Sale</a> ->
-            </button> -->
-            <button class="buttin px-4" onclick="saveValueAndNavigate()">Browse Properties</button>
-            </div>
-           <!-- <FilterSearch /> -->
-            <!-- <FooterComp /> -->
-        </div>
-
-        <div class="card-container my-5">
-            <div class="card-content d-flex justify-content-center gap-5">    
-                <div class="col-3 col-md-3 col-lg-3">
-                    <div class="card card-color p-3">
-                        <div class="card-body">
-                            <div class="icon-container">
-                                <i class="bi bi-shop fs-3"></i>
-                            </div>
-                            <div class="card-body-text">
-                                <h4>Find Your Dream Home</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, 
-                                    adipisicing elit. Mollitia est placeat 
-                                    inventore dolore, temporibus architecto!
-                                    Lorem ipsum dolor sit amet.
-                                </p>
+            <div class="row">
+                <main>
+                    <!-- Section one -->
+                    <section class="relative-Section-one">
+                          <!-- Section one -->
+                    <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                        <div class="col-md-6 mt-lg-5">
+                            <h2 class="display-5 animated fadeIn mb-4">Find A <span class="text-asher">Perfect Home</span> To Live With Your Family</h1>
+                            <p class="animated fadeIn mb-4 pb-2">Find the best homes to rent and check house prices</p>
+                        </div>
+                        <div class="col-md-6 mt-lg-5">
+                            <div class="p-3">
+                                <img src="/img/Hero.png" alt="House Image" class="img-size">
                             </div>
                         </div>
+                        
                     </div>
-                </div>
-                <div class="col-3 col-md-3 col-lg-3">
-                    <div class="card card-color p-3">
-                        <div class="card-body">
-                            <div class="icon-container">
-                                <i class="bi bi-buildings fs-3"></i>
-                            </div>
-                            <div class="card-body-text">
-                                <h4>Find Your Dream Home</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, 
-                                    adipisicing elit. Mollitia est placeat 
-                                    inventore dolore, temporibus architecto!
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3 col-md-3 col-lg-3">
-                    <div class="card card-color p-3">
-                        <div class="card-body">
-                            <div class="icon-container">
-                                <i class="bi bi-shop fs-3"></i>
-                            </div>
-                            <div class="card-body-text">
-                                <h4>Find Your Dream Home</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, 
-                                    adipisicing elit. Mollitia est placeat 
-                                    inventore dolore, temporibus architecto!
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-container-two mb-5">
-            <div class="d-flex p-5 justify-content-evenly">
-                <div class="card card-color" style="width: 100%;">
-                    <div class="card-body d-flex justify-content-between p-0">
-                        <div class="card-text col-4 d-flex justify-content-center px-5 align-items-center">
-                            <div class="">
-                                <h2>The new way to find your new home</h2>
-                            <p>Find your dream place to live in with more tha 10k Properties listed</p>
-                            <div class="card-text-footer mt-2 d-flex justify-content-between">
-                                <div class="me-2">
-                                    <div class="icon-container-sm">
-                                        <img src="./img/Icon-1.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h5>3500</h5>
-                                        <small>Active Users</small>
-                                    </div>
+                    <div class="absolute">
+                        <form method="" class="">
+                            <div class="card shadow p-3">
+                                <p class="text-muted m-0">Location</p>
+                                <div class="card-body p-0 d-flex align-items-center">
+                                    
+                                    <input type="text" class="form-select me-1" placeholder="e.g 'york' 'hampshire' 'midian'" id="inputElement">
+                                    <button class="btn-red-lg px-4" onclick="saveValueAndNavigate()">Browse Properties</button>
                                 </div>
-                                <hr>
-                                <div class="me-2">
-                                    <div class="icon-container-sm">
-                                        <img src="./img/Icon-2.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h5>3856</h5>
-                                        <small>Total Properties</small>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="">
-                                    <div class="icon-container-sm">
-                                        <img src="./img/Icon-3.png" alt="">
-                                    </div>
-                                    <div>
-                                        <h5>2540</h5>
-                                        <small>Daily Transactions Completed</small>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            
-                        </div>
-
-                        <div class="card-img d-flex justify-content-end">
-                            <img src="./img/Illustration.png" alt="">
-                        </div>
+                            </div> 
+                        </form>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-three d-flex justify-content-evenly gap-2 p-5">
-            <div class="card-left">
-                <img src="./img/FindTheBest.png" alt="">
-            </div>
-            <div class="card-right d-flex justify-content-center align-items-center">
-                <div class="card-right-content">
-                    <div class="d-flex">
-                        <div class="topleft">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
-                                <h6 class="m-0">Trust</h6>
-                            </div>
-                            <div><p>Trust is the corner stone of every successful real estate transaction</p></div>    
-                        </div>
-                        <div class="topright">
-                            <div class="">
-                                <div class="d-flex align-items-center mb-2">
-                                    <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
-                                    <h6 class="m-0">Trust</h6>
-                                </div>
-                                <div><p>Trust is the corner stone of every successful real estate transaction</p></div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <hr class="hr">
-                    <div class="d-flex">
-                        <div class="topleft">
-                            <div class="d-flex align-items-center mb-2">
-                                <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
-                                <h6 class="m-0">Trust</h6>
-                            </div>
-                            <div><p>Trust is the corner stone of every successful real estate transaction</p></div>    
-                        </div>
-                        <div class="topright">
-                            <div class="">
-                                <div class="d-flex align-items-center mb-2">
-                                    <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
-                                    <h6 class="m-0">Trust</h6>
-                                </div>
-                                <div><p>Trust is the corner stone of every successful real estate transaction</p></div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
                 
-            </div>
-        </div>
-
-        <div class="moredetails p-5">
-            <div class="d-flex justify-content-between p-3">
-                <div class="moredetailsleft">
-                    <div class=""><h2>We make it easy for Landlord, tenants and Agents</h2></div>
+                    </section>
+                  <!-- Section Two -->
+                  <section class="bg-asher-grey my-5">
                     <div>
-                        <div class="card">
-                            <div class="card-body d-flex">
-                                <div class="houseContainer"><i class="bi bi-house-check fs-3"></i></div>
-                                <div class="">
-                                    <h4>Find the Best Deal</h4>
-                                    <p class="m-0">Browse Thousands of properties, save your favourite and set up search alerts so you don't miss the best home deals</p>
+                        <div class="card-container p-3">
+                            <div class="row justify-content-center asher-gap-sm">    
+                                <div class="col-8 col-md-8 col-lg-4">
+                                    <div class="card card-color p-3">
+                                        <div class="card-body">
+                                            <div class="icon-container">
+                                                <i class="bi bi-shop fs-3"></i>
+                                            </div>
+                                            <div class="card-body-text">
+                                                <h4>Find Your Dream Home</h4>
+                                                <p>Lorem ipsum dolor sit amet consectetur, 
+                                                    adipisicing elit. Mollitia est placeat 
+                                                    inventore dolore, temporibus architecto!
+                                                    Lorem ipsum dolor sit amet.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8 col-md-8 col-lg-4">
+                                    <div class="card card-color p-3">
+                                        <div class="card-body">
+                                            <div class="icon-container">
+                                                <i class="bi bi-buildings fs-3"></i>
+                                            </div>
+                                            <div class="card-body-text">
+                                                <h4>Find Your Dream Home</h4>
+                                                <p>Lorem ipsum dolor sit amet consectetur, 
+                                                    adipisicing elit. Mollitia est placeat 
+                                                    inventore dolore, temporibus architecto!
+                                                    Lorem ipsum dolor sit amet.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8 col-md-8 col-lg-4">
+                                    <div class="card card-color p-3">
+                                        <div class="card-body">
+                                            <div class="icon-container">
+                                                <i class="bi bi-shop fs-3"></i>
+                                            </div>
+                                            <div class="card-body-text">
+                                                <h4>Find Your Dream Home</h4>
+                                                <p>Lorem ipsum dolor sit amet consectetur, 
+                                                    adipisicing elit. Mollitia est placeat 
+                                                    inventore dolore, temporibus architecto!
+                                                    Lorem ipsum dolor sit amet.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- <div class="moredetailsright">
-                    <div>
-                        <div class="card">
-                            <div class="card-body d-flex">
-                                <div class="houseContainer"><i class="bi bi-house-check fs-3"></i></div>
-                                <div class="">
-                                    <h4>Find the Best Deal</h4>
-                                    <p class="m-0">Browse Thousands of properties, save your favourite and set up search alerts so you don't miss the best home deals</p>
+                  </section>
+
+                  <!-- Section Three -->
+                  <section class="asher-section-three">
+                    <div class="">
+                        <div class="card-container-two mb-5">
+                            <div class="d-flex p-5 justify-content-evenly">
+                                <div class="card card-color" style="width: 100%;">
+                                    <div class="card-body asher-flex-between p-0">
+                                        <div class="card-text col-12 col-lg-4 d-flex justify-content-center px-5 align-items-center">
+                                            <!-- col-4 d-flex justify-content-center px-5 align-items-center -->
+                                            <div class="asher-pad-sm">
+                                                <h2>The new way to find your new home</h2>
+                                                <p>Find your dream place to live in with more tha 10k Properties listed</p>
+                                                <div class="card-text-footer mt-2 d-flex justify-content-between">
+                                                    <!--  -->
+                                                    <div class="me-2">
+                                                        <div class="icon-container-sm">
+                                                            <img src="./img/Icon-1.png" alt="">
+                                                        </div>
+                                                        <div class="asher-p10">
+                                                            <h5>3500</h5>
+                                                            <small>Active Users</small>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="me-2">
+                                                        <div class="icon-container-sm">
+                                                            <img src="./img/Icon-2.png" alt="">
+                                                        </div>
+                                                        <div class="asher-p10">
+                                                            <h5>3856</h5>
+                                                            <small>Total Properties</small>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="">
+                                                        <div class="icon-container-sm">
+                                                            <img src="./img/Icon-3.png" alt="">
+                                                        </div>
+                                                        <div class="asher-p10">
+                                                            <h5>2540</h5>
+                                                            <small>Daily Transactions Completed</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                
+                                        <div class="card-img d-flex justify-content-end">
+                                            <img src="./img/Illustration.png" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
-            </div>
-           
-        </div>
-
-        <div class="container-fluid bg-dark text-white-50 footer py-5" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Get In Touch</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Quick Links</h5>
-                        <a class="btn btn-link text-white-50" href="">About Us</a>
-                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="">Our Services</a>
-                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                        <a class="btn btn-link text-white-50" href="">Terms &amp; Condition</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Photo Gallery</h5>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="asset/property-1.jpg" alt="">
+                  </section>
+                  <!-- Section four -->
+                  <section>
+                    <div>
+                        <div class="container-three gap-3 p-5">
+                            <div class=" col-12 col-lg-6 card-left">
+                                <img src="./img/FindTheBest.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-lg-6 card-right d-flex justify-content-center align-items-center">
+                                <div class="card-right-content">
+                                    <div class="d-flex">
+                                        <div class="topleft">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                                <h6 class="m-0">Trust</h6>
+                                            </div>
+                                            <div><p>Trust is the corner stone of every successful real estate transaction</p></div>    
+                                        </div>
+                                        <div class="topright">
+                                            <div class="">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                                    <h6 class="m-0">Trust</h6>
+                                                </div>
+                                                <div><p>Trust is the corner stone of every successful real estate transaction</p></div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <hr class="hr">
+                                    <div class="d-flex">
+                                        <div class="topleft">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                                <h6 class="m-0">Trust</h6>
+                                            </div>
+                                            <div><p>Trust is the corner stone of every successful real estate transaction</p></div>    
+                                        </div>
+                                        <div class="topright">
+                                            <div class="">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <img src="./img/Icon-container.png" alt="" width="40px" height="40px" class="me-3">
+                                                    <h6 class="m-0">Trust</h6>
+                                                </div>
+                                                <div><p>Trust is the corner stone of every successful real estate transaction</p></div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                                 
                             </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
+                        </div>
+                    </div>
+                  </section>
+
+                  <!-- Section Five -->
+                  <section class="my-5">
+                    <div class="row asher-row-sm">
+                        <div class="col-12 col-md-12 col-lg-7">
+                            <h2>We make it easy for Landlord, tenants and Agents</h2>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-5">
+                            <p class="text-muted">Whether it is finding a new apartment or getting a tenant. We make it easy and 
+                                efficient. The best part? you'll save a bunch of money and time with our Services.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body d-flex">
+                                    <div class="houseContainer m-2"><i class="bi bi-house-check fs-3"></i></div>
+                                    <div class="">
+                                        <h4>Find the Best Deal</h4>
+                                        <p class="m-0">Browse Thousands of properties, save your favourite and set up search alerts so you don't miss the best home deals</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-6">
+                            <div class="card">
+                                <div class="card-body bg-asher d-flex">
+                                    <div class="houseContainer m-2"><i class="bi bi-file-earmark-medical fs-3"></i></div>
+                                    <div class="">
+                                        <h4>Find the Best Deal</h4>
+                                        <p class="m-0">Browse Thousands of properties, save your favourite and set up search alerts so you don't miss the best home deals</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    <div>
+
+                    </div>
+                  </section>
+                  <hr>
+                  <!-- Section 6 -->
+                  <section class="my-5">
+                    <div class="Explore">
+                        <div class="p-3">
+                            <h3>Your Dream property is just a click away.</h3>
+                            <p>Whether you're looking for a new home or a way to manage properly Asher is here to assist
+                                you every step of the way. Take the first step towards your goals and ecplore our available
+                                properties or get in touch with our agents for personalized assistance.
+                            </p>
+                        </div>
+                        <div class="button-container d-flex align-items-center">
+                            <button class="btn-red-lg Explore" style="text-wrap: nowrap;">Explore Properties</button>
                         </div>
                     </div>
-                </div>
+                  </section>
+
+                </mai>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            © <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">Dexter Codex</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
+            <div class="row">
+                <footer>
+                    <div class="d-flex justify-content-evenly">
+                        <div>Rent and Sell</div>
+                        <div>Terms and Privacy</div>
+                        <div>About</div>
                     </div>
-                </div>
+                </footer>
             </div>
         </div>
     </div>
@@ -391,7 +493,20 @@
             // Navigate to the next page
             window.location.href = 'About.html'; // Change 'next-page.html' to the URL of your next page
         }
-    
+        
+        document.getElementById("signin").addEventListener('click', ()=>{
+            window.location.href = 'Signin.html';
+        })
+        document.getElementById('sign-up').addEventListener('click', ()=>{
+            window.location.href = 'Signup.html';
+        })
+        document.getElementById('signup').addEventListener('click', ()=>{
+            window.location.href = 'Signup.html';
+        })
+        document.getElementById('sign-in').addEventListener('click', (e)=>{
+            e.preventDefault();
+            window.location.href = 'Signin.html'
+        })
     </script>
 </body>
 </html>
