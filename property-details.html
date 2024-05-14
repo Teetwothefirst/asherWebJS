@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link href="img/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ed079d4f28.js" crossorigin="anonymous"></script>
     <title>Asher - For the web</title>
+    <link rel="stylesheet" href="./newStyle.css">
     <style>
       body{
         background-color: #F8F8F8;
-;
       }
       .br{
         border-radius: 15px;
@@ -43,88 +45,247 @@
         text-decoration: none;
         color: #B80238;
       }
+      .pd-flex{
+        display: flex;
+        justify-content: space-between;
+      }
+      #map{
+        height: 180px;
+      }
       @media screen and (max-width: 750px) {
             .topImg{
                 margin-left: 5px;
+            }
+            .pd-flex{
+              display: block;
+            }
+            .m-sm1{
+              margin-top: 1em;
+              margin-bottom: 1em;
             }
         }
     </style>
 </head>
 <body>
-  <div class="Container p-3">
-    <div class="back">
-      <a href="property.html"><i class="bi bi-chevron-left me-2"></i><small>Back</small></a>
-    </div>
-    <div class="d-flex justify-content-between px-4 mb-3">
-      <div>
-        <h2>Serenity Spings Residence</h2>
+  <div class="app">
+    <div class="Container p-3">
+      <div class="row">
+        <header class="headerstyle pt-3">
+            <div class="headerComponent d-flex justify-content-between">
+                <img src="./img/Logo.png" alt="">
+                <div class="asher-nav-lg gap-3 ps-5">
+                    <a href="">For Rent</a>
+                    <a href="#">Find Property</a>
+                </div>
+           </div>
+           
+           <div class="button">
+            <nav class="asher-nav-sm">
+                <div class="dropdown">
+                    <button class="btn btn-red dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-archive"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" id="sign-in">Sign in</a></li>
+                      <li><a class="dropdown-item" id="sign-up">Sign up</a></li>
+                      <li><a class="dropdown-item" href="#">For Rent</a></li>
+                      <li><a class="dropdown-item" href="#">Manage Property</a></li>
+                    </ul>
+                  </div>
+            </nav>
+            <nav class="asher-button-lg">
+                <button class="btn btn-white" id="signin">Login</button>
+                <button class="btn btn-danger" id="signup">Sign up</button>
+            </nav>
+           </div>
+        </header>
       </div>
-      <div>
-        <button class="btn-asher mx-1"> <i class="bi bi-share me-2"></i>Share</button>
-        <button class="btn-asher"> <i class="bi bi-heart me-2"></i>Favourite</button>
-      </div>
-    </div>
-    <div class="row mb-5">
-      <div class="col-12 col-md-12 col-lg-8">
-        <img src="./img/1.jpeg" alt="" width="100%" class="br">
-      </div>
-      <div class="col-12 col-md-12 col-lg-4">
-        <div class="img-container col-6 col-lg-12 topImg">
-          <img src="./img/1.jpeg" alt="" width="100%" class="br">
+      <main class="mt-4 p-2">
+        <div class="back mb-2">
+          <a href="property.html"><i class="bi bi-chevron-left me-2"></i><small>Back</small></a>
         </div>
-        <div class="img-container col-6 col-lg-12">
-          <img src="./img/1.jpeg" alt="" width="100%" class="br">
+        <div class="px-4 mb-3">
+          <div>
+            <h2>Serenity Spings Residence</h2>
+          </div>
+          <div>
+            <button class="btn-asher mx-1"> <i class="bi bi-share me-2"></i>Share</button>
+            <button class="btn-asher"> <i class="bi bi-heart me-2"></i>Favourite</button>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-12 col-lg-8">
-        <div class="card">
-          <div class="card-body d-flex justify-content-evenly">
-            <div> 
-              <div><small class="text-muted">Bedrooms</small></div>
-              <div><i class="fa-solid fa-bed-pulse"></i> 4</div>
+        <div class="row mb-5">
+          <div class="col-12 col-md-12 col-lg-8 m-sm1">
+            <img src="./img/1.jpeg" alt="" width="100%" class="br">
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="img-container col-12 col-lg-12 topImg">
+              <img src="./img/1.jpeg" alt="" width="100%" class="br">
             </div>
-            <div> 
-              <div><small class="text-muted">Bathroom</small></div>
-              <div><i class="fa-solid fa-bed-pulse"></i>2</div>
-            </div>
-            <div> 
-              <div><small class="text-muted">Square Area</small></div>
-              <div><i class="bi bi-bed"></i> 6x7.5</div>
-            </div>
-            <div> 
-              <div><small class="text-muted">Status</small></div>
-              <div><i class="bi bi-bed"></i>Available</div>
+            <div class="img-container col-12 col-lg-12">
+              <img src="./img/1.jpeg" alt="" width="100%" class="br">
             </div>
           </div>
         </div>
-
-        <div></div>
-      </div>
-      <div class="col-12 col-md-12 col-lg-4">
-        <div class="card">
-          <div class="card-body">
-
-            <div class="card mb-3 bg-secondary">
-              <div class="card-body d-flex justify-content-evenly p-0 py-2">
-                <div class="d-flex justify-content-center align-items-center"><img src="./img/profile.png" alt="" class=""></div>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                  <h5 class="">Adam Leke</h5>
-                  <p class="m-0">Asset Assurance</p>
+  
+        <!-- Property Details Proper -->
+        <div class="row">
+          <!-- CARD LEFT -->
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="card">
+              <div class="card-body d-flex justify-content-evenly">
+                <div> 
+                  <div><small class="text-muted">Bedrooms</small></div>
+                  <div><i class="fa-solid fa-bed-pulse"></i> 4</div>
+                </div>
+                <div> 
+                  <div><small class="text-muted">Bathroom</small></div>
+                  <div><i class="fa-solid fa-bed-pulse"></i>2</div>
+                </div>
+                <div> 
+                  <div><small class="text-muted">Square Area</small></div>
+                  <div><i class="bi bi-bed"></i> 6x7.5</div>
+                </div>
+                <div> 
+                  <div><small class="text-muted">Status</small></div>
+                  <div><i class="bi bi-bed"></i>Available</div>
                 </div>
               </div>
             </div>
-            <div class="" style="width: 100%">
-              <button style="width: 100%" class="btn-red">Email Agent</button>
-              <button style="width: 100%" class="btn-asher mt-2">Email Agent</button>
+  
+            <div class="my-3 p-1">
+
+              <h5 class="">$3,650 pcm</h5>
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">Tenancy info</small>
+                <small class="text-muted">Added Today</small>
+              </div>
+              <hr>
+              <strong>Leasing Details</strong>
+              <div class="d-flex justify-content-between pe-3">
+                <span><small>Leasing Avaliable date: </small><small>now</small></span>
+                <span><small>Leasing Avaliable date: </small><small>now</small></span>
+                <span><small>Leasing Avaliable date: </small><small>now</small></span>
+              </div>
+              <div class="d-flex justify-content-between pe-3">
+                <span><small>Leasing Avaliable date: </small><small>now</small></span>
+                <span><small>Leasing Avaliable date: </small><small>now</small></span>
+                <span><small>Leasing Avaliable date: </small><small>now</small></span>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <div class="text-muted">PROPERTY TYPE</div>
+                  <div>Flat</div>
+                </div>
+                <div>
+                  <div class="text-muted">BEDROOMS</div>
+                  <div>1</div>
+                </div>
+                <div>
+                  <div class="text-muted">BATHROOM(S)</div>
+                  <div>1</div>
+                </div>
+                <div>
+                  <div class="text-muted">SIZE</div>
+                  <div>538 sq ft</div>
+                  <div>50 sqm</div>
+                </div>
+              </div>
+              <hr>
+              <div class="img-container">
+                <img src="./img/1.jpeg" alt="" width="75px" height="75px">
+              </div>
+              <hr>
+              <div class="pe-5">
+                <strong>Key Features</strong>
+                <div class="d-flex flex-start">
+                  <div class="me-5">
+                    <p><i class="bi bi-wifi"></i> Wi-Fi</p>
+                    <p><i class="bi bi-tv"></i> TV</p>
+                    <p> Hair Dryer</p>
+                    <p><i class="bi bi-calendar4-range"></i> Long Term Stay</p>
+                  </div>
+                  <div>
+                    <p><i class="bi bi-water"></i> Pool</p>
+                    <p><i class="bi bi-fan"></i> Air Condition</p>
+                    <p><i class="bi bi-cup-hot"></i> Breakfast</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div>
+                <strong class="mb-2">Description</strong>
+                <p>Reference: 13454# </p>
+                <div class="">
+                  <p class="">
+                    Escape to this stunning rental home, a true oasis of comfort and style. Boasting a sparkling 
+                    in-ground pool surrounded by a meticulously landscaped garden, you'll find yourself instantly 
+                    transported to a world of relaxation and tranquility. Step inside to discover a fully air-conditioned interior,
+                     ensuring a cool and comfortable living experience throughout the year.
+                    The spacious and beautifully appointed rooms are bathed in natural light, 
+                    creating a warm and inviting atmosphere. The open-concept living area seamlessly 
+                    flows into the modern kitchen, making it an ideal setting for entertaining guests 
+                    or enjoying quality family time.
+                    Outside, the impeccably manicured garden provides a serene retreat, with lush 
+                    greenery and vibrant blooms adding a touch of nature's beauty. The spacious driveway
+                     offers ample parking space, ensuring convenience and ease of access.
+                    Additional highlights of this exceptional rental property include a cozy fireplace for
+                     those chilly evenings, a private study or home office for productivity, and a fully equipped laundry room for added convenience.
+                    Located in a desirable neighborhood, with proximity to shopping, dining, and recreational areas,
+                     this rental home truly offers the best of both worlds – a peaceful sanctuary and convenient access to urban amenities.
+                    Don't miss the opportunity to make this remarkable property your new home.</p>
+                  <div class="overlay-text">
+                    Read Full Description
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="mt-2">
+                <strong>Bondway</strong>
+                <div>
+                  <div id="map"></div>
+                </div>
+              </div>
+              <hr>
+              <div>
+                <strong>About the Agent</strong>
+              </div>
+              <hr>
+              <div><p class="text-muted">Similar Listing</p></div>
+            </div>
+          </div>
+
+          <!-- CARD RIGHT -->
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+  
+                <div class="card mb-3 bg-secondary">
+                  <div class="card-body d-flex justify-content-evenly p-0 py-2">
+                    <div class="d-flex justify-content-center align-items-center"><img src="./img/profile.png" alt="" class=""></div>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                      <h5 class="">Adam Leke</h5>
+                      <p class="m-0">Asset Assurance</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="" style="width: 100%">
+                  <button style="width: 100%" class="btn-red">Email Agent</button>
+                  <button style="width: 100%" class="btn-asher mt-2">Email Agent</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
+      
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
+  <script>
+
+    var map = L.map('map').setView([51.505, -0.09], 13);
+  </script>
 </body>
 </html>

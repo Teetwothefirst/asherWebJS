@@ -1,0 +1,156 @@
+.bg-asher{
+    background-color: #B80238;
+    color: white;
+}
+.container-three{
+    display: flex;
+    justify-content: space-evenly;
+}
+.asher-flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+.headerstyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.asher-nav-sm{
+    display: none;
+}
+.btn-white{
+    border: 1px solid grey;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color:#B80238;
+}
+.asher-nav-lg{
+    display: flex;
+    align-items: center;
+}
+.asher-button-lg{
+    display: block;
+}
+.text-asher{
+    color: #B80238;
+}
+.search{
+    width: 350px;
+}
+.btn-red-lg{
+        background-color: #B80238;
+        color: white;
+        cursor: pointer;
+        border-color: #B80238;
+        padding: 5px;
+        border-radius: 10px;
+        text-wrap: nowrap;
+    }
+
+    .relative-Section-one{
+        position: relative;
+        /* height: 350px; */
+    }
+    .absolute-about{
+        position: absolute;
+        top: 90%;
+        left: 35%;
+    }
+    .absolute{
+        position: absolute;
+        bottom: 5.5%;
+        left: 30%;
+    }
+    .bg-asher-grey{
+        background-color: #f8f8f8;
+    }
+    .asher-p10{
+        padding: 10px
+    }
+    .Explore{
+        display: flex;
+        justify-content: space-between;
+    }
+    @media screen and (max-width: 900px) and (min-width: 770px){
+        .search{
+            width: 150px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+    .Explore{
+        display: flex;
+        flex-direction: column;
+    }
+    .w100{
+        width: 100%;
+    }
+    .asher-row-sm{
+        gap: 1rem;
+    }
+    .container-three{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .asher-nav-lg{
+        display: none;
+    }
+    .asher-flex-between{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search{
+        width: 150px;
+    }
+    .headerstyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    .asher-button-lg{
+        display: none;
+    }
+    .btn-red{
+        background-color: #B80238;
+        color: white;
+        cursor: pointer;
+        border-color: #B80238;
+        border-radius: 5px;
+    }
+    .asher-ds-lg-no{
+        display: none;
+    }
+    .btn-red:hover{
+        background-color: #B80238;
+        color: white;
+    }
+    .asher-nav-sm{
+        display: flex;
+        align-items: center;
+    }
+    .dropdown-item:hover{
+        background-color: #B80238;
+        color: white;
+    }
+    .absolute{
+        position: initial;
+    }
+    .asher-gap-sm{
+        gap: 3rem;
+    }
+    .asher-pad-sm{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .absolute-about{
+        position: initial;
+        display: flex;
+        justify-content: center;
+    }
+}
