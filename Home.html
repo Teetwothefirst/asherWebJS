@@ -214,7 +214,8 @@
                                 <p class="text-muted m-0">Location</p>
                                 <div class="card-body p-0 d-flex align-items-center">
                                     <input type="text" class="form-select me-1" placeholder="e.g 'york' 'hampshire' 'midian'" id="inputElement">
-                                    <button class="btn-red-lg px-4" onclick="saveValueAndNavigate()" id="inputElement">Browse Properties</button>
+                                    <!-- <button class="btn-red-lg px-4" id="Connect">Browse Properties</button> -->
+                                    <a href="About.html" class="btn-red-lg px-4">Browse Properties</a>
                                 </div>
                             </div> 
                         </form>
@@ -479,6 +480,7 @@
                 // // Assuming 'valueToSave' is the value you want to save
                 // localStorage.setItem('myValue', d);
         function saveValueAndNavigate() {
+            // e.preventDefault();
             // Get the input element
             var inputElement = document.getElementById('inputElement');
 
@@ -487,10 +489,14 @@
 
             // Save the value to local storage
             localStorage.setItem('myValue', valueToSave);
-
+            console.log(valueToSave)
             // Navigate to the next page
             window.location.href = 'About.html'; // Change 'next-page.html' to the URL of your next page
         }
+        document.getElementById("Connect").addEventListener('click', ()=>{
+            window.location.href = 'Signin.html';
+            console.log('ld');
+        })
         
         document.getElementById("signin").addEventListener('click', ()=>{
             window.location.href = 'Signin.html';

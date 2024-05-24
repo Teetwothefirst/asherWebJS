@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Profile</title>
     <style>
         /* *{
@@ -13,6 +14,11 @@
         /* Color code for the flyer background: #EDF1F4;
  */     .card-body-head{
             background-color: #EDF1F4;
+        }
+        
+        button:hover{
+            /* background-color: rgba(184, 2, 56,0.2); */
+            color:black !important;
         }
         .card-body-main{
             background: #F8F8F8;  
@@ -34,7 +40,7 @@
             display: block;
         }
         .nav-link.active{
-            background-color: brown !important;
+            background-color: #B80238 !important;
         }
         .profileImgContainer{
             position: relative;
@@ -50,6 +56,28 @@
             border: none;
             padding: 15px;
         }
+        .btn-red:hover{
+            border: 1px solid #B80238;
+            color:#B80238;
+        }
+        /* Error */
+        /* Hide the default checkbox */
+        .star-checkbox input[type="checkbox"] {
+        display: none;
+        }
+
+        /* Style the custom star icon */
+        .star-icon {
+        font-size: 19px;
+        color: #ccc;
+        cursor: pointer;
+        }
+
+        /* Change the star color when checked */
+        .star-checkbox input[type="checkbox"]:checked + .star-icon {
+        color: #ffc107;
+        }
+
     </style>
 </head>
 <body>
@@ -70,6 +98,7 @@
                             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                               <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="bi bi-person-circle me-3"></i> Profile</button>
                               <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="bi bi-book-half me-3"></i>Application</button>
+                              <button class="nav-link" id="v-pills-inbox-tab" data-bs-toggle="pill" data-bs-target="#v-pills-inbox" type="button" role="tab" aria-controls="v-pills-inbox" aria-selected="false"><i class="bi bi-envelope me-3"></i>Inbox</button>
                               <button class="nav-link" id="v-pills-marketplace-tab" data-bs-toggle="pill" data-bs-target="#v-pills-marketplace" type="button" role="tab" aria-controls="v-pills-marketplace" aria-selected="false"><i class="bi bi-shop me-3"></i>Chat </button>
                               <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="bi bi-house me-3"></i>Settings</button>
                               
@@ -77,9 +106,9 @@
                             <div class="tab-content" id="v-pills-tabContent" style="width: 100%;">
                               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
                                 <div class="container">
-                                    <div class="row">
+                                    <div class="row pb-5">
                                         <div class="card p-0">
-                                            <div class="card-body p-0">
+                                            <div class="card-body p-0 pb-2">
                                                 <div class="card-body-head d-flex justify-content-between ps-5">
                                                     <div class="d-flex align-items-center">
                                                         <div>
@@ -106,7 +135,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center">
-                                                        <button class="btn-red" id="homeBtn" onclick=""><i class="bi bi-buildings me-1"></i>Find Property</button>
+                                                        <button class="btn btn-red" id="homeBtn" onclick=""><i class="bi bi-buildings me-1"></i>Find Property</button>
                                                     </div>
                                                 </div>
                                                 <div class="card-body-footer">
@@ -173,7 +202,134 @@
                               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
                                 <div class="container">
                                     <div class="row">
-                                        <img src="./img/Bannar.png" alt="">
+                                        <div class="card p-0">
+                                            <div class="card-body p-0 pb-2">
+                                                <div class="card-body-head d-flex justify-content-between ps-5">
+                                                    <div class="d-flex align-items-center">
+                                                        <div>
+                                                            <h3>Get your Dream</h3>
+                                                            <h1>Home</h1>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="img-container">
+                                                        <img src="./img/Banner_Group_II.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-main d-flex justify-content-between px-4">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="pe-5">
+                                                            <div class="profileImgContainer">
+                                                                <img src="./img/profile.png" alt="" width="70px" height="70px" id="imgItSelf">
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="ps-5">
+                                                            <strong>Sarah J Robinson</strong>
+                                                            <p><i class="bi bi-geo-alt"></i> House Address</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-red" id="homeBtn" onclick=""><i class="bi bi-buildings me-1"></i>Find Property</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-footer p-5">
+                                                    <h5>Applications</h5>
+                                                    <a href="About.html">Linked</a>
+                                                    <div id="applicationCard"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="v-pills-inbox" role="tabpanel" aria-labelledby="v-pills-inbox-tab" tabindex="0">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- <img src="./img/Bannar.png" alt=""> -->
+                                        <div class="card p-0">
+                                            <div class="card-body p-0 pb-2">
+                                                <div class="card-body-head d-flex justify-content-between ps-5">
+                                                    <div class="d-flex align-items-center">
+                                                        <div>
+                                                            <h3>Get your Dream</h3>
+                                                            <h1>Home</h1>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="img-container">
+                                                        <img src="./img/Banner_Group_II.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-main d-flex justify-content-between px-4">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="pe-5">
+                                                            <div class="profileImgContainer">
+                                                                <img src="./img/profile.png" alt="" width="70px" height="70px" id="imgItSelf">
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="ps-5">
+                                                            <strong>Sarah J Robinson</strong>
+                                                            <p><i class="bi bi-geo-alt"></i> House Address</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn btn-red" id="homeBtn" onclick=""><i class="bi bi-buildings me-1"></i>Find Property</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-foot">
+                                                    <div class="p-3">
+                                                        <div class="">Inbox</div>
+                                                        <div class="p-3">
+                                                            <div class="search py-2 mb-2">
+                                                                <input type="search" name="" id="" class="form-control">
+                                                            </div>
+                                                            <!-- <div class="inbox-head"><span class=""><input type="checkbox" name="" id=""></span><span class=""><a href="#"><i class="bi bi-arrow-clockwise"></i></a></span><span class=""></span><span class=""></span></div>
+                                                            <div class="inbox-main"></div> -->
+                                                            <table class="table table-borderless table-hover">
+                                                                <thead>
+                                                                  <tr>
+                                                                    <th scope="col" class="d-flex justify-content-evenly"><span class="me-2"><input type="checkbox" name="" id=""></span><span class=""><a href="#"><i class="bi bi-arrow-clockwise"></i></a></span></th>
+                                                                    <th scope="col">Last</th>
+                                                                    <th scope="col" colspan="2">Handle</th>
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody class="">
+                                                                  <tr>
+                                                                    <th scope="col" class="d-flex justify-content-evenly">
+                                                                        <span class="me-2"><input type="checkbox" name="" id=""></span>
+                                                                        <!-- <span class=""><a href="#"><i class="bi bi-arrow-clockwise"></i></a></span> -->
+                                                                        <label class="star-checkbox" style="margin-top: -3px;">
+                                                                            <input type="checkbox" class="checkbox-input">
+                                                                            <span class="star-icon">&#9733;</span>
+                                                                        </label>
+                                                                    </th>
+                                                                    <td>Mark</td>
+                                                                    <td colspan="2">@mdo</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">2</th>
+                                                                    <td>@fat</td>
+                                                                    <td colspan="2">Jacob</td>
+                                                                    
+                                                                    <!-- <td>Thornton</td> -->
+                                                                    
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">3</th>
+                                                                    <td>@twitter</td>
+                                                                    <td colspan="2">Larry the Bird</td>
+                                                                    
+                                                                  </tr>
+                                                                </tbody>
+                                                              </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  -->
                                     </div>
                                 </div>
                               </div>
@@ -208,10 +364,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center">
-                                                        <button class="btn-red" id="homeBtn" onclick=""><i class="bi bi-buildings me-1"></i>Find Property</button>
+                                                        <button class="btn btn-red" id="homeBtn" onclick=""><i class="bi bi-buildings me-1"></i>Find Property</button>
                                                     </div>
                                                 </div>
-                                                <div class="card-body-foot mt-5">
+                                                <div class="card-body-foot m-5">
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="d-flex align-items-start">
@@ -221,8 +377,8 @@
                                                                             <input type="search" name="search" id="search" class="form-control">
                                                                         </form>
                                                                     </div>
-                                                                    <button class="nav-link active" id="v-pills-chat-tab" data-bs-toggle="pill" data-bs-target="#v-pills-chat" type="button" role="tab" aria-controls="v-pills-chat" aria-selected="true">
-                                                                        <span><img src="./img/profile.png" alt="" width="30px" height="30px"></span><span><strong style="display: flex;">Profile name</strong><em>The last message was</em></span><small>Time</small>
+                                                                    <button class="nav-link active d-flex align-items-center" id="v-pills-chat-tab" data-bs-toggle="pill" data-bs-target="#v-pills-chat" type="button" role="tab" aria-controls="v-pills-chat" aria-selected="true">
+                                                                        <span class="d-flex align-items-center pe-2"><img src="./img/profile.png" alt="" width="50px" height="50px"></span><span><strong class="" style="display: flex; text-wrap:nowrap">Profile name</strong><small style="text-wrap: nowrap;">The last message</small></span><small class="pb-4">Time</small>
                                                                     </button>
                                                                     <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
                                                                 </div>
@@ -232,16 +388,27 @@
                                                                         <div class="head d-flex justify-content-between p-3">
                                                                             <div class="d-flex">
                                                                                 <img src="./img/profile.png" alt="">
-                                                                                <p>Jedidiah Herbert</p>
+                                                                                <p class="pt-2 ps-2">Jedidiah Herbert</p>
                                                                             </div>
-                                                                            <div><i class="bi bi-three-dots-vertical"></i></div>
+                                                                            <div class="pt-2"><a href="#"><i class="bi bi-three-dots-vertical"></i></a></div>
                                                                         </div>
-                                                                        <div class="main"></div>
+                                                                        <div class="main" style="height: 70vh; margin-left: 1.5rem; margin-right: 1.5rem; background-color: #EDF1F4;">
+                                                                            <div class="chat-box d-flex flex-column align-items-start">
+                                                                                <div class="chat-messages bg-success text-white rounded p-2 mb-2">
+                                                                                    <span class="in-chat-profile"><img src="./img/1.jpeg" alt="" width="40px" height="40px" style="border-radius: 50%;"></span>
+                                                                                    <span class="msg">Hi there my name is ....... </span>
+                                                                                </div>
+                                                                                <div class="chat-messages bg-success text-white rounded p-2 mb-2">
+                                                                                    <span class="in-chat-profile"><img src="./img/1.jpeg" alt="" width="40px" height="40px"></span>
+                                                                                    <span class="msg">Hi there my name is ....... </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                         <div class="foot"></div>
                                                                     </div>
                                                                    </div>
                                                                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
-                                                                    
+                                                                        <p>Next</p>
                                                                    </div>
                                                                 </div>
                                                               </div>
@@ -256,7 +423,80 @@
                               <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
                                 <div class="container">
                                     <div class="row">
-                                        <img src="./img/Bannar.png" alt="">
+                                        <div class="card p-0">
+                                            <div class="card-body p-0 pb-2">
+                                                <div class="card-body-head d-flex justify-content-between ps-5">
+                                                    <div class="d-flex align-items-center">
+                                                        <div>
+                                                            <h3>Get your Dream</h3>
+                                                            <h1>Home</h1>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="img-container">
+                                                        <img src="./img/Banner_Group_II.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-main d-flex justify-content-between px-4">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="pe-5">
+                                                            <div class="profileImgContainer">
+                                                                <img src="./img/profile.png" alt="" width="70px" height="70px" id="imgItSelf">
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="ps-5">
+                                                            <strong>Sarah J Robinson</strong>
+                                                            <p><i class="bi bi-geo-alt"></i> House Address</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <button class="btn-red" id="homeBtn" onclick=""><i class="bi bi-buildings me-1"></i>Find Property</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body-footer ps-5 pt-4">
+                                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Security Settings</button>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Preference Settings</button>
+                                                        </li>
+                                                      </ul>
+                                                      <div class="tab-content" id="pills-tabContent">
+                                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-6 col-lg-4">
+                                                                    <form action="">
+                                                                        <label for="currency">Old Password</label>
+                                                                        <input type="password" name="" id="" class="form-control mb-3">
+                                                                        <label for="">New Password</label>
+                                                                        <input type="password" name="" id="" class="form-control mb-3">
+                                                                        <label for="">Confirm Password</label>
+                                                                        <input type="password" name="" id="" class="form-control mb-3">
+                                                                        <button class="btn btn-red p-2">Save Changes</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-6 col-lg-4">
+                                                                    <form action="">
+                                                                        <label for="currency">Currency</label>
+                                                                        <input type="text" name="" id="" class="form-control mb-3">
+                                                                        <label for="">Time Zone</label>
+                                                                        <input type="text" name="" id="" class="form-control mb-3">
+                                                                        <button class="btn btn-red p-2">Save Changes</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                               </div>
@@ -269,7 +509,7 @@
         <footer></footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         // function routeToHome(){
         //     let homeBtn = document.getElementById('homeBtn');
@@ -278,6 +518,110 @@
         document.getElementById('homeBtn').addEventListener('click', ()=>{
             window.location.href = 'Home.html'
         })
+    </script>
+    <script>
+        axios({
+            method: "GET",
+            headers: { 'Content-Type': 'application/json;charset=utf-8' },
+            url: 'https://asher-server.onrender.com/website/location?address=Ikorodu&location=Ebute%20ikorodu%2C%20Lagos%2C%20Nigeria&propertySize=null&minPropertyRent=null&maxPropertyRent=null&propertyType=',
+        }).then(response =>{
+            console.log(response.data.result);
+        })
+        console.log("working")
+    </script>
+    <script>
+        let applicationContainer = document.getElementById("applicationCard");
+        let emptyCard = document.createElement('div');
+        let containedCard = document.createElement('div');
+        let determinant = 1;
+        arry = [1,2,3]
+        //Creation of Empty Card
+        let emDiv = document.createElement('div');
+        let emcard = document.createElement('div');
+        let emcardBody = document.createElement('div');
+        let emp = document.createElement('p');
+        let embtn = document.createElement('button');
+        let emstrong = document.createElement('strong');
+        let emi = document.createElement('i');
+        let emiDiv = document.createElement('div');
+        
+        emDiv.setAttribute('class','d-flex justify-content-center');
+        emcard.setAttribute('class','card');
+        emcardBody.setAttribute('class','card-body d-flex flex-column justify-content-center align-items-center');
+        emi.setAttribute('class','bi bi-buildings fs-3');
+        emstrong.textContent = "You don not have an active application";
+        emp.textContent = "Tour guid is the next thing to the Look into, want to experience the house fully";
+        emiDiv.appendChild(emi);
+        emiDiv.style = 'width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 1px solid grey';
+        embtn.innerHTML = `<i class="bi bi-house"> Go to Home`;
+        embtn.setAttribute('class','btn btn-red');
+        
+        emcardBody.appendChild(emiDiv);
+        emcardBody.appendChild(emstrong);
+        emcardBody.appendChild(emp);
+        emcardBody.appendChild(embtn);
+        emcard.appendChild(emcardBody)
+        emDiv.appendChild(emcard);
+        emptyCard.appendChild(emDiv);
+        
+             //Creation of Contained Card
+        let fullDiv = document.createElement('div');
+
+        arry.forEach(element => {  
+            let col = document.createElement('div')
+            let card_body = document.createElement('div');
+            card_body.setAttribute('class','card-body');
+            let card_img_top = document.createElement('div');
+            let div = document.createElement('div');
+            let strong = document.createElement('strong');
+            let divnext = document.createElement('div');
+            let h4 = document.createElement('h4');
+            h4.innerText = '$2,510';
+            let div1 = document.createElement('div');
+            let span = document.createElement('span');
+            let div2 = document.createElement('div');
+            div2.innerHTML = `<i class="bi bi-battery-half></i> bath"`;
+            div.appendChild(strong);
+            div.appendChild(divnext)
+            let div3 = document.createElement('div');
+            div3.innerText = `2500 sq ft`;
+            let i = document.createElement('i');
+            span.innerText = 'bed'
+            i.setAttribute('class','bi bi-battery-half me-2');
+            divnext.setAttribute('class', 'd-flex justify-content-between');
+            div1.appendChild(i);
+            strong.innerText = 'Serenity Spring Residence';
+            divnext.appendChild(div1);
+            div1.appendChild(span)
+            div2.innerText = 'bath';
+            div3.innerText = '2500 sq ft'
+            divnext.appendChild(div2);
+            divnext.appendChild(div3);
+            div.appendChild(h4);
+            card_body.appendChild(card_img_top);
+            card_body.appendChild(div);
+            // div.appendChild(divnext);
+            card_img_top.setAttribute('class','card-img-top');
+            let img = document.createElement('img');
+            img.setAttribute('src','./img/about-img.png');
+            img.setAttribute('class', 'w100 img-fluid');
+            card_img_top.appendChild(img);
+            let card = document.createElement ('div');
+            card.appendChild(card_body)
+            card.setAttribute('class','card');
+            col.appendChild(card)
+            col.setAttribute('class','col-12 col-md-7 col-lg-4 my-2');
+            fullDiv.appendChild(col);
+        });
+       
+        fullDiv.setAttribute('class','row')
+        containedCard.appendChild(fullDiv);
+        if (determinant === 0){
+            applicationContainer.appendChild(emptyCard);
+        }else{
+            applicationContainer.appendChild(containedCard);
+        }
+
     </script>
 </body>
 </html>

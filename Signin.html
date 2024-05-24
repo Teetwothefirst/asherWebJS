@@ -59,10 +59,16 @@
         .anchor:hover{
             color:#B80238;
         }
+        .img-lg{
+            height: 83vh;
+        }
         @media screen and (max-width: 750px) {
             .main-content{
             display: flex;
             flex-direction: column ;
+        }
+        .img-lg{
+            height: auto;
         }
         .form-container{
             margin-bottom: 20px;
@@ -106,7 +112,7 @@
                         <button class="form-control" id="g_id_onload" ><i class="bi bi-google"></i> Continue with Google</button>
                     </form> 
                 </div>
-                <div class="position-relative"><img src="./img/LoginBG.png" alt="" width="100%">
+                <div class="position-relative"><img src="./img/LoginBG.png" alt="" width="100%" class="img-lg">
                     <div class="card bg-red position-absolute">
                         <div class="card-body">
                             <h2>Find your Dream House</h2>

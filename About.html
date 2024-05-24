@@ -88,7 +88,7 @@
                             <div class="container">
                                 <div class="row" id="paginate">
                                     <div class="col-12 col-md-7 col-lg-4">
-                                        <div class="card">
+                                        <div class="card" id="propertyDet" >
                                             <div class="card-body">
                                                 <div class="card-img-top">
                                                     <img src="./img/about-img.png" alt="" class="w100">
@@ -196,6 +196,13 @@
             col.appendChild(card)
             col.setAttribute('class','col-12 col-md-7 col-lg-4 my-2')
             paginate.appendChild(col);
+        })
+    </script>
+    <script>
+        document.getElementById("propertyDet").addEventListener('click',()=>{
+            window.location.href = 'property-details.html'
+            document.getElementById("propertyDet").style = 'cursor: pointer;'
+            // document.querySelectorAll('card').style = 'cursor: pointer'
         })
     </script>
 </body>
