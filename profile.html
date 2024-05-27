@@ -77,7 +77,33 @@
         .star-checkbox input[type="checkbox"]:checked + .star-icon {
         color: #ffc107;
         }
+        /* Working on the Chat */
 
+        .chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.sender {
+  align-self: flex-start;
+  background-color: #dcf8c6; /* Sender message background color */
+}
+
+.receiver {
+  align-self: flex-end;
+  background-color: #fff; /* Receiver message background color */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
     </style>
 </head>
 <body>
@@ -309,19 +335,18 @@
                                                                     <td colspan="2">@mdo</td>
                                                                   </tr>
                                                                   <tr>
-                                                                    <th scope="row">2</th>
-                                                                    <td>@fat</td>
-                                                                    <td colspan="2">Jacob</td>
-                                                                    
-                                                                    <!-- <td>Thornton</td> -->
-                                                                    
+                                                                    <th scope="col" class="d-flex justify-content-evenly">
+                                                                        <span class="me-2"><input type="checkbox" name="" id=""></span>
+                                                                        <!-- <span class=""><a href="#"><i class="bi bi-arrow-clockwise"></i></a></span> -->
+                                                                        <label class="star-checkbox" style="margin-top: -3px;">
+                                                                            <input type="checkbox" class="checkbox-input">
+                                                                            <span class="star-icon">&#9733;</span>
+                                                                        </label>
+                                                                    </th>
+                                                                    <td>Mark</td>
+                                                                    <td colspan="2">@mdo</td>
                                                                   </tr>
-                                                                  <tr>
-                                                                    <th scope="row">3</th>
-                                                                    <td>@twitter</td>
-                                                                    <td colspan="2">Larry the Bird</td>
-                                                                    
-                                                                  </tr>
+                                                                  
                                                                 </tbody>
                                                               </table>
                                                         </div>
@@ -393,18 +418,39 @@
                                                                             <div class="pt-2"><a href="#"><i class="bi bi-three-dots-vertical"></i></a></div>
                                                                         </div>
                                                                         <div class="main" style="height: 70vh; margin-left: 1.5rem; margin-right: 1.5rem; background-color: #EDF1F4;">
-                                                                            <div class="chat-box d-flex flex-column align-items-start">
-                                                                                <div class="chat-messages bg-success text-white rounded p-2 mb-2">
+                                                                            <!-- <div class="chat-box d-flex flex-column align-items-start">
+                                                                                <div class="chat-messages bg-success text-white rounded p-2 mb-3">
                                                                                     <span class="in-chat-profile"><img src="./img/1.jpeg" alt="" width="40px" height="40px" style="border-radius: 50%;"></span>
                                                                                     <span class="msg">Hi there my name is ....... </span>
                                                                                 </div>
-                                                                                <div class="chat-messages bg-success text-white rounded p-2 mb-2">
-                                                                                    <span class="in-chat-profile"><img src="./img/1.jpeg" alt="" width="40px" height="40px"></span>
-                                                                                    <span class="msg">Hi there my name is ....... </span>
+                                                                                <div class="chat-messages bg-success text-white rounded p-2 mb-3">
+                                                                                    <span class="in-chat-profile"><img src="./img/1.jpeg" alt="" width="40px" height="40px" style="border-radius: 50%;"></span>
+                                                                                    <span class="msg">Hi, there my name is ....... </span>
                                                                                 </div>
-                                                                            </div>
+                                                                            </div> -->
+                                                                            
+                                                                            <div class="chat-container">
+                                                                                <div class="message sender">
+                                                                                  <p>Hi, this is a sender message. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aspernatur.</p>
+                                                                                </div>
+                                                                                <div class="message receiver">
+                                                                                  <p>Hello, this is a receiver message. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, distinctio!</p>
+                                                                                </div>
+                                                                                <!-- Add more messages here -->
+                                                                              </div>
+
+
                                                                         </div>
-                                                                        <div class="foot"></div>
+                                                                        <div class="foot" style="margin-left: 1.5rem; margin-right: 1.5rem;">
+                                                                            <div class="input-group input-group-sm mb-3">
+                                                                                <span class="input-group-text" id="inputGroup-sizing-sm"><a href="#"><i class="bi bi-emoji-smile"></i></a></span>
+                                                                                <button class="input-group-text" id="inputGroup-sizing-sm"><i class="bi bi-plus-lg"></i></button>
+                                                                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                                                                <span class="input-group-text" id="inputGroup-sizing-sm"><a href="#"><i class="bi bi-mic"></i></a></span>
+                                                                                <button class="input-group-text" id="inputGroup-sizing-sm"><i class="bi bi-send"></i></button>
+
+                                                                              </div>
+                                                                        </div>
                                                                     </div>
                                                                    </div>
                                                                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
