@@ -34,5 +34,12 @@
 // // } else {
 // //     console.log('No value found in local storage.');
 // // }
+const axios = require('axios/dist/node/axios.cjs');
 
-
+axios({
+    method: "GET",
+    headers: { 'Content-Type': 'application/json;charset=utf-8' },
+    url: 'http://localhost:8000/website/register',
+}).then(response =>{
+    console.log(response.data.result);
+})
