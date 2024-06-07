@@ -1,7 +1,10 @@
+
 {
+  "name": "asher",
+  "version": "2.1.0",
+  "description": "A Powerful, yet easy to use application for managing real estate assets",
+  "type": "commonjs",
   "dependencies": {
-    "axios": "^1.7.2",
-    "description": "ghffhj",
-    "type": "commonJS"
+    "axios": "^1.7.2"
 }
 }

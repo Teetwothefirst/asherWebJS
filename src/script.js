@@ -34,7 +34,9 @@
 // // } else {
 // //     console.log('No value found in local storage.');
 // // }
-const axios = require('axios/dist/node/axios.cjs');
+// const axios = require('axios/dist/browser/axios.cjs'); // browser
+const axios = require('axios/dist/node/axios.cjs'); // node
+
 
 axios({
     method: "GET",
