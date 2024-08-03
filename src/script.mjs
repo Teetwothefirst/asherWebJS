@@ -35,8 +35,8 @@
 // //     console.log('No value found in local storage.');
 // // }
 // const axios = require('axios/dist/browser/axios.cjs'); // browser
-const axios = require('axios/dist/node/axios.cjs'); // node
-
+// const axios = require('axios'); // node
+import axios from  'axios/dist/browser/axios.cjs' //{'axios/dist/browser/axios.cjs}
 
 axios({
     method: "GET",
